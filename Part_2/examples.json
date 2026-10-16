@@ -1,0 +1,1942 @@
+{
+  "format_version": 1,
+  "part": 2,
+  "examples": [
+    {
+      "id": "P2-C01-E001",
+      "part": 2,
+      "chapter": 1,
+      "chapter_title": "1. Определители и геометрия",
+      "example": 1,
+      "section": "1.1. Начальные случаи",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C01-E001",
+      "depends_on": [],
+      "code": "a = {{3, 1}, {1, 2}};\n{Det[a], Det[a[[All, {2, 1}]]], Abs[Det[a]]}",
+      "sha256": "3c479ecde40ce4fe4d2fb1faddfd216012dab4ed5990e1fc9b85ee016dacad2d",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 8,
+          "example": 1,
+          "section": "8.1. Начальные случаи"
+        }
+      ]
+    },
+    {
+      "id": "P2-C01-E002",
+      "part": 2,
+      "chapter": 1,
+      "chapter_title": "1. Определители и геометрия",
+      "example": 2,
+      "section": "1.2. Перестановки и определение",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C01-E002",
+      "depends_on": [],
+      "code": "{Signature[{3, 1, 2}], Signature[{2, 1, 3}],\n Det[{{2, 4, 1}, {0, -3, 5}, {0, 0, 7}}]}",
+      "sha256": "4365750b86dd48283f8894277bdf2f0931394708eac9fac8d08dfd6b8655196e",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 8,
+          "example": 2,
+          "section": "8.2. Перестановки и определение"
+        }
+      ]
+    },
+    {
+      "id": "P2-C01-E003",
+      "part": 2,
+      "chapter": 1,
+      "chapter_title": "1. Определители и геометрия",
+      "example": 3,
+      "section": "1.3. Матричная перестановка",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C01-E003",
+      "depends_on": [],
+      "code": "p = IdentityMatrix[3][[{3, 1, 2}]];\n{p, Det[p], p.Transpose[p]}",
+      "sha256": "bb7bbf21271d51a06097e0e063fbb725a53c79e3638026087fb48ccf32a70c47",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 8,
+          "example": 3,
+          "section": "8.3. Матричная перестановка"
+        }
+      ]
+    },
+    {
+      "id": "P2-C01-E004",
+      "part": 2,
+      "chapter": 1,
+      "chapter_title": "1. Определители и геометрия",
+      "example": 4,
+      "section": "1.4. Линейность и операции над строками",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C01-E004",
+      "depends_on": [],
+      "code": "a = {{2, 1, 0}, {4, 3, 1}, {2, 1, 2}};\nb = a;\nb[[2]] = a[[2]] - 2 a[[1]];\nb[[3]] = a[[3]] - a[[1]];\n{b, Det[a], Times @@ Diagonal[b]}",
+      "sha256": "6dc7a862ffe0c1b3c11d9f15cca5d2e967ae62880d66ff4c1fb9dcbf7a78460a",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 8,
+          "example": 4,
+          "section": "8.4. Линейность и операции над строками"
+        }
+      ]
+    },
+    {
+      "id": "P2-C01-E005",
+      "part": 2,
+      "chapter": 1,
+      "chapter_title": "1. Определители и геометрия",
+      "example": 5,
+      "section": "1.6. Разложение Лапласа и правило Крамера",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C01-E005",
+      "depends_on": [],
+      "code": "a = {{2, 1}, {1, 3}}; b = {7, 11};\na1 = Transpose[{b, a[[All, 2]]}];\na2 = Transpose[{a[[All, 1]], b}];\n{Det[a1]/Det[a], Det[a2]/Det[a]}",
+      "sha256": "34738379cb9a00f5503cbe16f9b80c721d4960e82f56342379e82ddb0c35b2ff",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 8,
+          "example": 5,
+          "section": "8.6. Разложение Лапласа и правило Крамера"
+        }
+      ]
+    },
+    {
+      "id": "P2-C01-E006",
+      "part": 2,
+      "chapter": 1,
+      "chapter_title": "1. Определители и геометрия",
+      "example": 6,
+      "section": "1.7. Целочисленная обратимость",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C01-E006",
+      "depends_on": [],
+      "code": "a = {{2, 1}, {1, 1}};\n{Det[a], Inverse[a], Inverse[2 IdentityMatrix[2]]}",
+      "sha256": "0ab570c1897fc59f802fa4dcf330b201bdfda75644a695a67fdf26dc225e9c50",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 8,
+          "example": 6,
+          "section": "8.7. Целочисленная обратимость"
+        }
+      ]
+    },
+    {
+      "id": "P2-C01-E007",
+      "part": 2,
+      "chapter": 1,
+      "chapter_title": "1. Определители и геометрия",
+      "example": 7,
+      "section": "1.8. Объемы и тождество Льюиса Кэрролла",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C01-E007",
+      "depends_on": [],
+      "code": "a = {{2, 1, 3}, {1, 4, 2}, {0, 2, 5}};\nleft = Det[a] a[[2, 2]];\nright = Det[a[[{1, 2}, {1, 2}]]] *\n  Det[a[[{2, 3}, {2, 3}]]] -\n  Det[a[[{1, 2}, {2, 3}]]] *\n  Det[a[[{2, 3}, {1, 2}]]];\n{Det[a], left, right}",
+      "sha256": "a13063b5a495d8196d18118b733e10bc0016037426e14954027a41859fe410c0",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 8,
+          "example": 7,
+          "section": "8.8. Объемы и тождество Льюиса Кэрролла"
+        }
+      ]
+    },
+    {
+      "id": "P2-C02-E001",
+      "part": 2,
+      "chapter": 2,
+      "chapter_title": "2. Собственные значения и динамика",
+      "example": 1,
+      "section": "2.1. Дискретная динамика и Фибоначчи",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C02-E001",
+      "depends_on": [],
+      "code": "a = {{1, 1}, {1, 0}};\nstates = NestList[a.# &, {1, 0}, 8];\n{states, MatrixPower[a, 8].{1, 0}}",
+      "sha256": "bddc1d88f6ddf79a062716d0d2215a51a8054640b641d7badf6eb9e936595ce4",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 9,
+          "example": 1,
+          "section": "9.1. Дискретная динамика и Фибоначчи"
+        }
+      ]
+    },
+    {
+      "id": "P2-C02-E002",
+      "part": 2,
+      "chapter": 2,
+      "chapter_title": "2. Собственные значения и динамика",
+      "example": 2,
+      "section": "2.2. Собственные пары и характеристический многочлен",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C02-E002",
+      "depends_on": [],
+      "code": "ClearAll[t];\na = {{2, 1}, {1, 2}};\n{Factor[CharacteristicPolynomial[a, t]],\n Eigensystem[a]}",
+      "sha256": "9e258a0ffaf27ecd13799b44212fa075707020c2bdd1a61eb7cfe22dad1e0a6e",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 9,
+          "example": 2,
+          "section": "9.2. Собственные пары и характеристический многочлен"
+        }
+      ]
+    },
+    {
+      "id": "P2-C02-E003",
+      "part": 2,
+      "chapter": 2,
+      "chapter_title": "2. Собственные значения и динамика",
+      "example": 3,
+      "section": "2.4. Диагонализация и кратности",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C02-E003",
+      "depends_on": [],
+      "code": "j = {{2, 1}, {0, 2}};\n{CharacteristicPolynomial[j, t],\n NullSpace[j - 2 IdentityMatrix[2]],\n MatrixPower[j, 4]}",
+      "sha256": "8cc167b7c9627248619500596f6b98a7bcfadbd59aec76c43e4412a25661329b",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 9,
+          "example": 3,
+          "section": "9.4. Диагонализация и кратности"
+        }
+      ]
+    },
+    {
+      "id": "P2-C02-E004",
+      "part": 2,
+      "chapter": 2,
+      "chapter_title": "2. Собственные значения и динамика",
+      "example": 4,
+      "section": "2.5. Формула Фибоначчи",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C02-E004",
+      "depends_on": [],
+      "code": "phi = (1 + Sqrt[5])/2;\npsi = (1 - Sqrt[5])/2;\nTable[FullSimplify[(phi^k - psi^k)/Sqrt[5]],\n {k, 0, 10}]",
+      "sha256": "6b655f1a36cbf47a391bcc8f56a6fb1ac2c889d613402ca0bbb0d9798f57b58d",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 9,
+          "example": 4,
+          "section": "9.5. Формула Фибоначчи"
+        }
+      ]
+    },
+    {
+      "id": "P2-C02-E005",
+      "part": 2,
+      "chapter": 2,
+      "chapter_title": "2. Собственные значения и динамика",
+      "example": 5,
+      "section": "2.7. Теорема Кэли–Гамильтона",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C02-E005",
+      "depends_on": [],
+      "code": "a = {{2, 1}, {1, 2}};\n{a.a - 4 a + 3 IdentityMatrix[2],\n (4 IdentityMatrix[2] - a)/3 == Inverse[a]}",
+      "sha256": "2c55b274e6c170ac93cb050dd523e662b1b973bfab678c344f2766f6a546d477",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 9,
+          "example": 5,
+          "section": "9.7. Теорема Кэли–Гамильтона"
+        }
+      ]
+    },
+    {
+      "id": "P2-C02-E006",
+      "part": 2,
+      "chapter": 2,
+      "chapter_title": "2. Собственные значения и динамика",
+      "example": 6,
+      "section": "2.8. Экспонента и системы дифференциальных уравнений",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C02-E006",
+      "depends_on": [],
+      "code": "ClearAll[t];\na = {{-2, 1}, {1, -2}};\nx = FullSimplify[MatrixExp[t a].{1, 0}];\n{x, FullSimplify[D[x, t] - a.x], x /. t -> 0}",
+      "sha256": "69840c0307dbacd612fbd91255a9259e6606074ec5d2c63bdaf17af972c5f958",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 9,
+          "example": 6,
+          "section": "9.8. Экспонента и системы дифференциальных уравнений"
+        }
+      ]
+    },
+    {
+      "id": "P2-C03-E001",
+      "part": 2,
+      "chapter": 3,
+      "chapter_title": "3. Унитарная диагонализация",
+      "example": 1,
+      "section": "3.1. Сопряженный оператор и нормальность",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C03-E001",
+      "depends_on": [],
+      "code": "a = {{1, -2}, {2, 1}};\n{ConjugateTranspose[a].a,\n a.ConjugateTranspose[a], Eigenvalues[a]}",
+      "sha256": "c75e5c4b41f45143132cae04cfe3392ffe12d674210cf19cf3b2ba13ba2457d7",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 11,
+          "example": 1,
+          "section": "11.1. Сопряженный оператор и нормальность"
+        }
+      ]
+    },
+    {
+      "id": "P2-C03-E002",
+      "part": 2,
+      "chapter": 3,
+      "chapter_title": "3. Унитарная диагонализация",
+      "example": 2,
+      "section": "3.3. Эрмитовы матрицы и главные оси",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C03-E002",
+      "depends_on": [],
+      "code": "a = {{3, 1}, {1, 3}};\nq = {{1, 1}, {1, -1}}/Sqrt[2];\n{FullSimplify[Transpose[q].a.q],\n FullSimplify[Transpose[q].q]}",
+      "sha256": "84fc0b8f222986b70b3c3350392ce0c250e2a463ba2edc981cca9f0f5281fd9e",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 11,
+          "example": 2,
+          "section": "11.3. Эрмитовы матрицы и главные оси"
+        }
+      ]
+    },
+    {
+      "id": "P2-C03-E003",
+      "part": 2,
+      "chapter": 3,
+      "chapter_title": "3. Унитарная диагонализация",
+      "example": 3,
+      "section": "3.4. Спектральные проекторы",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C03-E003",
+      "depends_on": [],
+      "code": "a = {{3, 1}, {1, 3}};\np4 = (a - 2 IdentityMatrix[2])/2;\np2 = (4 IdentityMatrix[2] - a)/2;\n{p4.p4 == p4, p4.p2,\n 4 p4 + 2 p2 == a}",
+      "sha256": "dfc2e9f0922a69d9cbb9d299f48c589d8a823ad97e3cf1452ccdecf71ea9da08",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 11,
+          "example": 3,
+          "section": "11.4. Спектральные проекторы"
+        }
+      ]
+    },
+    {
+      "id": "P2-C03-E004",
+      "part": 2,
+      "chapter": 3,
+      "chapter_title": "3. Унитарная диагонализация",
+      "example": 4,
+      "section": "3.5. Самосопряженность вне стандартных координат",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C03-E004",
+      "depends_on": [],
+      "code": "p = {{1, 1}, {0, 1}};\nd = DiagonalMatrix[{1, 2}];\nb = Inverse[p].d.p;\ng = Transpose[p].p;\n{b, g, Transpose[b].g == g.b}",
+      "sha256": "4db3dda084cdf62a602fd4ec8d8db969f33a808d970d83ee2d6f7c80e8fa5425",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 11,
+          "example": 4,
+          "section": "11.5. Самосопряженность вне стандартных координат"
+        }
+      ]
+    },
+    {
+      "id": "P2-C04-E001",
+      "part": 2,
+      "chapter": 4,
+      "chapter_title": "4. Приложения спектральной теории",
+      "example": 1,
+      "section": "4.1. Квадратичные формы",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C04-E001",
+      "depends_on": [],
+      "code": "ClearAll[x, y];\na = {{2, 1}, {1, 2}};\n{Expand[{x, y}.a.{x, y}], Eigenvalues[a]}",
+      "sha256": "dba9e2dc7c429463341bf1ee8a4d33f2d395604bcb35ae522a13cfd3e58b1f23",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 12,
+          "example": 1,
+          "section": "12.1. Квадратичные формы"
+        }
+      ]
+    },
+    {
+      "id": "P2-C04-E002",
+      "part": 2,
+      "chapter": 4,
+      "chapter_title": "4. Приложения спектральной теории",
+      "example": 2,
+      "section": "4.3. Критерий положительной определенности",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C04-E002",
+      "depends_on": [],
+      "code": "a = {{4, 2, 0}, {2, 3, 1}, {0, 1, 2}};\nminors = Table[Det[a[[1 ;; k, 1 ;; k]]],\n {k, 1, Length[a]}];\n{minors, And @@ Thread[minors > 0]}",
+      "sha256": "1055c7efc62159c41706ed0ce5e2fad1bac89ec35c349a2ca589a84df97ca80e",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 12,
+          "example": 2,
+          "section": "12.3. Критерий положительной определенности"
+        }
+      ]
+    },
+    {
+      "id": "P2-C04-E003",
+      "part": 2,
+      "chapter": 4,
+      "chapter_title": "4. Приложения спектральной теории",
+      "example": 3,
+      "section": "4.4. Стационарные точки и гессиан",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C04-E003",
+      "depends_on": [],
+      "code": "ClearAll[x, y];\nf = x^2 + x y + y^2 - 4 x - 2 y;\nvars = {x, y};\ngrad = D[f, #] & /@ vars;\nhessian = Table[D[f, vars[[i]], vars[[j]]],\n {i, 2}, {j, 2}];\n{Solve[Thread[grad == 0], vars],\n Eigenvalues[hessian]}",
+      "sha256": "78a1e43cc1f9c8d4457904896a1e4da7aa8e1bbdc74016a0cfd2d0c42d62b5c6",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 12,
+          "example": 3,
+          "section": "12.4. Стационарные точки и гессиан"
+        }
+      ]
+    },
+    {
+      "id": "P2-C04-E004",
+      "part": 2,
+      "chapter": 4,
+      "chapter_title": "4. Приложения спектральной теории",
+      "example": 4,
+      "section": "4.5. Матрицы графа",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C04-E004",
+      "depends_on": [],
+      "code": "a = {{0, 1, 0}, {1, 0, 1}, {0, 1, 0}};\nl = DiagonalMatrix[Total /@ a] - a;\n{Eigenvalues[l], NullSpace[l], a.a}",
+      "sha256": "9f3bb6f3298b3a609a76dac91d276dc4950e234feb0f93e2bffe747416f58109",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 12,
+          "example": 4,
+          "section": "12.5. Матрицы графа"
+        }
+      ]
+    },
+    {
+      "id": "P2-C04-E005",
+      "part": 2,
+      "chapter": 4,
+      "chapter_title": "4. Приложения спектральной теории",
+      "example": 5,
+      "section": "4.5. Матрицы графа",
+      "subsection": "4.5.1. Спектральная кластеризация",
+      "variant": "4.5.1. Спектральная кластеризация",
+      "execution_group": "P2-C04-E005",
+      "depends_on": [],
+      "code": "w = {{0, 1, 0, 0}, {1, 0, 1/10, 0},\n {0, 1/10, 0, 1}, {0, 0, 1, 0}};\nlap = DiagonalMatrix[Total[w]] - w;\ntau = (Sqrt[101] - 1)/10;\nlambda2 = (11 - Sqrt[101])/10;\nfiedler = {1, tau, -tau, -1};\n{lap, FullSimplify[lap.fiedler - lambda2 fiedler],\n Total[fiedler], Sign[fiedler],\n Sort[N[Eigenvalues[lap], 8]]}",
+      "sha256": "38daf010c14cc01432a21f2ef6b6b29e711f5b52df97904c57fd80b6deca6d40",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 12,
+          "example": 5,
+          "section": "12.5.1. Спектральная кластеризация"
+        }
+      ]
+    },
+    {
+      "id": "P2-C04-E006",
+      "part": 2,
+      "chapter": 4,
+      "chapter_title": "4. Приложения спектральной теории",
+      "example": 6,
+      "section": "4.6. Регулярные графы",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C04-E006",
+      "depends_on": [],
+      "code": "a = {{0, 1, 0, 1}, {1, 0, 1, 0},\n {0, 1, 0, 1}, {1, 0, 1, 0}};\n{a.ConstantArray[1, 4], Eigenvalues[a],\n a.{1, -1, 1, -1}}",
+      "sha256": "10aa331de3105d1473d85d088a1a5ad707626a36e8ec1332dcaa25b4ead12705",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 12,
+          "example": 6,
+          "section": "12.6. Регулярные графы"
+        }
+      ]
+    },
+    {
+      "id": "P2-C04-E007",
+      "part": 2,
+      "chapter": 4,
+      "chapter_title": "4. Приложения спектральной теории",
+      "example": 7,
+      "section": "4.7. Степенной метод",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C04-E007",
+      "depends_on": [],
+      "code": "a = N[{{2, 1}, {1, 2}}];\nx = Normalize[{1., 0.}];\nhistory = Table[\n x = Normalize[a.x];\n lambda = x.a.x;\n {k, lambda, Norm[a.x - lambda x]},\n {k, 1, 12}];\nhistory",
+      "sha256": "69474e40bd4014c9646c728dfdd5141b9d98c27207a834de43b90f8dd372fc3b",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 12,
+          "example": 7,
+          "section": "12.7. Степенной метод"
+        }
+      ]
+    },
+    {
+      "id": "P2-C04-E008",
+      "part": 2,
+      "chapter": 4,
+      "chapter_title": "4. Приложения спектральной теории",
+      "example": 8,
+      "section": "4.8. QR-алгоритм и условия сходимости",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C04-E008",
+      "depends_on": [],
+      "code": "a = N[{{4, 1}, {1, 2}}];\nhistory = Table[\n {qs, r} = QRDecomposition[a];\n q = ConjugateTranspose[qs];\n a = r.q;\n {k, Diagonal[a], Abs[a[[2, 1]]]},\n {k, 1, 20}];\nhistory",
+      "sha256": "964d0fe0add5b18b0f48fb82f5a314a6a42290a180cffa038d9bd9e328823dc4",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 12,
+          "example": 8,
+          "section": "12.8. QR-алгоритм и условия сходимости"
+        }
+      ]
+    },
+    {
+      "id": "P2-C05-E001",
+      "part": 2,
+      "chapter": 5,
+      "chapter_title": "5. Жорданово разложение",
+      "example": 1,
+      "section": "5.1. Обобщенные собственные векторы",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C05-E001",
+      "depends_on": [],
+      "code": "j = {{2, 1, 0}, {0, 2, 1}, {0, 0, 2}};\nn = j - 2 IdentityMatrix[3];\nTable[n.UnitVector[3, k], {k, 1, 3}]",
+      "sha256": "59856ec83bb6ac86ca5e5c9dedd9d7b876f8384271532f6ede2dfaa8608f6361",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 13,
+          "example": 1,
+          "section": "13.1. Обобщенные собственные векторы"
+        }
+      ]
+    },
+    {
+      "id": "P2-C05-E002",
+      "part": 2,
+      "chapter": 5,
+      "chapter_title": "5. Жорданово разложение",
+      "example": 2,
+      "section": "5.4. Главный результат и вычисление",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C05-E002",
+      "depends_on": [],
+      "code": "a = {{2, 1, 1}, {0, 2, 1}, {0, 0, 2}};\np = {{1, 0, 0}, {0, 1, -1}, {0, 0, 1}};\nj = Inverse[p].a.p;\n{j, a.p == p.j, Det[p]}",
+      "sha256": "0a6c3700b8502acb9c6704a88ce1aaa9142e12e88ad64bf0cf1ea2681783a788",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 13,
+          "example": 2,
+          "section": "13.4. Главный результат и вычисление"
+        }
+      ]
+    },
+    {
+      "id": "P2-C05-E003",
+      "part": 2,
+      "chapter": 5,
+      "chapter_title": "5. Жорданово разложение",
+      "example": 3,
+      "section": "5.5. Размеры блоков из ядер",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C05-E003",
+      "depends_on": [],
+      "code": "j3 = {{0, 1, 0}, {0, 0, 1}, {0, 0, 0}};\nj2 = {{0, 1}, {0, 0}};\nn = ArrayFlatten[{{j3, ConstantArray[0, {3, 2}]},\n {ConstantArray[0, {2, 3}], j2}}];\ndims = Table[5 - MatrixRank[MatrixPower[n, k]],\n {k, 0, 4}];\n{dims, Differences[dims]}",
+      "sha256": "1bcd7b25c48002e58ba7b984c8d063b81afb0b43097215a81ff92bbe77b9b575",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 13,
+          "example": 3,
+          "section": "13.5. Размеры блоков из ядер"
+        }
+      ]
+    },
+    {
+      "id": "P2-C05-E004",
+      "part": 2,
+      "chapter": 5,
+      "chapter_title": "5. Жорданово разложение",
+      "example": 4,
+      "section": "5.6. Степени и экспонента блока",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C05-E004",
+      "depends_on": [],
+      "code": "ClearAll[t];\nj = {{-1, 1}, {0, -1}};\nx = FullSimplify[MatrixExp[t j].{0, 1}];\n{x, FullSimplify[D[x, t] - j.x]}",
+      "sha256": "3bd1599ab5d661edac723dfbaf3da5a3291738ca26ef5a650ffb9c9993897ff3",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 13,
+          "example": 4,
+          "section": "13.6. Степени и экспонента блока"
+        }
+      ]
+    },
+    {
+      "id": "P2-C05-E005",
+      "part": 2,
+      "chapter": 5,
+      "chapter_title": "5. Жорданово разложение",
+      "example": 5,
+      "section": "5.8. Почему численная жорданова форма чувствительна",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C05-E005",
+      "depends_on": [],
+      "code": "ClearAll[e, t];\na = {{0, 1}, {e, 0}};\n{CharacteristicPolynomial[a, t],\n Eigenvalues[a /. e -> 1/1000000],\n NullSpace[a /. e -> 0]}",
+      "sha256": "2f5bbcafce7094faa8be13c861370a5ed38012acf7b59c7ac36feec97a88774f",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 13,
+          "example": 5,
+          "section": "13.8. Почему численная жорданова форма чувствительна"
+        }
+      ]
+    },
+    {
+      "id": "P2-C06-E001",
+      "part": 2,
+      "chapter": 6,
+      "chapter_title": "6. Геометрия плоскости и пространства",
+      "example": 1,
+      "section": "6.1. Прямые и параметр",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C06-E001",
+      "depends_on": [],
+      "code": "ClearAll[t];\np = {1, 2}; u = {3, -1};\npoint = p + t u;\n{point, Expand[{1, 3}.point]}",
+      "sha256": "046b969823fd31bf514f93e0201dc7097172b99b57829011fcb3d19577276250",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 14,
+          "example": 1,
+          "section": "14.1. Прямые и параметр"
+        }
+      ]
+    },
+    {
+      "id": "P2-C06-E002",
+      "part": 2,
+      "chapter": 6,
+      "chapter_title": "6. Геометрия плоскости и пространства",
+      "example": 2,
+      "section": "6.2. Плоскость и нормаль",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C06-E002",
+      "depends_on": [],
+      "code": "n = {2, -1, 1}; p = {1, 0, 2};\npoints = {{2, 1, 1}, {0, 0, 0}};\n(n.(# - p) &) /@ points",
+      "sha256": "cf112168fe59c52f6a5d69a973dfb24fcd49d2767e88c40e10c5a6bcab462862",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 14,
+          "example": 2,
+          "section": "14.2. Плоскость и нормаль"
+        }
+      ]
+    },
+    {
+      "id": "P2-C06-E003",
+      "part": 2,
+      "chapter": 6,
+      "chapter_title": "6. Геометрия плоскости и пространства",
+      "example": 3,
+      "section": "6.3. Неравенство Коши–Шварца",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C06-E003",
+      "depends_on": [],
+      "code": "u = {1, 2}; v = {2, -1}; w = {2, 4};\n{u.v, Abs[u.w], Norm[u] Norm[w]}",
+      "sha256": "7ff826b19c3c38adf6f88eff2381bef17261c574e2c0a49976b74ae18d451bf3",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 14,
+          "example": 3,
+          "section": "14.3. Неравенство Коши–Шварца"
+        }
+      ]
+    },
+    {
+      "id": "P2-C06-E004",
+      "part": 2,
+      "chapter": 6,
+      "chapter_title": "6. Геометрия плоскости и пространства",
+      "example": 4,
+      "section": "6.4. Углы и расстояния",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C06-E004",
+      "depends_on": [],
+      "code": "n = {2, -1, 1}; d = 4; b = {2, 1, 4};\np = b - (n.b - d)/(n.n) n;\n{p, n.p, FullSimplify[Norm[b - p]]}",
+      "sha256": "c4aab40f8ee998fbeb960f7892f7a7442b167fe521e31fa71cde53277c6dcc2f",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 14,
+          "example": 4,
+          "section": "14.4. Углы и расстояния"
+        }
+      ]
+    },
+    {
+      "id": "P2-C06-E005",
+      "part": 2,
+      "chapter": 6,
+      "chapter_title": "6. Геометрия плоскости и пространства",
+      "example": 5,
+      "section": "6.5. Векторное произведение",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C06-E005",
+      "depends_on": [],
+      "code": "u = {1, 0, 1}; v = {0, 2, 1};\nnormal = Cross[u, v];\n{normal, normal.u, normal.v,\n Norm[normal], Norm[normal]/2}",
+      "sha256": "21fc7ece3abbfff9805709cddc51c2f8a97cc9f5b4b49c542f3e947071ced898",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 14,
+          "example": 5,
+          "section": "14.5. Векторное произведение"
+        }
+      ]
+    },
+    {
+      "id": "P2-C06-E006",
+      "part": 2,
+      "chapter": 6,
+      "chapter_title": "6. Геометрия плоскости и пространства",
+      "example": 6,
+      "section": "6.6. Момент силы",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C06-E006",
+      "depends_on": [],
+      "code": "r = {3/10, 0, 0};\nforce = {0, 10, 0};\n{Cross[r, force], Cross[r, {10, 0, 0}]}",
+      "sha256": "4363c81e96173aa6d6213420613beeb54c2b8a4e9e357bfdf378bcdb32fa8e8e",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 14,
+          "example": 6,
+          "section": "14.6. Момент силы"
+        }
+      ]
+    },
+    {
+      "id": "P2-C06-E007",
+      "part": 2,
+      "chapter": 6,
+      "chapter_title": "6. Геометрия плоскости и пространства",
+      "example": 7,
+      "section": "6.7. Смешанное произведение и объем",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C06-E007",
+      "depends_on": [],
+      "code": "u = {2, 0, 0}; v = {0, 3, 0}; w = {1, 1, 4};\nmixed = u.Cross[v, w];\n{mixed, Det[Transpose[{u, v, w}]], Abs[mixed]/6}",
+      "sha256": "90839e186aa8d45977afe5852419698c7057b36f0f64c9cf739e14e464160d4e",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 14,
+          "example": 7,
+          "section": "14.7. Смешанное произведение и объем"
+        }
+      ]
+    },
+    {
+      "id": "P2-C06-E008",
+      "part": 2,
+      "chapter": 6,
+      "chapter_title": "6. Геометрия плоскости и пространства",
+      "example": 8,
+      "section": "6.8. Итоговый пример с плоскостями",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P2-C06-E008",
+      "depends_on": [],
+      "code": "ClearAll[t];\nn1 = {1, 1, 1}; n2 = {1, -1, 1};\nline = {2, 1, 0} + t {-1, 0, 1};\n{Expand[n1.line], Expand[n2.line], Cross[n1, n2]}",
+      "sha256": "fec9d997866ebc81ea9998d1b4e537a69ac14f474f24299ca8e3213fa31de73c",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 14,
+          "example": 8,
+          "section": "14.8. Итоговый пример с плоскостями"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E001",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 1,
+      "section": "7.1. Определитель третьего порядка через миноры",
+      "subsection": "7.1.1. Вариант 1. Три направления. Определитель 1",
+      "variant": "7.1.1. Вариант 1. Три направления. Определитель 1",
+      "execution_group": "P2-C07-E001",
+      "depends_on": [],
+      "code": "a = {{2, 1, 2},\n {1, 3, 1},\n {2, 0, 4}};\nminors = Table[Det[Delete[#, j] & /@ Rest[a]],\n {j, 1, 3}];\ncofactors = {1, -1, 1} minors;\ncontributions = a[[1]] cofactors;\nresult = Total[contributions];\n{minors, cofactors, contributions, result, Det[a]}",
+      "sha256": "51ac887706352208d327da0b61da23212ab78a525263272da8e1dbc903fdb966",
+      "verification_expression": "TrueQ[result == Det[a]] && TrueQ[Total[contributions] == Det[a]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 49,
+          "section": "15.9.1. Вариант 1. Три направления. Определитель 1"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E002",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 2,
+      "section": "7.1. Определитель третьего порядка через миноры",
+      "subsection": "7.1.2. Вариант 2. Три направления. Определитель 2",
+      "variant": "7.1.2. Вариант 2. Три направления. Определитель 2",
+      "execution_group": "P2-C07-E002",
+      "depends_on": [],
+      "code": "a = {{3, 1, 2},\n {1, 4, 1},\n {2, 0, 5}};\nminors = Table[Det[Delete[#, j] & /@ Rest[a]],\n {j, 1, 3}];\ncofactors = {1, -1, 1} minors;\ncontributions = a[[1]] cofactors;\nresult = Total[contributions];\n{minors, cofactors, contributions, result, Det[a]}",
+      "sha256": "cfb246268bd2a9a04d727f8e6341279ad57db958b1bedfb4736f13052dc9457a",
+      "verification_expression": "TrueQ[result == Det[a]] && TrueQ[Total[contributions] == Det[a]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 50,
+          "section": "15.9.2. Вариант 2. Три направления. Определитель 2"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E003",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 3,
+      "section": "7.1. Определитель третьего порядка через миноры",
+      "subsection": "7.1.3. Вариант 3. Три направления. Определитель 3",
+      "variant": "7.1.3. Вариант 3. Три направления. Определитель 3",
+      "execution_group": "P2-C07-E003",
+      "depends_on": [],
+      "code": "a = {{4, 1, 2},\n {1, 5, 1},\n {2, 0, 6}};\nminors = Table[Det[Delete[#, j] & /@ Rest[a]],\n {j, 1, 3}];\ncofactors = {1, -1, 1} minors;\ncontributions = a[[1]] cofactors;\nresult = Total[contributions];\n{minors, cofactors, contributions, result, Det[a]}",
+      "sha256": "4c0728e07ed4170da51cd53a68386d3ef1f88afaa429cb8f77fbf4e408113b7f",
+      "verification_expression": "TrueQ[result == Det[a]] && TrueQ[Total[contributions] == Det[a]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 51,
+          "section": "15.9.3. Вариант 3. Три направления. Определитель 3"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E004",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 4,
+      "section": "7.1. Определитель третьего порядка через миноры",
+      "subsection": "7.1.4. Вариант 4. Три направления. Определитель 4",
+      "variant": "7.1.4. Вариант 4. Три направления. Определитель 4",
+      "execution_group": "P2-C07-E004",
+      "depends_on": [],
+      "code": "a = {{5, 1, 2},\n {1, 6, 1},\n {2, 0, 7}};\nminors = Table[Det[Delete[#, j] & /@ Rest[a]],\n {j, 1, 3}];\ncofactors = {1, -1, 1} minors;\ncontributions = a[[1]] cofactors;\nresult = Total[contributions];\n{minors, cofactors, contributions, result, Det[a]}",
+      "sha256": "e276b283d7f4377c897a17db745e9892f1e8058ed4d16b428a3755ba61060bd1",
+      "verification_expression": "TrueQ[result == Det[a]] && TrueQ[Total[contributions] == Det[a]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 52,
+          "section": "15.9.4. Вариант 4. Три направления. Определитель 4"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E005",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 5,
+      "section": "7.1. Определитель третьего порядка через миноры",
+      "subsection": "7.1.5. Вариант 5. Три направления. Определитель 5",
+      "variant": "7.1.5. Вариант 5. Три направления. Определитель 5",
+      "execution_group": "P2-C07-E005",
+      "depends_on": [],
+      "code": "a = {{6, 1, 2},\n {1, 7, 1},\n {2, 0, 8}};\nminors = Table[Det[Delete[#, j] & /@ Rest[a]],\n {j, 1, 3}];\ncofactors = {1, -1, 1} minors;\ncontributions = a[[1]] cofactors;\nresult = Total[contributions];\n{minors, cofactors, contributions, result, Det[a]}",
+      "sha256": "6311e58e6fab076d1213f22f6673f9440235c50c17c626165054337aa9352cf1",
+      "verification_expression": "TrueQ[result == Det[a]] && TrueQ[Total[contributions] == Det[a]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 53,
+          "section": "15.9.5. Вариант 5. Три направления. Определитель 5"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E006",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 6,
+      "section": "7.1. Определитель третьего порядка через миноры",
+      "subsection": "7.1.6. Вариант 6. Три направления. Определитель 6",
+      "variant": "7.1.6. Вариант 6. Три направления. Определитель 6",
+      "execution_group": "P2-C07-E006",
+      "depends_on": [],
+      "code": "a = {{7, 1, 2},\n {1, 8, 1},\n {2, 0, 9}};\nminors = Table[Det[Delete[#, j] & /@ Rest[a]],\n {j, 1, 3}];\ncofactors = {1, -1, 1} minors;\ncontributions = a[[1]] cofactors;\nresult = Total[contributions];\n{minors, cofactors, contributions, result, Det[a]}",
+      "sha256": "06166fd3fcb869899c23e5310929aafc157824fb30f6fb4a20a3b44afe88235b",
+      "verification_expression": "TrueQ[result == Det[a]] && TrueQ[Total[contributions] == Det[a]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 54,
+          "section": "15.9.6. Вариант 6. Три направления. Определитель 6"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E007",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 7,
+      "section": "7.2. Площадь после линейного преобразования",
+      "subsection": "7.2.1. Вариант 1. Преобразование участка. Масштаб 1",
+      "variant": "7.2.1. Вариант 1. Преобразование участка. Масштаб 1",
+      "execution_group": "P2-C07-E007",
+      "depends_on": [],
+      "code": "p = {{2, 1},\n {1, 3}};\na = {{2, 1},\n {0, 2}};\nu = p[[All, 1]]; v = p[[All, 2]];\nnew = Transpose[{a.u, a.v}];\n{Det[p], Det[a], new, Abs[Det[new]],\n Det[new] == Det[a] Det[p]}",
+      "sha256": "d5190d5ec98ae4a4e9228ab408b12c85e3ed34b21997e7187ea5d35ef999a172",
+      "verification_expression": "TrueQ[Det[new] == Det[a] Det[p]] && TrueQ[Abs[Det[new]] == Abs[Det[a]] Abs[Det[p]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 55,
+          "section": "15.10.1. Вариант 1. Преобразование участка. Масштаб 1"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E008",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 8,
+      "section": "7.2. Площадь после линейного преобразования",
+      "subsection": "7.2.2. Вариант 2. Преобразование участка. Масштаб 2",
+      "variant": "7.2.2. Вариант 2. Преобразование участка. Масштаб 2",
+      "execution_group": "P2-C07-E008",
+      "depends_on": [],
+      "code": "p = {{2, 1},\n {1, 4}};\na = {{3, 1},\n {0, 2}};\nu = p[[All, 1]]; v = p[[All, 2]];\nnew = Transpose[{a.u, a.v}];\n{Det[p], Det[a], new, Abs[Det[new]],\n Det[new] == Det[a] Det[p]}",
+      "sha256": "f0f40b08f1b39b91c42e611ee377f21216adc73224bf6ac77d4629f269e6269b",
+      "verification_expression": "TrueQ[Det[new] == Det[a] Det[p]] && TrueQ[Abs[Det[new]] == Abs[Det[a]] Abs[Det[p]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 56,
+          "section": "15.10.2. Вариант 2. Преобразование участка. Масштаб 2"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E009",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 9,
+      "section": "7.2. Площадь после линейного преобразования",
+      "subsection": "7.2.3. Вариант 3. Преобразование участка. Масштаб 3",
+      "variant": "7.2.3. Вариант 3. Преобразование участка. Масштаб 3",
+      "execution_group": "P2-C07-E009",
+      "depends_on": [],
+      "code": "p = {{2, 1},\n {1, 5}};\na = {{4, 1},\n {0, 2}};\nu = p[[All, 1]]; v = p[[All, 2]];\nnew = Transpose[{a.u, a.v}];\n{Det[p], Det[a], new, Abs[Det[new]],\n Det[new] == Det[a] Det[p]}",
+      "sha256": "4ef520a30af980a774370cdfd8702e861f0f1de06b0e026e59dfc9c32663c190",
+      "verification_expression": "TrueQ[Det[new] == Det[a] Det[p]] && TrueQ[Abs[Det[new]] == Abs[Det[a]] Abs[Det[p]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 57,
+          "section": "15.10.3. Вариант 3. Преобразование участка. Масштаб 3"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E010",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 10,
+      "section": "7.2. Площадь после линейного преобразования",
+      "subsection": "7.2.4. Вариант 4. Преобразование участка. Масштаб 4",
+      "variant": "7.2.4. Вариант 4. Преобразование участка. Масштаб 4",
+      "execution_group": "P2-C07-E010",
+      "depends_on": [],
+      "code": "p = {{2, 1},\n {1, 6}};\na = {{5, 1},\n {0, 2}};\nu = p[[All, 1]]; v = p[[All, 2]];\nnew = Transpose[{a.u, a.v}];\n{Det[p], Det[a], new, Abs[Det[new]],\n Det[new] == Det[a] Det[p]}",
+      "sha256": "61669c9bdfb3d28fbd1bfe8a59a4edb0f6127bff2d3d34b8190adb80a5a0f2ff",
+      "verification_expression": "TrueQ[Det[new] == Det[a] Det[p]] && TrueQ[Abs[Det[new]] == Abs[Det[a]] Abs[Det[p]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 58,
+          "section": "15.10.4. Вариант 4. Преобразование участка. Масштаб 4"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E011",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 11,
+      "section": "7.2. Площадь после линейного преобразования",
+      "subsection": "7.2.5. Вариант 5. Преобразование участка. Масштаб 5",
+      "variant": "7.2.5. Вариант 5. Преобразование участка. Масштаб 5",
+      "execution_group": "P2-C07-E011",
+      "depends_on": [],
+      "code": "p = {{2, 1},\n {1, 7}};\na = {{6, 1},\n {0, 2}};\nu = p[[All, 1]]; v = p[[All, 2]];\nnew = Transpose[{a.u, a.v}];\n{Det[p], Det[a], new, Abs[Det[new]],\n Det[new] == Det[a] Det[p]}",
+      "sha256": "b35a238c43d4e9dbb9f41dfe54318605700b3da669051bcb86c7e2432dea98b1",
+      "verification_expression": "TrueQ[Det[new] == Det[a] Det[p]] && TrueQ[Abs[Det[new]] == Abs[Det[a]] Abs[Det[p]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 59,
+          "section": "15.10.5. Вариант 5. Преобразование участка. Масштаб 5"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E012",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 12,
+      "section": "7.2. Площадь после линейного преобразования",
+      "subsection": "7.2.6. Вариант 6. Преобразование участка. Масштаб 6",
+      "variant": "7.2.6. Вариант 6. Преобразование участка. Масштаб 6",
+      "execution_group": "P2-C07-E012",
+      "depends_on": [],
+      "code": "p = {{2, 1},\n {1, 8}};\na = {{7, 1},\n {0, 2}};\nu = p[[All, 1]]; v = p[[All, 2]];\nnew = Transpose[{a.u, a.v}];\n{Det[p], Det[a], new, Abs[Det[new]],\n Det[new] == Det[a] Det[p]}",
+      "sha256": "cbb987943a34cc57a3813d7e2ba185150111f93c684f88c8ce5c32d1c91ccc7b",
+      "verification_expression": "TrueQ[Det[new] == Det[a] Det[p]] && TrueQ[Abs[Det[new]] == Abs[Det[a]] Abs[Det[p]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 60,
+          "section": "15.10.6. Вариант 6. Преобразование участка. Масштаб 6"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E013",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 13,
+      "section": "7.3. Собственные направления симметричной связи",
+      "subsection": "7.3.1. Вариант 1. Два связанных процесса. Связь 1",
+      "variant": "7.3.1. Вариант 1. Два связанных процесса. Связь 1",
+      "execution_group": "P2-C07-E013",
+      "depends_on": [],
+      "code": "a = {{3, 1},\n {1, 3}};\nq = {{1, 1},\n {1, -1}}/Sqrt[2];\nx = {1, 1};\ndiagonal = FullSimplify[Transpose[q].a.q];\ncoordinates = FullSimplify[Transpose[q].x];\n{Eigenvalues[a], diagonal, coordinates,\n FullSimplify[q.diagonal.coordinates - a.x]}",
+      "sha256": "4b72f936a73884e37ffd8a8846c4113fd52dc4f2b03e874c26e7a40e4a51e88f",
+      "verification_expression": "TrueQ[FullSimplify[Transpose[q].q] == IdentityMatrix[2]] && TrueQ[FullSimplify[q.diagonal.Transpose[q]-a] == ConstantArray[0,{2,2}]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 61,
+          "section": "15.11.1. Вариант 1. Два связанных процесса. Связь 1"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E014",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 14,
+      "section": "7.3. Собственные направления симметричной связи",
+      "subsection": "7.3.2. Вариант 2. Два связанных процесса. Связь 2",
+      "variant": "7.3.2. Вариант 2. Два связанных процесса. Связь 2",
+      "execution_group": "P2-C07-E014",
+      "depends_on": [],
+      "code": "a = {{4, 1},\n {1, 4}};\nq = {{1, 1},\n {1, -1}}/Sqrt[2];\nx = {2, 1};\ndiagonal = FullSimplify[Transpose[q].a.q];\ncoordinates = FullSimplify[Transpose[q].x];\n{Eigenvalues[a], diagonal, coordinates,\n FullSimplify[q.diagonal.coordinates - a.x]}",
+      "sha256": "a969ee82e9e8bf3d47797204dfe5bb2a47df2e07d616b3e04fb8ac0985da77c9",
+      "verification_expression": "TrueQ[FullSimplify[Transpose[q].q] == IdentityMatrix[2]] && TrueQ[FullSimplify[q.diagonal.Transpose[q]-a] == ConstantArray[0,{2,2}]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 62,
+          "section": "15.11.2. Вариант 2. Два связанных процесса. Связь 2"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E015",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 15,
+      "section": "7.3. Собственные направления симметричной связи",
+      "subsection": "7.3.3. Вариант 3. Два связанных процесса. Связь 3",
+      "variant": "7.3.3. Вариант 3. Два связанных процесса. Связь 3",
+      "execution_group": "P2-C07-E015",
+      "depends_on": [],
+      "code": "a = {{5, 1},\n {1, 5}};\nq = {{1, 1},\n {1, -1}}/Sqrt[2];\nx = {3, 1};\ndiagonal = FullSimplify[Transpose[q].a.q];\ncoordinates = FullSimplify[Transpose[q].x];\n{Eigenvalues[a], diagonal, coordinates,\n FullSimplify[q.diagonal.coordinates - a.x]}",
+      "sha256": "b2975d91e0e4a9124a2821c8b2ad3e15dd5a1ac847467121b49a79549fed662c",
+      "verification_expression": "TrueQ[FullSimplify[Transpose[q].q] == IdentityMatrix[2]] && TrueQ[FullSimplify[q.diagonal.Transpose[q]-a] == ConstantArray[0,{2,2}]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 63,
+          "section": "15.11.3. Вариант 3. Два связанных процесса. Связь 3"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E016",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 16,
+      "section": "7.3. Собственные направления симметричной связи",
+      "subsection": "7.3.4. Вариант 4. Два связанных процесса. Связь 4",
+      "variant": "7.3.4. Вариант 4. Два связанных процесса. Связь 4",
+      "execution_group": "P2-C07-E016",
+      "depends_on": [],
+      "code": "a = {{6, 1},\n {1, 6}};\nq = {{1, 1},\n {1, -1}}/Sqrt[2];\nx = {4, 1};\ndiagonal = FullSimplify[Transpose[q].a.q];\ncoordinates = FullSimplify[Transpose[q].x];\n{Eigenvalues[a], diagonal, coordinates,\n FullSimplify[q.diagonal.coordinates - a.x]}",
+      "sha256": "f074666cbcaafd199c185965616c05ddda4972a9d80e3612b1f13cf0dcc4efff",
+      "verification_expression": "TrueQ[FullSimplify[Transpose[q].q] == IdentityMatrix[2]] && TrueQ[FullSimplify[q.diagonal.Transpose[q]-a] == ConstantArray[0,{2,2}]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 64,
+          "section": "15.11.4. Вариант 4. Два связанных процесса. Связь 4"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E017",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 17,
+      "section": "7.3. Собственные направления симметричной связи",
+      "subsection": "7.3.5. Вариант 5. Два связанных процесса. Связь 5",
+      "variant": "7.3.5. Вариант 5. Два связанных процесса. Связь 5",
+      "execution_group": "P2-C07-E017",
+      "depends_on": [],
+      "code": "a = {{7, 1},\n {1, 7}};\nq = {{1, 1},\n {1, -1}}/Sqrt[2];\nx = {5, 1};\ndiagonal = FullSimplify[Transpose[q].a.q];\ncoordinates = FullSimplify[Transpose[q].x];\n{Eigenvalues[a], diagonal, coordinates,\n FullSimplify[q.diagonal.coordinates - a.x]}",
+      "sha256": "55edc76e53880969d53361aeeb73fd4242be0325c1efa06633d9224767d7cc54",
+      "verification_expression": "TrueQ[FullSimplify[Transpose[q].q] == IdentityMatrix[2]] && TrueQ[FullSimplify[q.diagonal.Transpose[q]-a] == ConstantArray[0,{2,2}]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 65,
+          "section": "15.11.5. Вариант 5. Два связанных процесса. Связь 5"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E018",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 18,
+      "section": "7.3. Собственные направления симметричной связи",
+      "subsection": "7.3.6. Вариант 6. Два связанных процесса. Связь 6",
+      "variant": "7.3.6. Вариант 6. Два связанных процесса. Связь 6",
+      "execution_group": "P2-C07-E018",
+      "depends_on": [],
+      "code": "a = {{8, 1},\n {1, 8}};\nq = {{1, 1},\n {1, -1}}/Sqrt[2];\nx = {6, 1};\ndiagonal = FullSimplify[Transpose[q].a.q];\ncoordinates = FullSimplify[Transpose[q].x];\n{Eigenvalues[a], diagonal, coordinates,\n FullSimplify[q.diagonal.coordinates - a.x]}",
+      "sha256": "da57f308e62a4663aa188de7c32c7e631ef81d6e0c9b45f6d3ab7ed6982971e9",
+      "verification_expression": "TrueQ[FullSimplify[Transpose[q].q] == IdentityMatrix[2]] && TrueQ[FullSimplify[q.diagonal.Transpose[q]-a] == ConstantArray[0,{2,2}]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 66,
+          "section": "15.11.6. Вариант 6. Два связанных процесса. Связь 6"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E019",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 19,
+      "section": "7.4. Степени матрицы через Кэли–Гамильтона",
+      "subsection": "7.4.1. Вариант 1. Повторное действие. Степень 4",
+      "variant": "7.4.1. Вариант 1. Повторное действие. Степень 4",
+      "execution_group": "P2-C07-E019",
+      "depends_on": [],
+      "code": "a = {{2, 1},\n {1, 2}};\npower = 4;\ncoeff = {0, 1};\nhistory = Table[\n coeff = {4 coeff[[1]] + coeff[[2]],\n   -3 coeff[[1]]};\n Prepend[coeff, k], {k, 1, power}];\nresult = coeff[[1]] a + coeff[[2]] IdentityMatrix[2];\n{history, result, result - MatrixPower[a, power]}",
+      "sha256": "d7463d7412c5d6c3a628891712e382ebd89c7d64ece660f6f51f9ad2931105fb",
+      "verification_expression": "TrueQ[result == MatrixPower[a,power]] && TrueQ[a.a-4 a+3 IdentityMatrix[2] == ConstantArray[0,{2,2}]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 67,
+          "section": "15.12.1. Вариант 1. Повторное действие. Степень 4"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E020",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 20,
+      "section": "7.4. Степени матрицы через Кэли–Гамильтона",
+      "subsection": "7.4.2. Вариант 2. Повторное действие. Степень 5",
+      "variant": "7.4.2. Вариант 2. Повторное действие. Степень 5",
+      "execution_group": "P2-C07-E020",
+      "depends_on": [],
+      "code": "a = {{2, 1},\n {1, 2}};\npower = 5;\ncoeff = {0, 1};\nhistory = Table[\n coeff = {4 coeff[[1]] + coeff[[2]],\n   -3 coeff[[1]]};\n Prepend[coeff, k], {k, 1, power}];\nresult = coeff[[1]] a + coeff[[2]] IdentityMatrix[2];\n{history, result, result - MatrixPower[a, power]}",
+      "sha256": "563fe25314bc5818a8d43917412ac77ee2f786c0bf74826d44754ff97845cd47",
+      "verification_expression": "TrueQ[result == MatrixPower[a,power]] && TrueQ[a.a-4 a+3 IdentityMatrix[2] == ConstantArray[0,{2,2}]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 68,
+          "section": "15.12.2. Вариант 2. Повторное действие. Степень 5"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E021",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 21,
+      "section": "7.4. Степени матрицы через Кэли–Гамильтона",
+      "subsection": "7.4.3. Вариант 3. Повторное действие. Степень 6",
+      "variant": "7.4.3. Вариант 3. Повторное действие. Степень 6",
+      "execution_group": "P2-C07-E021",
+      "depends_on": [],
+      "code": "a = {{2, 1},\n {1, 2}};\npower = 6;\ncoeff = {0, 1};\nhistory = Table[\n coeff = {4 coeff[[1]] + coeff[[2]],\n   -3 coeff[[1]]};\n Prepend[coeff, k], {k, 1, power}];\nresult = coeff[[1]] a + coeff[[2]] IdentityMatrix[2];\n{history, result, result - MatrixPower[a, power]}",
+      "sha256": "5cc7ddaa1f0817f5e5b8c3c5e6bf45127ce3da571e33bd7543a81a6096895875",
+      "verification_expression": "TrueQ[result == MatrixPower[a,power]] && TrueQ[a.a-4 a+3 IdentityMatrix[2] == ConstantArray[0,{2,2}]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 69,
+          "section": "15.12.3. Вариант 3. Повторное действие. Степень 6"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E022",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 22,
+      "section": "7.4. Степени матрицы через Кэли–Гамильтона",
+      "subsection": "7.4.4. Вариант 4. Повторное действие. Степень 7",
+      "variant": "7.4.4. Вариант 4. Повторное действие. Степень 7",
+      "execution_group": "P2-C07-E022",
+      "depends_on": [],
+      "code": "a = {{2, 1},\n {1, 2}};\npower = 7;\ncoeff = {0, 1};\nhistory = Table[\n coeff = {4 coeff[[1]] + coeff[[2]],\n   -3 coeff[[1]]};\n Prepend[coeff, k], {k, 1, power}];\nresult = coeff[[1]] a + coeff[[2]] IdentityMatrix[2];\n{history, result, result - MatrixPower[a, power]}",
+      "sha256": "a03b46800ef4279131d6af5a3e2046d283de3d426afccbc05f9432189bb40ee8",
+      "verification_expression": "TrueQ[result == MatrixPower[a,power]] && TrueQ[a.a-4 a+3 IdentityMatrix[2] == ConstantArray[0,{2,2}]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 70,
+          "section": "15.12.4. Вариант 4. Повторное действие. Степень 7"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E023",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 23,
+      "section": "7.4. Степени матрицы через Кэли–Гамильтона",
+      "subsection": "7.4.5. Вариант 5. Повторное действие. Степень 8",
+      "variant": "7.4.5. Вариант 5. Повторное действие. Степень 8",
+      "execution_group": "P2-C07-E023",
+      "depends_on": [],
+      "code": "a = {{2, 1},\n {1, 2}};\npower = 8;\ncoeff = {0, 1};\nhistory = Table[\n coeff = {4 coeff[[1]] + coeff[[2]],\n   -3 coeff[[1]]};\n Prepend[coeff, k], {k, 1, power}];\nresult = coeff[[1]] a + coeff[[2]] IdentityMatrix[2];\n{history, result, result - MatrixPower[a, power]}",
+      "sha256": "0c3278d7d475a8f03a3074f8fa00cae9c2317af2636dc2919e2b6b58d6052cd1",
+      "verification_expression": "TrueQ[result == MatrixPower[a,power]] && TrueQ[a.a-4 a+3 IdentityMatrix[2] == ConstantArray[0,{2,2}]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 71,
+          "section": "15.12.5. Вариант 5. Повторное действие. Степень 8"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E024",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 24,
+      "section": "7.4. Степени матрицы через Кэли–Гамильтона",
+      "subsection": "7.4.6. Вариант 6. Повторное действие. Степень 9",
+      "variant": "7.4.6. Вариант 6. Повторное действие. Степень 9",
+      "execution_group": "P2-C07-E024",
+      "depends_on": [],
+      "code": "a = {{2, 1},\n {1, 2}};\npower = 9;\ncoeff = {0, 1};\nhistory = Table[\n coeff = {4 coeff[[1]] + coeff[[2]],\n   -3 coeff[[1]]};\n Prepend[coeff, k], {k, 1, power}];\nresult = coeff[[1]] a + coeff[[2]] IdentityMatrix[2];\n{history, result, result - MatrixPower[a, power]}",
+      "sha256": "2b701ace5163e8d5dfb52ec410d63022e6a5665760db74f82579fa02942bb8e8",
+      "verification_expression": "TrueQ[result == MatrixPower[a,power]] && TrueQ[a.a-4 a+3 IdentityMatrix[2] == ConstantArray[0,{2,2}]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 72,
+          "section": "15.12.6. Вариант 6. Повторное действие. Степень 9"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E025",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 25,
+      "section": "7.5. Выделение квадратов и LDLᵀ",
+      "subsection": "7.5.1. Вариант 1. Энергия двух координат. Форма 1",
+      "variant": "7.5.1. Вариант 1. Энергия двух координат. Форма 1",
+      "execution_group": "P2-C07-E025",
+      "depends_on": [],
+      "code": "ClearAll[x, y];\na = {{2, 1},\n {1, 2}};\nd1 = a[[1, 1]];\nell = a[[2, 1]]/d1;\nd2 = a[[2, 2]] - ell a[[1, 2]];\nl = {{1, 0},\n {ell, 1}};\nd = DiagonalMatrix[{d1, d2}];\nform = {x, y}.a.{x, y};\nsquares = d1 (x + ell y)^2 + d2 y^2;\n{l.d.Transpose[l] == a, Expand[form - squares],\n d1 > 0 && d2 > 0}",
+      "sha256": "ca48483c5fc9c05d842a0b18e46fc4e82df8d19578f79f7f22f2bc535464fbff",
+      "verification_expression": "TrueQ[l.d.Transpose[l] == a] && TrueQ[Expand[form-squares] == 0] && TrueQ[d1 > 0 && d2 > 0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 115,
+          "section": "15.20.1. Вариант 1. Энергия двух координат. Форма 1"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E026",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 26,
+      "section": "7.5. Выделение квадратов и LDLᵀ",
+      "subsection": "7.5.2. Вариант 2. Энергия двух координат. Форма 2",
+      "variant": "7.5.2. Вариант 2. Энергия двух координат. Форма 2",
+      "execution_group": "P2-C07-E026",
+      "depends_on": [],
+      "code": "ClearAll[x, y];\na = {{3, 1},\n {1, 2}};\nd1 = a[[1, 1]];\nell = a[[2, 1]]/d1;\nd2 = a[[2, 2]] - ell a[[1, 2]];\nl = {{1, 0},\n {ell, 1}};\nd = DiagonalMatrix[{d1, d2}];\nform = {x, y}.a.{x, y};\nsquares = d1 (x + ell y)^2 + d2 y^2;\n{l.d.Transpose[l] == a, Expand[form - squares],\n d1 > 0 && d2 > 0}",
+      "sha256": "261d39027606fbf5509c24fad4e5b053fde6e64ef108ea7aa35c76bf86481a46",
+      "verification_expression": "TrueQ[l.d.Transpose[l] == a] && TrueQ[Expand[form-squares] == 0] && TrueQ[d1 > 0 && d2 > 0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 116,
+          "section": "15.20.2. Вариант 2. Энергия двух координат. Форма 2"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E027",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 27,
+      "section": "7.5. Выделение квадратов и LDLᵀ",
+      "subsection": "7.5.3. Вариант 3. Энергия двух координат. Форма 3",
+      "variant": "7.5.3. Вариант 3. Энергия двух координат. Форма 3",
+      "execution_group": "P2-C07-E027",
+      "depends_on": [],
+      "code": "ClearAll[x, y];\na = {{4, 1},\n {1, 2}};\nd1 = a[[1, 1]];\nell = a[[2, 1]]/d1;\nd2 = a[[2, 2]] - ell a[[1, 2]];\nl = {{1, 0},\n {ell, 1}};\nd = DiagonalMatrix[{d1, d2}];\nform = {x, y}.a.{x, y};\nsquares = d1 (x + ell y)^2 + d2 y^2;\n{l.d.Transpose[l] == a, Expand[form - squares],\n d1 > 0 && d2 > 0}",
+      "sha256": "f0e12ff2d6d7720cab418cef332c16dbfbce331c0e014a2c7d105b0df4f314cc",
+      "verification_expression": "TrueQ[l.d.Transpose[l] == a] && TrueQ[Expand[form-squares] == 0] && TrueQ[d1 > 0 && d2 > 0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 117,
+          "section": "15.20.3. Вариант 3. Энергия двух координат. Форма 3"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E028",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 28,
+      "section": "7.5. Выделение квадратов и LDLᵀ",
+      "subsection": "7.5.4. Вариант 4. Энергия двух координат. Форма 4",
+      "variant": "7.5.4. Вариант 4. Энергия двух координат. Форма 4",
+      "execution_group": "P2-C07-E028",
+      "depends_on": [],
+      "code": "ClearAll[x, y];\na = {{5, 1},\n {1, 2}};\nd1 = a[[1, 1]];\nell = a[[2, 1]]/d1;\nd2 = a[[2, 2]] - ell a[[1, 2]];\nl = {{1, 0},\n {ell, 1}};\nd = DiagonalMatrix[{d1, d2}];\nform = {x, y}.a.{x, y};\nsquares = d1 (x + ell y)^2 + d2 y^2;\n{l.d.Transpose[l] == a, Expand[form - squares],\n d1 > 0 && d2 > 0}",
+      "sha256": "8e6fcd15b293c8cdc9b7362872c623a323e6edaaca89ee3316857e1dd89941f7",
+      "verification_expression": "TrueQ[l.d.Transpose[l] == a] && TrueQ[Expand[form-squares] == 0] && TrueQ[d1 > 0 && d2 > 0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 118,
+          "section": "15.20.4. Вариант 4. Энергия двух координат. Форма 4"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E029",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 29,
+      "section": "7.5. Выделение квадратов и LDLᵀ",
+      "subsection": "7.5.5. Вариант 5. Энергия двух координат. Форма 5",
+      "variant": "7.5.5. Вариант 5. Энергия двух координат. Форма 5",
+      "execution_group": "P2-C07-E029",
+      "depends_on": [],
+      "code": "ClearAll[x, y];\na = {{6, 1},\n {1, 2}};\nd1 = a[[1, 1]];\nell = a[[2, 1]]/d1;\nd2 = a[[2, 2]] - ell a[[1, 2]];\nl = {{1, 0},\n {ell, 1}};\nd = DiagonalMatrix[{d1, d2}];\nform = {x, y}.a.{x, y};\nsquares = d1 (x + ell y)^2 + d2 y^2;\n{l.d.Transpose[l] == a, Expand[form - squares],\n d1 > 0 && d2 > 0}",
+      "sha256": "ab071c0747ad251b71f6b3fe3cbe27dc7678978e60028f883e71fa48384e8a1b",
+      "verification_expression": "TrueQ[l.d.Transpose[l] == a] && TrueQ[Expand[form-squares] == 0] && TrueQ[d1 > 0 && d2 > 0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 119,
+          "section": "15.20.5. Вариант 5. Энергия двух координат. Форма 5"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E030",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 30,
+      "section": "7.5. Выделение квадратов и LDLᵀ",
+      "subsection": "7.5.6. Вариант 6. Энергия двух координат. Форма 6",
+      "variant": "7.5.6. Вариант 6. Энергия двух координат. Форма 6",
+      "execution_group": "P2-C07-E030",
+      "depends_on": [],
+      "code": "ClearAll[x, y];\na = {{7, 1},\n {1, 2}};\nd1 = a[[1, 1]];\nell = a[[2, 1]]/d1;\nd2 = a[[2, 2]] - ell a[[1, 2]];\nl = {{1, 0},\n {ell, 1}};\nd = DiagonalMatrix[{d1, d2}];\nform = {x, y}.a.{x, y};\nsquares = d1 (x + ell y)^2 + d2 y^2;\n{l.d.Transpose[l] == a, Expand[form - squares],\n d1 > 0 && d2 > 0}",
+      "sha256": "13429479fa3e2ba06200375dc84f07d83287e40ea087f6e6971e1d7b9fcb157c",
+      "verification_expression": "TrueQ[l.d.Transpose[l] == a] && TrueQ[Expand[form-squares] == 0] && TrueQ[d1 > 0 && d2 > 0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 120,
+          "section": "15.20.6. Вариант 6. Энергия двух координат. Форма 6"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E031",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 31,
+      "section": "7.6. Минимум квадратичной функции",
+      "subsection": "7.6.1. Вариант 1. Оптимальная настройка. Энергия 1",
+      "variant": "7.6.1. Вариант 1. Оптимальная настройка. Энергия 1",
+      "execution_group": "P2-C07-E031",
+      "depends_on": [],
+      "code": "ClearAll[x, y, h1, h2];\na = {{3, 1},\n {1, 2}}; b = {1, 3};\nvec = {x, y};\nf = Expand[vec.a.vec/2 - b.vec];\npoint = LinearSolve[a, b];\nminimum = f /. Thread[vec -> point];\nshifted = f /. Thread[vec -> point + {h1, h2}];\n{point, minimum,\n Expand[shifted - minimum], a.point - b}",
+      "sha256": "4c3526dba03298a71f24acf4eb4fc27d6b8d3c292de81c21701da17ef3ee37c7",
+      "verification_expression": "TrueQ[a.point == b] && TrueQ[Expand[shifted-minimum-{h1,h2}.a.{h1,h2}/2] == 0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 121,
+          "section": "15.21.1. Вариант 1. Оптимальная настройка. Энергия 1"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E032",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 32,
+      "section": "7.6. Минимум квадратичной функции",
+      "subsection": "7.6.2. Вариант 2. Оптимальная настройка. Энергия 2",
+      "variant": "7.6.2. Вариант 2. Оптимальная настройка. Энергия 2",
+      "execution_group": "P2-C07-E032",
+      "depends_on": [],
+      "code": "ClearAll[x, y, h1, h2];\na = {{4, 1},\n {1, 2}}; b = {2, 3};\nvec = {x, y};\nf = Expand[vec.a.vec/2 - b.vec];\npoint = LinearSolve[a, b];\nminimum = f /. Thread[vec -> point];\nshifted = f /. Thread[vec -> point + {h1, h2}];\n{point, minimum,\n Expand[shifted - minimum], a.point - b}",
+      "sha256": "5d6038a082ad086cdea2961ab2b5e434bbee14755752651f3f47b5581646c1da",
+      "verification_expression": "TrueQ[a.point == b] && TrueQ[Expand[shifted-minimum-{h1,h2}.a.{h1,h2}/2] == 0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 122,
+          "section": "15.21.2. Вариант 2. Оптимальная настройка. Энергия 2"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E033",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 33,
+      "section": "7.6. Минимум квадратичной функции",
+      "subsection": "7.6.3. Вариант 3. Оптимальная настройка. Энергия 3",
+      "variant": "7.6.3. Вариант 3. Оптимальная настройка. Энергия 3",
+      "execution_group": "P2-C07-E033",
+      "depends_on": [],
+      "code": "ClearAll[x, y, h1, h2];\na = {{5, 1},\n {1, 2}}; b = {3, 3};\nvec = {x, y};\nf = Expand[vec.a.vec/2 - b.vec];\npoint = LinearSolve[a, b];\nminimum = f /. Thread[vec -> point];\nshifted = f /. Thread[vec -> point + {h1, h2}];\n{point, minimum,\n Expand[shifted - minimum], a.point - b}",
+      "sha256": "6544b248ef7770dd411f2453f02c5efefe1f8b70860fcd5adae619e20e8a80c1",
+      "verification_expression": "TrueQ[a.point == b] && TrueQ[Expand[shifted-minimum-{h1,h2}.a.{h1,h2}/2] == 0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 123,
+          "section": "15.21.3. Вариант 3. Оптимальная настройка. Энергия 3"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E034",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 34,
+      "section": "7.6. Минимум квадратичной функции",
+      "subsection": "7.6.4. Вариант 4. Оптимальная настройка. Энергия 4",
+      "variant": "7.6.4. Вариант 4. Оптимальная настройка. Энергия 4",
+      "execution_group": "P2-C07-E034",
+      "depends_on": [],
+      "code": "ClearAll[x, y, h1, h2];\na = {{6, 1},\n {1, 2}}; b = {4, 3};\nvec = {x, y};\nf = Expand[vec.a.vec/2 - b.vec];\npoint = LinearSolve[a, b];\nminimum = f /. Thread[vec -> point];\nshifted = f /. Thread[vec -> point + {h1, h2}];\n{point, minimum,\n Expand[shifted - minimum], a.point - b}",
+      "sha256": "d2e04967163b3ebdc9b3aedb5a4b6c90814889fe829b8237965ded06a66d09a1",
+      "verification_expression": "TrueQ[a.point == b] && TrueQ[Expand[shifted-minimum-{h1,h2}.a.{h1,h2}/2] == 0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 124,
+          "section": "15.21.4. Вариант 4. Оптимальная настройка. Энергия 4"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E035",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 35,
+      "section": "7.6. Минимум квадратичной функции",
+      "subsection": "7.6.5. Вариант 5. Оптимальная настройка. Энергия 5",
+      "variant": "7.6.5. Вариант 5. Оптимальная настройка. Энергия 5",
+      "execution_group": "P2-C07-E035",
+      "depends_on": [],
+      "code": "ClearAll[x, y, h1, h2];\na = {{7, 1},\n {1, 2}}; b = {5, 3};\nvec = {x, y};\nf = Expand[vec.a.vec/2 - b.vec];\npoint = LinearSolve[a, b];\nminimum = f /. Thread[vec -> point];\nshifted = f /. Thread[vec -> point + {h1, h2}];\n{point, minimum,\n Expand[shifted - minimum], a.point - b}",
+      "sha256": "392c3255e436206e76f18f63111070d5a4e3106efbf9130dd7ae7fd56e332ba3",
+      "verification_expression": "TrueQ[a.point == b] && TrueQ[Expand[shifted-minimum-{h1,h2}.a.{h1,h2}/2] == 0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 125,
+          "section": "15.21.5. Вариант 5. Оптимальная настройка. Энергия 5"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E036",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 36,
+      "section": "7.6. Минимум квадратичной функции",
+      "subsection": "7.6.6. Вариант 6. Оптимальная настройка. Энергия 6",
+      "variant": "7.6.6. Вариант 6. Оптимальная настройка. Энергия 6",
+      "execution_group": "P2-C07-E036",
+      "depends_on": [],
+      "code": "ClearAll[x, y, h1, h2];\na = {{8, 1},\n {1, 2}}; b = {6, 3};\nvec = {x, y};\nf = Expand[vec.a.vec/2 - b.vec];\npoint = LinearSolve[a, b];\nminimum = f /. Thread[vec -> point];\nshifted = f /. Thread[vec -> point + {h1, h2}];\n{point, minimum,\n Expand[shifted - minimum], a.point - b}",
+      "sha256": "1c8e0ab614dc6c1e80fa8e50b87f50f01ba8814304b9714bd5612b382e4fb2e1",
+      "verification_expression": "TrueQ[a.point == b] && TrueQ[Expand[shifted-minimum-{h1,h2}.a.{h1,h2}/2] == 0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 126,
+          "section": "15.21.6. Вариант 6. Оптимальная настройка. Энергия 6"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E037",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 37,
+      "section": "7.7. Экспонента нильпотентного возмущения",
+      "subsection": "7.7.1. Вариант 1. Три последовательных звена. Связь 1",
+      "variant": "7.7.1. Вариант 1. Три последовательных звена. Связь 1",
+      "execution_group": "P2-C07-E037",
+      "depends_on": [],
+      "code": "ClearAll[t];\nn = {{0, 1, 0},\n {0, 0, 1},\n {0, 0, 0}};\na = -IdentityMatrix[3] + n;\npoly = IdentityMatrix[3] + t n + t^2 n.n/2;\nx = Exp[-t] poly.{0, 0, 1};\n{n.n, MatrixPower[n, 3], x,\n FullSimplify[D[x, t] - a.x], x /. t -> 0,\n FullSimplify[x - MatrixExp[t a].{0, 0, 1}]}",
+      "sha256": "818e39a4ff1ac0ebdde84741db15f5fd4f6ad09fe638fad374d02fe32401b24c",
+      "verification_expression": "TrueQ[MatrixPower[n,3] == ConstantArray[0,{3,3}]] && TrueQ[FullSimplify[D[x,t]-a.x] == {0,0,0}]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 127,
+          "section": "15.22.1. Вариант 1. Три последовательных звена. Связь 1"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E038",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 38,
+      "section": "7.7. Экспонента нильпотентного возмущения",
+      "subsection": "7.7.2. Вариант 2. Три последовательных звена. Связь 2",
+      "variant": "7.7.2. Вариант 2. Три последовательных звена. Связь 2",
+      "execution_group": "P2-C07-E038",
+      "depends_on": [],
+      "code": "ClearAll[t];\nn = {{0, 2, 0},\n {0, 0, 1},\n {0, 0, 0}};\na = -IdentityMatrix[3] + n;\npoly = IdentityMatrix[3] + t n + t^2 n.n/2;\nx = Exp[-t] poly.{0, 0, 1};\n{n.n, MatrixPower[n, 3], x,\n FullSimplify[D[x, t] - a.x], x /. t -> 0,\n FullSimplify[x - MatrixExp[t a].{0, 0, 1}]}",
+      "sha256": "3ffeaf50d048f38a7efd3e8e30d08fcf12dece5b88a640f1726ee99111377378",
+      "verification_expression": "TrueQ[MatrixPower[n,3] == ConstantArray[0,{3,3}]] && TrueQ[FullSimplify[D[x,t]-a.x] == {0,0,0}]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 128,
+          "section": "15.22.2. Вариант 2. Три последовательных звена. Связь 2"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E039",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 39,
+      "section": "7.7. Экспонента нильпотентного возмущения",
+      "subsection": "7.7.3. Вариант 3. Три последовательных звена. Связь 3",
+      "variant": "7.7.3. Вариант 3. Три последовательных звена. Связь 3",
+      "execution_group": "P2-C07-E039",
+      "depends_on": [],
+      "code": "ClearAll[t];\nn = {{0, 3, 0},\n {0, 0, 1},\n {0, 0, 0}};\na = -IdentityMatrix[3] + n;\npoly = IdentityMatrix[3] + t n + t^2 n.n/2;\nx = Exp[-t] poly.{0, 0, 1};\n{n.n, MatrixPower[n, 3], x,\n FullSimplify[D[x, t] - a.x], x /. t -> 0,\n FullSimplify[x - MatrixExp[t a].{0, 0, 1}]}",
+      "sha256": "ce63276d6ad76aa2bf46bb54ebbce24d6c33454a8c4c45d86a29f7d916f97295",
+      "verification_expression": "TrueQ[MatrixPower[n,3] == ConstantArray[0,{3,3}]] && TrueQ[FullSimplify[D[x,t]-a.x] == {0,0,0}]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 129,
+          "section": "15.22.3. Вариант 3. Три последовательных звена. Связь 3"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E040",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 40,
+      "section": "7.7. Экспонента нильпотентного возмущения",
+      "subsection": "7.7.4. Вариант 4. Три последовательных звена. Связь 4",
+      "variant": "7.7.4. Вариант 4. Три последовательных звена. Связь 4",
+      "execution_group": "P2-C07-E040",
+      "depends_on": [],
+      "code": "ClearAll[t];\nn = {{0, 4, 0},\n {0, 0, 1},\n {0, 0, 0}};\na = -IdentityMatrix[3] + n;\npoly = IdentityMatrix[3] + t n + t^2 n.n/2;\nx = Exp[-t] poly.{0, 0, 1};\n{n.n, MatrixPower[n, 3], x,\n FullSimplify[D[x, t] - a.x], x /. t -> 0,\n FullSimplify[x - MatrixExp[t a].{0, 0, 1}]}",
+      "sha256": "7e292429dec557719dd2860d5c42e9f14498d29d281739f52450cce72a3611ae",
+      "verification_expression": "TrueQ[MatrixPower[n,3] == ConstantArray[0,{3,3}]] && TrueQ[FullSimplify[D[x,t]-a.x] == {0,0,0}]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 130,
+          "section": "15.22.4. Вариант 4. Три последовательных звена. Связь 4"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E041",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 41,
+      "section": "7.7. Экспонента нильпотентного возмущения",
+      "subsection": "7.7.5. Вариант 5. Три последовательных звена. Связь 5",
+      "variant": "7.7.5. Вариант 5. Три последовательных звена. Связь 5",
+      "execution_group": "P2-C07-E041",
+      "depends_on": [],
+      "code": "ClearAll[t];\nn = {{0, 5, 0},\n {0, 0, 1},\n {0, 0, 0}};\na = -IdentityMatrix[3] + n;\npoly = IdentityMatrix[3] + t n + t^2 n.n/2;\nx = Exp[-t] poly.{0, 0, 1};\n{n.n, MatrixPower[n, 3], x,\n FullSimplify[D[x, t] - a.x], x /. t -> 0,\n FullSimplify[x - MatrixExp[t a].{0, 0, 1}]}",
+      "sha256": "5cabfcf34c8712ea03cc65cdeb43d03e5ec9296e751f7ca2778633b2e1b3fe03",
+      "verification_expression": "TrueQ[MatrixPower[n,3] == ConstantArray[0,{3,3}]] && TrueQ[FullSimplify[D[x,t]-a.x] == {0,0,0}]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 131,
+          "section": "15.22.5. Вариант 5. Три последовательных звена. Связь 5"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E042",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 42,
+      "section": "7.7. Экспонента нильпотентного возмущения",
+      "subsection": "7.7.6. Вариант 6. Три последовательных звена. Связь 6",
+      "variant": "7.7.6. Вариант 6. Три последовательных звена. Связь 6",
+      "execution_group": "P2-C07-E042",
+      "depends_on": [],
+      "code": "ClearAll[t];\nn = {{0, 6, 0},\n {0, 0, 1},\n {0, 0, 0}};\na = -IdentityMatrix[3] + n;\npoly = IdentityMatrix[3] + t n + t^2 n.n/2;\nx = Exp[-t] poly.{0, 0, 1};\n{n.n, MatrixPower[n, 3], x,\n FullSimplify[D[x, t] - a.x], x /. t -> 0,\n FullSimplify[x - MatrixExp[t a].{0, 0, 1}]}",
+      "sha256": "57ec79756b4f4451acc0c79c1b266a591b15497b3b385b32f25a9ceecb716e75",
+      "verification_expression": "TrueQ[MatrixPower[n,3] == ConstantArray[0,{3,3}]] && TrueQ[FullSimplify[D[x,t]-a.x] == {0,0,0}]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 132,
+          "section": "15.22.6. Вариант 6. Три последовательных звена. Связь 6"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E043",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 43,
+      "section": "7.8. Нормаль, площадь и объем",
+      "subsection": "7.8.1. Вариант 1. Геометрия пространственной ячейки. Размер 1",
+      "variant": "7.8.1. Вариант 1. Геометрия пространственной ячейки. Размер 1",
+      "execution_group": "P2-C07-E043",
+      "depends_on": [],
+      "code": "u = {1, 0, 1}; v = {0, 2, 1}; w = {1, 1, 3};\nn = Cross[u, v];\narea = Norm[n];\nmixed = n.w;\nheight = Abs[mixed]/area;\nvolume = Abs[mixed]/6;\n{n, n.u, n.v, area, mixed,\n Det[Transpose[{u, v, w}]], height, volume}",
+      "sha256": "0975db8a602ad2840d94392616d8cec75b5b2a3a6fcbf477ecc12360463cffdd",
+      "verification_expression": "TrueQ[n.u == 0] && TrueQ[n.v == 0] && TrueQ[mixed == Det[Transpose[{u,v,w}]]] && TrueQ[volume == Abs[mixed]/6]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 133,
+          "section": "15.23.1. Вариант 1. Геометрия пространственной ячейки. Размер 1"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E044",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 44,
+      "section": "7.8. Нормаль, площадь и объем",
+      "subsection": "7.8.2. Вариант 2. Геометрия пространственной ячейки. Размер 2",
+      "variant": "7.8.2. Вариант 2. Геометрия пространственной ячейки. Размер 2",
+      "execution_group": "P2-C07-E044",
+      "depends_on": [],
+      "code": "u = {2, 0, 1}; v = {0, 2, 1}; w = {1, 1, 4};\nn = Cross[u, v];\narea = Norm[n];\nmixed = n.w;\nheight = Abs[mixed]/area;\nvolume = Abs[mixed]/6;\n{n, n.u, n.v, area, mixed,\n Det[Transpose[{u, v, w}]], height, volume}",
+      "sha256": "5a4e11bb97638f1e9b9609519ba838a117bfe40cd41ab39491dce589d4d5e92e",
+      "verification_expression": "TrueQ[n.u == 0] && TrueQ[n.v == 0] && TrueQ[mixed == Det[Transpose[{u,v,w}]]] && TrueQ[volume == Abs[mixed]/6]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 134,
+          "section": "15.23.2. Вариант 2. Геометрия пространственной ячейки. Размер 2"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E045",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 45,
+      "section": "7.8. Нормаль, площадь и объем",
+      "subsection": "7.8.3. Вариант 3. Геометрия пространственной ячейки. Размер 3",
+      "variant": "7.8.3. Вариант 3. Геометрия пространственной ячейки. Размер 3",
+      "execution_group": "P2-C07-E045",
+      "depends_on": [],
+      "code": "u = {3, 0, 1}; v = {0, 2, 1}; w = {1, 1, 5};\nn = Cross[u, v];\narea = Norm[n];\nmixed = n.w;\nheight = Abs[mixed]/area;\nvolume = Abs[mixed]/6;\n{n, n.u, n.v, area, mixed,\n Det[Transpose[{u, v, w}]], height, volume}",
+      "sha256": "4baa79de94485e092e515a338de3002ae76501ca59b9cb1beeb4e59ee5dc00be",
+      "verification_expression": "TrueQ[n.u == 0] && TrueQ[n.v == 0] && TrueQ[mixed == Det[Transpose[{u,v,w}]]] && TrueQ[volume == Abs[mixed]/6]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 135,
+          "section": "15.23.3. Вариант 3. Геометрия пространственной ячейки. Размер 3"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E046",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 46,
+      "section": "7.8. Нормаль, площадь и объем",
+      "subsection": "7.8.4. Вариант 4. Геометрия пространственной ячейки. Размер 4",
+      "variant": "7.8.4. Вариант 4. Геометрия пространственной ячейки. Размер 4",
+      "execution_group": "P2-C07-E046",
+      "depends_on": [],
+      "code": "u = {4, 0, 1}; v = {0, 2, 1}; w = {1, 1, 6};\nn = Cross[u, v];\narea = Norm[n];\nmixed = n.w;\nheight = Abs[mixed]/area;\nvolume = Abs[mixed]/6;\n{n, n.u, n.v, area, mixed,\n Det[Transpose[{u, v, w}]], height, volume}",
+      "sha256": "7b413a68372faa1c11cedeb9d85e22b90e121bf856be6e178d33167691d3284a",
+      "verification_expression": "TrueQ[n.u == 0] && TrueQ[n.v == 0] && TrueQ[mixed == Det[Transpose[{u,v,w}]]] && TrueQ[volume == Abs[mixed]/6]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 136,
+          "section": "15.23.4. Вариант 4. Геометрия пространственной ячейки. Размер 4"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E047",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 47,
+      "section": "7.8. Нормаль, площадь и объем",
+      "subsection": "7.8.5. Вариант 5. Геометрия пространственной ячейки. Размер 5",
+      "variant": "7.8.5. Вариант 5. Геометрия пространственной ячейки. Размер 5",
+      "execution_group": "P2-C07-E047",
+      "depends_on": [],
+      "code": "u = {5, 0, 1}; v = {0, 2, 1}; w = {1, 1, 7};\nn = Cross[u, v];\narea = Norm[n];\nmixed = n.w;\nheight = Abs[mixed]/area;\nvolume = Abs[mixed]/6;\n{n, n.u, n.v, area, mixed,\n Det[Transpose[{u, v, w}]], height, volume}",
+      "sha256": "cc630145a0941a86ba31bc76ba44dbe8e02cfd2bab3785d349f365d3732d9662",
+      "verification_expression": "TrueQ[n.u == 0] && TrueQ[n.v == 0] && TrueQ[mixed == Det[Transpose[{u,v,w}]]] && TrueQ[volume == Abs[mixed]/6]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 137,
+          "section": "15.23.5. Вариант 5. Геометрия пространственной ячейки. Размер 5"
+        }
+      ]
+    },
+    {
+      "id": "P2-C07-E048",
+      "part": 2,
+      "chapter": 7,
+      "chapter_title": "7. Практикум. Решения с промежуточными вычислениями",
+      "example": 48,
+      "section": "7.8. Нормаль, площадь и объем",
+      "subsection": "7.8.6. Вариант 6. Геометрия пространственной ячейки. Размер 6",
+      "variant": "7.8.6. Вариант 6. Геометрия пространственной ячейки. Размер 6",
+      "execution_group": "P2-C07-E048",
+      "depends_on": [],
+      "code": "u = {6, 0, 1}; v = {0, 2, 1}; w = {1, 1, 8};\nn = Cross[u, v];\narea = Norm[n];\nmixed = n.w;\nheight = Abs[mixed]/area;\nvolume = Abs[mixed]/6;\n{n, n.u, n.v, area, mixed,\n Det[Transpose[{u, v, w}]], height, volume}",
+      "sha256": "0b6bcb727470172e23dcfdc86f32a91352638940eb720d9849086ed8bc60b782",
+      "verification_expression": "TrueQ[n.u == 0] && TrueQ[n.v == 0] && TrueQ[mixed == Det[Transpose[{u,v,w}]]] && TrueQ[volume == Abs[mixed]/6]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 138,
+          "section": "15.23.6. Вариант 6. Геометрия пространственной ячейки. Размер 6"
+        }
+      ]
+    },
+    {
+      "id": "P2-C08-E001",
+      "part": 2,
+      "chapter": 8,
+      "chapter_title": "8. Справочник и литература",
+      "example": 1,
+      "section": "8.2. Указатель команд Wolfram Language",
+      "subsection": "Соглашения пяти матричных команд",
+      "variant": "",
+      "execution_group": "P2-C08-E001",
+      "depends_on": [],
+      "code": "a = {{1, 2, 3}, {2, 4, 6}};\np = PseudoInverse[a];\n{a.p.a == a, p.a.p == p,\n ConjugateTranspose[a.p] == a.p,\n ConjugateTranspose[p.a] == p.a}",
+      "sha256": "789f6b84964b89db62213c8ba30fa9f9480f6e5d6bbef470142e6517228f65c9",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 16,
+          "example": 1,
+          "section": "16.2. Указатель команд Wolfram Language"
+        }
+      ]
+    },
+    {
+      "id": "P2-C08-E002",
+      "part": 2,
+      "chapter": 8,
+      "chapter_title": "8. Справочник и литература",
+      "example": 2,
+      "section": "8.2. Указатель команд Wolfram Language",
+      "subsection": "Соглашения пяти матричных команд",
+      "variant": "",
+      "execution_group": "P2-C08-E002",
+      "depends_on": [],
+      "code": "ClearAll[t];\na = {{2, 1}, {0, 2}};\n{s, j} = JordanDecomposition[a];\ne = MatrixExp[t a];\n{a.s == s.j, Det[s] != 0,\n FullSimplify[D[e, t] - a.e],\n FullSimplify[(e /. t -> 0) - IdentityMatrix[2]]}",
+      "sha256": "1e3ec070ab3df3a925236391264f4e42acfe87ae46a9de8b684f5c0494e0313d",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 16,
+          "example": 2,
+          "section": "16.2. Указатель команд Wolfram Language"
+        }
+      ]
+    }
+  ]
+}

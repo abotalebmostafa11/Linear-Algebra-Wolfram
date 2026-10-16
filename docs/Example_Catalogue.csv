@@ -1,0 +1,256 @@
+example_id,part,chapter,section,variant,notebook,script,sha256
+P1-C01-E001,1,1,"1.1. Скаляр, вектор, матрица и тензор",,Part_1/Chapter_01.nb,Part_1/Chapter_01.wl,65727b1c685794173d86a29279714815d88ff68eeceed7cff3615143f562aac4
+P1-C01-E002,1,1,"1.1. Скаляр, вектор, матрица и тензор",,Part_1/Chapter_01.nb,Part_1/Chapter_01.wl,a588131f488fe15a17702644fb1427238f513aec40a00709daa8f91a1917961c
+P1-C01-E003,1,1,1.2. Линейность и принцип суперпозиции,,Part_1/Chapter_01.nb,Part_1/Chapter_01.wl,ecc031e7be407f057dab0ac4ab7b878ba8c7226d8aaf3aa0d6ac88ceeae6882a
+P1-C01-E004,1,1,1.3. От жизненной задачи к проверенному ответу,,Part_1/Chapter_01.nb,Part_1/Chapter_01.wl,e847416772820e5274123af9807d4f39126facf543351f2f7d3e20b508326314
+P1-C01-E005,1,1,"1.4. Точная арифметика, округление и обусловленность",,Part_1/Chapter_01.nb,Part_1/Chapter_01.wl,49479133c2f609cdc008dd1f85ccfba4dc5945c06be2a85ca0f50076f23c115b
+P1-C01-E006,1,1,1.5. Как читать доказательство и проверять код,,Part_1/Chapter_01.nb,Part_1/Chapter_01.wl,c4508fb798796db7b02c800b6ffc8c8820ad2ed9ad1d5b2b29e819e1e77329f2
+P1-C02-E001,1,2,2.1. Уравнение как ограничение,,Part_1/Chapter_02.nb,Part_1/Chapter_02.wl,f100b667c873805981f3ef4fd2b70c15313b12b89ad1dfc61fa726dc93eac692
+P1-C02-E002,1,2,"2.2. Матрицы, сложение и произведение",,Part_1/Chapter_02.nb,Part_1/Chapter_02.wl,bc9093da64d1fd6b5f6702c546bf776950872779b49c711407dc8ee0fc406d1d
+P1-C02-E003,1,2,2.3. Элементарные преобразования и эквивалентность,,Part_1/Chapter_02.nb,Part_1/Chapter_02.wl,90d66e183fdb43ba1201185644a633676c7cb7078833ca8fec9fa158736b0cdf
+P1-C02-E004,1,2,2.4. Метод Гаусса по шагам,,Part_1/Chapter_02.nb,Part_1/Chapter_02.wl,edad0c7dd5746df3e658c987ec4bff60819175b7a9091a628c9ad6694bda9c92
+P1-C02-E005,1,2,2.5. Приведенная ступенчатая форма,,Part_1/Chapter_02.nb,Part_1/Chapter_02.wl,2b7bb373d01ad465068989bdceec50240e4d3ee4ac8e79f144451cf6d06c6929
+P1-C02-E006,1,2,2.6. Однородная и неоднородная системы,,Part_1/Chapter_02.nb,Part_1/Chapter_02.wl,d16a1965da7a2d72bfa24be73ada02fa75541da525f61afdb246e4f2c3bf4a6b
+P1-C02-E007,1,2,"2.7. Совместность, ранг и единственность",,Part_1/Chapter_02.nb,Part_1/Chapter_02.wl,0a210ebabc314c3b585045adc377ed1791f06ab08fff186b7c3b1247f1c96ca1
+P1-C02-E008,1,2,2.8. Контрольная задача с интерпретацией,,Part_1/Chapter_02.nb,Part_1/Chapter_02.wl,7163b1ea73e42c986fbfb3c941c00ba8ecfad40f052b06be57d70fb8d0574ea4
+P1-C03-E001,1,3,3.1. Алгебраические законы,,Part_1/Chapter_03.nb,Part_1/Chapter_03.wl,ad8a5c6d5477bca6aae840be43adc52edf4718bf15305a49efb36ecc54ecdc45
+P1-C03-E002,1,3,3.2. Транспонирование,,Part_1/Chapter_03.nb,Part_1/Chapter_03.wl,3c64810c626bc17d3902e0e3f46153e4cee5c64e2bff44c7af61de05157f56cf
+P1-C03-E003,1,3,3.3. Элементарные матрицы,,Part_1/Chapter_03.nb,Part_1/Chapter_03.wl,fc1670b4f1b24cdfc9bb536172abc13cc4256bbc92d58b9590c5ebd7876da906
+P1-C03-E004,1,3,3.4. Обратная матрица и критерий существования,,Part_1/Chapter_03.nb,Part_1/Chapter_03.wl,818a75a7726c7a849b4c5f606c6ac392da5582a6fab83fb86d65159940cf2c4a
+P1-C03-E005,1,3,3.5. Группы матриц,,Part_1/Chapter_03.nb,Part_1/Chapter_03.wl,c3c4a1452589cf0dff1ffdcf20a5d2875f8f496f52846b8b4ad62120ac061251
+P1-C03-E006,1,3,"3.6. LU, LDU и роль перестановок",,Part_1/Chapter_03.nb,Part_1/Chapter_03.wl,770b0ec0b1ae5a6dfefeb1adf816f2666f9161d1b67159ff5195fb979be8ac04
+P1-C03-E007,1,3,3.7. Единственность и симметричное разложение,,Part_1/Chapter_03.nb,Part_1/Chapter_03.wl,5e382847ad47d44b9ae454159028440e7f7ff9b1af1aaefcaedb609e4db24825
+P1-C03-E008,1,3,3.8. Повторные правые части,,Part_1/Chapter_03.nb,Part_1/Chapter_03.wl,896d7fd47d468ef5483290d7135ef19861e774b8749c9fc4c78a88475d50ca05
+P1-C04-E001,1,4,4.1. Поле и арифметические правила,,Part_1/Chapter_04.nb,Part_1/Chapter_04.wl,a5acbaf9271992545e936f60a850156f21ce5c4ff0c2ff0c1e5d31f49e696f15
+P1-C04-E002,1,4,4.2. Поле по простому модулю,,Part_1/Chapter_04.nb,Part_1/Chapter_04.wl,111dfccea82f2ef8dbfc6f8fe01cb591e6ea2521fe3e9b0dea07f40757721840
+P1-C04-E003,1,4,4.3. Четыре элемента и алгебраическое расширение,,Part_1/Chapter_04.nb,Part_1/Chapter_04.wl,56589dbabfeb42c5c431ed4cd20cc80dcd1a5ffa5dda9b0602cd102cca3af22f
+P1-C04-E004,1,4,4.3. Четыре элемента и алгебраическое расширение,,Part_1/Chapter_04.nb,Part_1/Chapter_04.wl,5c39bd3fac3fa8e1904ef30b4417e16835725171f132a9ea0b76835edfc1ae68
+P1-C04-E005,1,4,4.4. Комплексные числа и геометрия,,Part_1/Chapter_04.nb,Part_1/Chapter_04.wl,9aecd53046bc6dd3b85200e98dd2eb31b84c4a1f6f0ddb396c00ad724cb1d97a
+P1-C04-E006,1,4,4.5. Аксиомы векторного пространства,,Part_1/Chapter_04.nb,Part_1/Chapter_04.wl,45c77e09e0b0c341c4e07d1efdfb10a30aef597c71ce8dae5437d01ee0549845
+P1-C04-E007,1,4,4.6. Подпространства и линейная оболочка,,Part_1/Chapter_04.nb,Part_1/Chapter_04.wl,e36206af604c34df63c25d6a620e8e56ef3a0f4f6bcb007eac450a33494c03f4
+P1-C04-E008,1,4,4.7. Вещественное и эрмитово скалярные произведения,,Part_1/Chapter_04.nb,Part_1/Chapter_04.wl,43f7884566e9f1660c2363bcb4f84c7591ecdae02055225d6dd97a6531ae2a09
+P1-C05-E001,1,5,5.1. Линейная независимость,,Part_1/Chapter_05.nb,Part_1/Chapter_05.wl,b6db18ad8dbd458ed2b16152654b18a4ab2c8b474730bc463ff48dd315cb9152
+P1-C05-E002,1,5,5.2. Базис и единственность координат,,Part_1/Chapter_05.nb,Part_1/Chapter_05.wl,2ce331dc16b17ec3038011db6d64e84cc42a1bdfcfaec556d7053de649b31a71
+P1-C05-E003,1,5,5.3. Теорема о размерности,,Part_1/Chapter_05.nb,Part_1/Chapter_05.wl,c169ff38131e23ed9e69d1d9710b693a3dcbca9c27600bad6bdbee9a253bbcd3
+P1-C05-E004,1,5,5.4. Пространства строк и столбцов,,Part_1/Chapter_05.nb,Part_1/Chapter_05.wl,3e37530ee66a8f2baffe3bb25c74b977209d3d3f49aceef616bec8048983bd9d
+P1-C05-E005,1,5,"5.6. Сумма, пересечение и формула Грассмана",,Part_1/Chapter_05.nb,Part_1/Chapter_05.wl,bd39e5121523b43932edc73ac1c7b99c45c3999fe6c33ee34d0c94b0b4e6dd1f
+P1-C05-E006,1,5,5.7. Прямая сумма,,Part_1/Chapter_05.nb,Part_1/Chapter_05.wl,df282587f1c856f26577b29cc986c46ebc829489cbbe3f6500bea2829034db60
+P1-C05-E007,1,5,5.8. Факторпространство,,Part_1/Chapter_05.nb,Part_1/Chapter_05.wl,7be6673c7f5c514ab1f48266e0dc9d28a0b87e3132b90e150d89cce7af424023
+P1-C06-E001,1,6,6.1. Код как подпространство,,Part_1/Chapter_06.nb,Part_1/Chapter_06.wl,e9d18797e4511ec7fe98606fcc6ca4497dda0596389f32c61227288232b0a60f
+P1-C06-E002,1,6,6.2. Контрольные суммы и ISBN,,Part_1/Chapter_06.nb,Part_1/Chapter_06.wl,092a8f9f05b3b667c33ae9bfb96b2aba1ad6ed7afeeb45cc468fc7fda9e9d38b
+P1-C06-E003,1,6,6.3. Расстояние и вес Хэмминга,,Part_1/Chapter_06.nb,Part_1/Chapter_06.wl,7123881450cdda835fabea879900a55024cf7731f2128f19d0e3c2ba6e1958e9
+P1-C06-E004,1,6,6.5. Полное кодирование и исправление,,Part_1/Chapter_06.nb,Part_1/Chapter_06.wl,aa1aa749b34c4a371cede90ec278bd76d4409d3340b14b66e6ea010fa1debeea
+P1-C06-E005,1,6,6.6. Совершенные коды и смежные классы,,Part_1/Chapter_06.nb,Part_1/Chapter_06.wl,6cfd0f47ca2fb23aa29f37c8dc089123adf313b7e5fe2df36f6d0acee611a0ce
+P1-C06-E006,1,6,6.7. Коды Адамара и максимальное расстояние,,Part_1/Chapter_06.nb,Part_1/Chapter_06.wl,734fa2fa9b9f29c0c87b070d0bb8feef5b582b3da2dda92bf259e7eaf9f500cc
+P1-C07-E001,1,7,7.1. Отображение и его свойства,,Part_1/Chapter_07.nb,Part_1/Chapter_07.wl,4d85c0ebc013b54adb1a67b2b84600da393f10da9a2ed266f4c6b6031a0f290f
+P1-C07-E002,1,7,7.2. Матрица преобразования,,Part_1/Chapter_07.nb,Part_1/Chapter_07.wl,d4afecbbbf0848cb254389dc2b385f6272422409b82ae4f83ccb68ce6d0bc6ea
+P1-C07-E003,1,7,7.3. Композиция и умножение,,Part_1/Chapter_07.nb,Part_1/Chapter_07.wl,828fed7e270bef210ffb581d0e0fc9b21d56e960ff741ef84a8afdec27a48cb1
+P1-C07-E004,1,7,"7.4. Поворот, отражение и сдвиговое преобразование",,Part_1/Chapter_07.nb,Part_1/Chapter_07.wl,3bc3143f8c7452b3affab655c428f58cd329f75598b98dba78d0ec7a8fec80ee
+P1-C07-E005,1,7,7.5. Смена базиса,,Part_1/Chapter_07.nb,Part_1/Chapter_07.wl,86cdda25f462e0faf1961a9b46e15bcd4ad3c32d3390f6e775fb7bc7572c414a
+P1-C07-E006,1,7,"7.6. Ядро, образ и теорема о ранге",,Part_1/Chapter_07.nb,Part_1/Chapter_07.wl,4f9c1d55a6772c720f0dbea5a6dbb1c0bebce029aa351327159599eeecf7dd39
+P1-C07-E007,1,7,7.8. Комплексная и вещественная линейность,,Part_1/Chapter_07.nb,Part_1/Chapter_07.wl,93467526c144b568b98c2c30de6b1d0ac5a963667959024eec179fb9009ba1bf
+P1-C08-E001,1,8,8.1. Баланс двух ресурсов,8.1.1. Вариант 1. Мастерская,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,f69491bd6e34c3fd3d4c34d952d00700603fc7420890aa85e24f952e217964ae
+P1-C08-E002,1,8,8.1. Баланс двух ресурсов,8.1.2. Вариант 2. Смесь кормов,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,0372a613d77a139540dba16246096ee11125ae642f105607d49c5b430ff715b8
+P1-C08-E003,1,8,8.1. Баланс двух ресурсов,8.1.3. Вариант 3. Доставка,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,9ae30c223b14f492ca70d50053d240cae0d6ec3a25faa03448dc08e3a1fe8506
+P1-C08-E004,1,8,8.1. Баланс двух ресурсов,8.1.4. Вариант 4. Печать,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,027195770203a8455c3bd3024539a48818e37223de51ffb6622fc8779fc34b99
+P1-C08-E005,1,8,8.1. Баланс двух ресурсов,8.1.5. Вариант 5. Сборка,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,1ba9677558f9ee3bb1ab54a7432a4b6d65fe3da9d1ac3d5270da124e75afc121
+P1-C08-E006,1,8,8.1. Баланс двух ресурсов,8.1.6. Вариант 6. План лаборатории,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,d4aab4819a221ae3498eb92ed5b94d2a11db23fc22b553ecb418b849c3dc095c
+P1-C08-E007,1,8,8.2. Метод Гаусса для трех неизвестных,8.2.1. Вариант 1. Три измерительных канала. Набор 1,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,18ed18e1fe3bb6f3db2ac7778f0fe6719965a878407bdd8f8a3e5821b8a7cc6c
+P1-C08-E008,1,8,8.2. Метод Гаусса для трех неизвестных,8.2.2. Вариант 2. Три измерительных канала. Набор 2,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,e6bd69c1e31a6fb0e15de50e2f0f9271feeaae4c33d8ba47def3b9457ffe97bd
+P1-C08-E009,1,8,8.2. Метод Гаусса для трех неизвестных,8.2.3. Вариант 3. Три измерительных канала. Набор 3,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,60611a43cb9baadcf7f68e086581f9a29325fe469b65064c0fe636458232ae6e
+P1-C08-E010,1,8,8.2. Метод Гаусса для трех неизвестных,8.2.4. Вариант 4. Три измерительных канала. Набор 4,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,f7bebc487e960e648240d2fcfd21fce96655ab26c1e5e7feb626ebe169ae1dd8
+P1-C08-E011,1,8,8.2. Метод Гаусса для трех неизвестных,8.2.5. Вариант 5. Три измерительных канала. Набор 5,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,7425eb556133f66f5434bcb36e613c26adef009f194bc42637d37f5e6934bb79
+P1-C08-E012,1,8,8.2. Метод Гаусса для трех неизвестных,8.2.6. Вариант 6. Три измерительных канала. Набор 6,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,b9365fce2008406e406fd7d760c7cbd746601875a95bc36e7c91af8f49e34042
+P1-C08-E013,1,8,8.3. Свободные параметры и ядро,8.3.1. Вариант 1. Неопределенный третий источник. Набор 1,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,a36093af1af535a69e14c335c4e0d3c2acec636874fe3244b920b3cfe4079cf2
+P1-C08-E014,1,8,8.3. Свободные параметры и ядро,8.3.2. Вариант 2. Неопределенный третий источник. Набор 2,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,ff516534616c0c7e212b413a5085a7658fcd5390b8d1a847783ee746ff8ec8a0
+P1-C08-E015,1,8,8.3. Свободные параметры и ядро,8.3.3. Вариант 3. Неопределенный третий источник. Набор 3,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,13c7e5b3b07bbb91178912ccdf396b3bc6a5642bd1e3a1e2a5f30ac6f049fed4
+P1-C08-E016,1,8,8.3. Свободные параметры и ядро,8.3.4. Вариант 4. Неопределенный третий источник. Набор 4,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,1eca7e7ab06323514eeac722fa9c9fd3c8e59d34b5bbecc45bc42cfe898d1b49
+P1-C08-E017,1,8,8.3. Свободные параметры и ядро,8.3.5. Вариант 5. Неопределенный третий источник. Набор 5,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,727639767ef919c0525d9eba0bada1d98b99cc41de08a8081d2c37f835b8a042
+P1-C08-E018,1,8,8.3. Свободные параметры и ядро,8.3.6. Вариант 6. Неопределенный третий источник. Набор 6,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,cd17350e2293fe016d2d0c883b53e5b99c5815f4330be86ade2ddd42de90efd2
+P1-C08-E019,1,8,8.4. LU-разложение и повторные нагрузки,8.4.1. Вариант 1. Расчет трех связанных узлов. Нагрузка 1,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,a13e0f4762fb479df185b333d02682771f7590842daa6718c57e5510cb4135f7
+P1-C08-E020,1,8,8.4. LU-разложение и повторные нагрузки,8.4.2. Вариант 2. Расчет трех связанных узлов. Нагрузка 2,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,34f4538fb75ad1d53b0741eb6689f16057aae12bf35fe5695c37b8798bf32d97
+P1-C08-E021,1,8,8.4. LU-разложение и повторные нагрузки,8.4.3. Вариант 3. Расчет трех связанных узлов. Нагрузка 3,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,fd3bc1f64be15ab99c3c6242d336bb6595914c2bfe4e20f505203b9d4ed99ba6
+P1-C08-E022,1,8,8.4. LU-разложение и повторные нагрузки,8.4.4. Вариант 4. Расчет трех связанных узлов. Нагрузка 4,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,fbe62bd0372ecb991b0d5cf8d1bc4118e523947ed0ca6208bd1bbb7ba90876bd
+P1-C08-E023,1,8,8.4. LU-разложение и повторные нагрузки,8.4.5. Вариант 5. Расчет трех связанных узлов. Нагрузка 5,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,e5a276b88c80c9b5d1fc0726d6d352385b10af480eee95c1a3f692d50881d56c
+P1-C08-E024,1,8,8.4. LU-разложение и повторные нагрузки,8.4.6. Вариант 6. Расчет трех связанных узлов. Нагрузка 6,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,d1c0537f466ae4f82db2519cf057b1ec2da2d3a366bd154908ba5e4d6f73b588
+P1-C08-E025,1,8,8.5. Вычисления над конечным полем,8.5.1. Вариант 1. Два символа по модулю 5,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,cd2f8e54707f4b3df3b9d3f479fdfab806e731d263268443d006a7bcf60838b1
+P1-C08-E026,1,8,8.5. Вычисления над конечным полем,8.5.2. Вариант 2. Два символа по модулю 7,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,446ed6329e781eeec44fe2cdc92a6cd0b8dbad7ebd67038d04f50abadc25ba1d
+P1-C08-E027,1,8,8.5. Вычисления над конечным полем,8.5.3. Вариант 3. Два символа по модулю 11,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,8f3cc12d2580bee0f1b532661d737e33aac794e53917c890a526b4cdf01c5e42
+P1-C08-E028,1,8,8.5. Вычисления над конечным полем,8.5.4. Вариант 4. Два символа по модулю 13,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,04104b48291e05f509a8632f43c60870421c144ece12c8ff06c56018542d7706
+P1-C08-E029,1,8,8.5. Вычисления над конечным полем,8.5.5. Вариант 5. Два символа по модулю 17,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,ef4c1a2ed1c9cd04f111b7286ba90ddbaedb91bf75e03c679028e0df5c99a9c1
+P1-C08-E030,1,8,8.5. Вычисления над конечным полем,8.5.6. Вариант 6. Два символа по модулю 19,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,7ed4e8b5c8799773a879acbce638defd27eae7069f3929e723a823b1ac28f44b
+P1-C08-E031,1,8,8.6. Координаты в новом базисе,8.6.1. Вариант 1. Два измерительных направления. Базис 1,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,8190d808b487d31d9edfdd4b7c537da904ec9f3b6e4b9f63e787de0006dfd93f
+P1-C08-E032,1,8,8.6. Координаты в новом базисе,8.6.2. Вариант 2. Два измерительных направления. Базис 2,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,333b91df07702e346e71aa0946fe250c459bdb1af6422e41c816e6dea73ef3e8
+P1-C08-E033,1,8,8.6. Координаты в новом базисе,8.6.3. Вариант 3. Два измерительных направления. Базис 3,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,8874deed91c2b13be124f1c1ac93c313776b3537c8f1b41722a8def72c21c5bf
+P1-C08-E034,1,8,8.6. Координаты в новом базисе,8.6.4. Вариант 4. Два измерительных направления. Базис 4,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,3a5eef435443cd1428356d0cf82755304a84f50e2b7f9d50266d60bba1f26679
+P1-C08-E035,1,8,8.6. Координаты в новом базисе,8.6.5. Вариант 5. Два измерительных направления. Базис 5,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,94e89cbcbef16b386d64009cebea63c7b828ce13b0c7370837d7a3c6bdb15238
+P1-C08-E036,1,8,8.6. Координаты в новом базисе,8.6.6. Вариант 6. Два измерительных направления. Базис 6,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,963b174ce56a4d7fde0f598dcec666cf3c4feacc272cfdad34a18d19040fcf0d
+P1-C08-E037,1,8,8.7. Пересечение двух плоскостей,8.7.1. Вариант 1. Пересечение двух ограничений. Геометрия 1,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,4a113dcd6cd5f101698691c6ec15fcc0ee7867e7444f623018bb385ccf424c01
+P1-C08-E038,1,8,8.7. Пересечение двух плоскостей,8.7.2. Вариант 2. Пересечение двух ограничений. Геометрия 2,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,2853fa9a10bba18f78c1551f3aa54e23b7999fe26ca5c91a178496534f82e917
+P1-C08-E039,1,8,8.7. Пересечение двух плоскостей,8.7.3. Вариант 3. Пересечение двух ограничений. Геометрия 3,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,fb884bd15fdb94916bd6e2fa3a85ff7be2c7f4828dbd0b5ea699800d4fe07564
+P1-C08-E040,1,8,8.7. Пересечение двух плоскостей,8.7.4. Вариант 4. Пересечение двух ограничений. Геометрия 4,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,4a52cc5ae72445edc08d580782f6b0d015929bd5e729791b02fbf193375e541a
+P1-C08-E041,1,8,8.7. Пересечение двух плоскостей,8.7.5. Вариант 5. Пересечение двух ограничений. Геометрия 5,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,d7b661866cd664815fb5644b57376e828f50c802c5b56fa6ec0111c1cd0ffe1f
+P1-C08-E042,1,8,8.7. Пересечение двух плоскостей,8.7.6. Вариант 6. Пересечение двух ограничений. Геометрия 6,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,cc4e7d6c46a824a99dbb82a09c11cf251928772b719f20941f1299a01a83d639
+P1-C08-E043,1,8,8.8. Синдромное исправление одной ошибки,8.8.1. Вариант 1. Ошибка в позиции 1,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,ec652bb7a214e500a1dc1aa65cded8992bc3efcd15193b2bfe03ac5d89ff4f30
+P1-C08-E044,1,8,8.8. Синдромное исправление одной ошибки,8.8.2. Вариант 2. Ошибка в позиции 2,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,b8df137bb8bc737cf2ef66812702cb5722f173dffa6cb4f882e51033412f2e38
+P1-C08-E045,1,8,8.8. Синдромное исправление одной ошибки,8.8.3. Вариант 3. Ошибка в позиции 3,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,1f168a05be6dc80778553d1141742f590937b52317a24dff0c5060907436b519
+P1-C08-E046,1,8,8.8. Синдромное исправление одной ошибки,8.8.4. Вариант 4. Ошибка в позиции 4,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,bed8566b921807325c48fb50343da4e2b274833b2a38c94ea079f15ebbe83c84
+P1-C08-E047,1,8,8.8. Синдромное исправление одной ошибки,8.8.5. Вариант 5. Ошибка в позиции 5,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,2ea226ac835631beecacfed1f12862c3dae43d1edd0cbc29d5d68388018f11cd
+P1-C08-E048,1,8,8.8. Синдромное исправление одной ошибки,8.8.6. Вариант 6. Ошибка в позиции 6,Part_1/Chapter_08.nb,Part_1/Chapter_08.wl,c3feb65b0d1c83818e643523aa16adf32f3d435bdcd8446a0a243f08d6d0935f
+P1-C09-E001,1,9,9.2. Указатель команд Wolfram Language,,Part_1/Chapter_09.nb,Part_1/Chapter_09.wl,789f6b84964b89db62213c8ba30fa9f9480f6e5d6bbef470142e6517228f65c9
+P1-C09-E002,1,9,9.2. Указатель команд Wolfram Language,,Part_1/Chapter_09.nb,Part_1/Chapter_09.wl,1e3ec070ab3df3a925236391264f4e42acfe87ae46a9de8b684f5c0494e0313d
+P2-C01-E001,2,1,1.1. Начальные случаи,,Part_2/Chapter_01.nb,Part_2/Chapter_01.wl,3c479ecde40ce4fe4d2fb1faddfd216012dab4ed5990e1fc9b85ee016dacad2d
+P2-C01-E002,2,1,1.2. Перестановки и определение,,Part_2/Chapter_01.nb,Part_2/Chapter_01.wl,4365750b86dd48283f8894277bdf2f0931394708eac9fac8d08dfd6b8655196e
+P2-C01-E003,2,1,1.3. Матричная перестановка,,Part_2/Chapter_01.nb,Part_2/Chapter_01.wl,bb7bbf21271d51a06097e0e063fbb725a53c79e3638026087fb48ccf32a70c47
+P2-C01-E004,2,1,1.4. Линейность и операции над строками,,Part_2/Chapter_01.nb,Part_2/Chapter_01.wl,6dc7a862ffe0c1b3c11d9f15cca5d2e967ae62880d66ff4c1fb9dcbf7a78460a
+P2-C01-E005,2,1,1.6. Разложение Лапласа и правило Крамера,,Part_2/Chapter_01.nb,Part_2/Chapter_01.wl,34738379cb9a00f5503cbe16f9b80c721d4960e82f56342379e82ddb0c35b2ff
+P2-C01-E006,2,1,1.7. Целочисленная обратимость,,Part_2/Chapter_01.nb,Part_2/Chapter_01.wl,0ab570c1897fc59f802fa4dcf330b201bdfda75644a695a67fdf26dc225e9c50
+P2-C01-E007,2,1,1.8. Объемы и тождество Льюиса Кэрролла,,Part_2/Chapter_01.nb,Part_2/Chapter_01.wl,a13063b5a495d8196d18118b733e10bc0016037426e14954027a41859fe410c0
+P2-C02-E001,2,2,2.1. Дискретная динамика и Фибоначчи,,Part_2/Chapter_02.nb,Part_2/Chapter_02.wl,bddc1d88f6ddf79a062716d0d2215a51a8054640b641d7badf6eb9e936595ce4
+P2-C02-E002,2,2,2.2. Собственные пары и характеристический многочлен,,Part_2/Chapter_02.nb,Part_2/Chapter_02.wl,9e258a0ffaf27ecd13799b44212fa075707020c2bdd1a61eb7cfe22dad1e0a6e
+P2-C02-E003,2,2,2.4. Диагонализация и кратности,,Part_2/Chapter_02.nb,Part_2/Chapter_02.wl,8cc167b7c9627248619500596f6b98a7bcfadbd59aec76c43e4412a25661329b
+P2-C02-E004,2,2,2.5. Формула Фибоначчи,,Part_2/Chapter_02.nb,Part_2/Chapter_02.wl,6b655f1a36cbf47a391bcc8f56a6fb1ac2c889d613402ca0bbb0d9798f57b58d
+P2-C02-E005,2,2,2.7. Теорема Кэли–Гамильтона,,Part_2/Chapter_02.nb,Part_2/Chapter_02.wl,2c55b274e6c170ac93cb050dd523e662b1b973bfab678c344f2766f6a546d477
+P2-C02-E006,2,2,2.8. Экспонента и системы дифференциальных уравнений,,Part_2/Chapter_02.nb,Part_2/Chapter_02.wl,69840c0307dbacd612fbd91255a9259e6606074ec5d2c63bdaf17af972c5f958
+P2-C03-E001,2,3,3.1. Сопряженный оператор и нормальность,,Part_2/Chapter_03.nb,Part_2/Chapter_03.wl,c75e5c4b41f45143132cae04cfe3392ffe12d674210cf19cf3b2ba13ba2457d7
+P2-C03-E002,2,3,3.3. Эрмитовы матрицы и главные оси,,Part_2/Chapter_03.nb,Part_2/Chapter_03.wl,84fc0b8f222986b70b3c3350392ce0c250e2a463ba2edc981cca9f0f5281fd9e
+P2-C03-E003,2,3,3.4. Спектральные проекторы,,Part_2/Chapter_03.nb,Part_2/Chapter_03.wl,dfc2e9f0922a69d9cbb9d299f48c589d8a823ad97e3cf1452ccdecf71ea9da08
+P2-C03-E004,2,3,3.5. Самосопряженность вне стандартных координат,,Part_2/Chapter_03.nb,Part_2/Chapter_03.wl,4db3dda084cdf62a602fd4ec8d8db969f33a808d970d83ee2d6f7c80e8fa5425
+P2-C04-E001,2,4,4.1. Квадратичные формы,,Part_2/Chapter_04.nb,Part_2/Chapter_04.wl,dba9e2dc7c429463341bf1ee8a4d33f2d395604bcb35ae522a13cfd3e58b1f23
+P2-C04-E002,2,4,4.3. Критерий положительной определенности,,Part_2/Chapter_04.nb,Part_2/Chapter_04.wl,1055c7efc62159c41706ed0ce5e2fad1bac89ec35c349a2ca589a84df97ca80e
+P2-C04-E003,2,4,4.4. Стационарные точки и гессиан,,Part_2/Chapter_04.nb,Part_2/Chapter_04.wl,78a1e43cc1f9c8d4457904896a1e4da7aa8e1bbdc74016a0cfd2d0c42d62b5c6
+P2-C04-E004,2,4,4.5. Матрицы графа,,Part_2/Chapter_04.nb,Part_2/Chapter_04.wl,9f3bb6f3298b3a609a76dac91d276dc4950e234feb0f93e2bffe747416f58109
+P2-C04-E005,2,4,4.5. Матрицы графа,4.5.1. Спектральная кластеризация,Part_2/Chapter_04.nb,Part_2/Chapter_04.wl,38daf010c14cc01432a21f2ef6b6b29e711f5b52df97904c57fd80b6deca6d40
+P2-C04-E006,2,4,4.6. Регулярные графы,,Part_2/Chapter_04.nb,Part_2/Chapter_04.wl,10aa331de3105d1473d85d088a1a5ad707626a36e8ec1332dcaa25b4ead12705
+P2-C04-E007,2,4,4.7. Степенной метод,,Part_2/Chapter_04.nb,Part_2/Chapter_04.wl,69474e40bd4014c9646c728dfdd5141b9d98c27207a834de43b90f8dd372fc3b
+P2-C04-E008,2,4,4.8. QR-алгоритм и условия сходимости,,Part_2/Chapter_04.nb,Part_2/Chapter_04.wl,964d0fe0add5b18b0f48fb82f5a314a6a42290a180cffa038d9bd9e328823dc4
+P2-C05-E001,2,5,5.1. Обобщенные собственные векторы,,Part_2/Chapter_05.nb,Part_2/Chapter_05.wl,59856ec83bb6ac86ca5e5c9dedd9d7b876f8384271532f6ede2dfaa8608f6361
+P2-C05-E002,2,5,5.4. Главный результат и вычисление,,Part_2/Chapter_05.nb,Part_2/Chapter_05.wl,0a6c3700b8502acb9c6704a88ce1aaa9142e12e88ad64bf0cf1ea2681783a788
+P2-C05-E003,2,5,5.5. Размеры блоков из ядер,,Part_2/Chapter_05.nb,Part_2/Chapter_05.wl,1bcd7b25c48002e58ba7b984c8d063b81afb0b43097215a81ff92bbe77b9b575
+P2-C05-E004,2,5,5.6. Степени и экспонента блока,,Part_2/Chapter_05.nb,Part_2/Chapter_05.wl,3bd1599ab5d661edac723dfbaf3da5a3291738ca26ef5a650ffb9c9993897ff3
+P2-C05-E005,2,5,5.8. Почему численная жорданова форма чувствительна,,Part_2/Chapter_05.nb,Part_2/Chapter_05.wl,2f5bbcafce7094faa8be13c861370a5ed38012acf7b59c7ac36feec97a88774f
+P2-C06-E001,2,6,6.1. Прямые и параметр,,Part_2/Chapter_06.nb,Part_2/Chapter_06.wl,046b969823fd31bf514f93e0201dc7097172b99b57829011fcb3d19577276250
+P2-C06-E002,2,6,6.2. Плоскость и нормаль,,Part_2/Chapter_06.nb,Part_2/Chapter_06.wl,cf112168fe59c52f6a5d69a973dfb24fcd49d2767e88c40e10c5a6bcab462862
+P2-C06-E003,2,6,6.3. Неравенство Коши–Шварца,,Part_2/Chapter_06.nb,Part_2/Chapter_06.wl,7ff826b19c3c38adf6f88eff2381bef17261c574e2c0a49976b74ae18d451bf3
+P2-C06-E004,2,6,6.4. Углы и расстояния,,Part_2/Chapter_06.nb,Part_2/Chapter_06.wl,c4aab40f8ee998fbeb960f7892f7a7442b167fe521e31fa71cde53277c6dcc2f
+P2-C06-E005,2,6,6.5. Векторное произведение,,Part_2/Chapter_06.nb,Part_2/Chapter_06.wl,21fc7ece3abbfff9805709cddc51c2f8a97cc9f5b4b49c542f3e947071ced898
+P2-C06-E006,2,6,6.6. Момент силы,,Part_2/Chapter_06.nb,Part_2/Chapter_06.wl,4363c81e96173aa6d6213420613beeb54c2b8a4e9e357bfdf378bcdb32fa8e8e
+P2-C06-E007,2,6,6.7. Смешанное произведение и объем,,Part_2/Chapter_06.nb,Part_2/Chapter_06.wl,90839e186aa8d45977afe5852419698c7057b36f0f64c9cf739e14e464160d4e
+P2-C06-E008,2,6,6.8. Итоговый пример с плоскостями,,Part_2/Chapter_06.nb,Part_2/Chapter_06.wl,fec9d997866ebc81ea9998d1b4e537a69ac14f474f24299ca8e3213fa31de73c
+P2-C07-E001,2,7,7.1. Определитель третьего порядка через миноры,7.1.1. Вариант 1. Три направления. Определитель 1,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,51ac887706352208d327da0b61da23212ab78a525263272da8e1dbc903fdb966
+P2-C07-E002,2,7,7.1. Определитель третьего порядка через миноры,7.1.2. Вариант 2. Три направления. Определитель 2,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,cfb246268bd2a9a04d727f8e6341279ad57db958b1bedfb4736f13052dc9457a
+P2-C07-E003,2,7,7.1. Определитель третьего порядка через миноры,7.1.3. Вариант 3. Три направления. Определитель 3,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,4c0728e07ed4170da51cd53a68386d3ef1f88afaa429cb8f77fbf4e408113b7f
+P2-C07-E004,2,7,7.1. Определитель третьего порядка через миноры,7.1.4. Вариант 4. Три направления. Определитель 4,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,e276b283d7f4377c897a17db745e9892f1e8058ed4d16b428a3755ba61060bd1
+P2-C07-E005,2,7,7.1. Определитель третьего порядка через миноры,7.1.5. Вариант 5. Три направления. Определитель 5,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,6311e58e6fab076d1213f22f6673f9440235c50c17c626165054337aa9352cf1
+P2-C07-E006,2,7,7.1. Определитель третьего порядка через миноры,7.1.6. Вариант 6. Три направления. Определитель 6,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,06166fd3fcb869899c23e5310929aafc157824fb30f6fb4a20a3b44afe88235b
+P2-C07-E007,2,7,7.2. Площадь после линейного преобразования,7.2.1. Вариант 1. Преобразование участка. Масштаб 1,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,d5190d5ec98ae4a4e9228ab408b12c85e3ed34b21997e7187ea5d35ef999a172
+P2-C07-E008,2,7,7.2. Площадь после линейного преобразования,7.2.2. Вариант 2. Преобразование участка. Масштаб 2,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,f0f40b08f1b39b91c42e611ee377f21216adc73224bf6ac77d4629f269e6269b
+P2-C07-E009,2,7,7.2. Площадь после линейного преобразования,7.2.3. Вариант 3. Преобразование участка. Масштаб 3,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,4ef520a30af980a774370cdfd8702e861f0f1de06b0e026e59dfc9c32663c190
+P2-C07-E010,2,7,7.2. Площадь после линейного преобразования,7.2.4. Вариант 4. Преобразование участка. Масштаб 4,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,61669c9bdfb3d28fbd1bfe8a59a4edb0f6127bff2d3d34b8190adb80a5a0f2ff
+P2-C07-E011,2,7,7.2. Площадь после линейного преобразования,7.2.5. Вариант 5. Преобразование участка. Масштаб 5,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,b35a238c43d4e9dbb9f41dfe54318605700b3da669051bcb86c7e2432dea98b1
+P2-C07-E012,2,7,7.2. Площадь после линейного преобразования,7.2.6. Вариант 6. Преобразование участка. Масштаб 6,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,cbb987943a34cc57a3813d7e2ba185150111f93c684f88c8ce5c32d1c91ccc7b
+P2-C07-E013,2,7,7.3. Собственные направления симметричной связи,7.3.1. Вариант 1. Два связанных процесса. Связь 1,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,4b72f936a73884e37ffd8a8846c4113fd52dc4f2b03e874c26e7a40e4a51e88f
+P2-C07-E014,2,7,7.3. Собственные направления симметричной связи,7.3.2. Вариант 2. Два связанных процесса. Связь 2,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,a969ee82e9e8bf3d47797204dfe5bb2a47df2e07d616b3e04fb8ac0985da77c9
+P2-C07-E015,2,7,7.3. Собственные направления симметричной связи,7.3.3. Вариант 3. Два связанных процесса. Связь 3,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,b2975d91e0e4a9124a2821c8b2ad3e15dd5a1ac847467121b49a79549fed662c
+P2-C07-E016,2,7,7.3. Собственные направления симметричной связи,7.3.4. Вариант 4. Два связанных процесса. Связь 4,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,f074666cbcaafd199c185965616c05ddda4972a9d80e3612b1f13cf0dcc4efff
+P2-C07-E017,2,7,7.3. Собственные направления симметричной связи,7.3.5. Вариант 5. Два связанных процесса. Связь 5,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,55edc76e53880969d53361aeeb73fd4242be0325c1efa06633d9224767d7cc54
+P2-C07-E018,2,7,7.3. Собственные направления симметричной связи,7.3.6. Вариант 6. Два связанных процесса. Связь 6,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,da57f308e62a4663aa188de7c32c7e631ef81d6e0c9b45f6d3ab7ed6982971e9
+P2-C07-E019,2,7,7.4. Степени матрицы через Кэли–Гамильтона,7.4.1. Вариант 1. Повторное действие. Степень 4,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,d7463d7412c5d6c3a628891712e382ebd89c7d64ece660f6f51f9ad2931105fb
+P2-C07-E020,2,7,7.4. Степени матрицы через Кэли–Гамильтона,7.4.2. Вариант 2. Повторное действие. Степень 5,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,563fe25314bc5818a8d43917412ac77ee2f786c0bf74826d44754ff97845cd47
+P2-C07-E021,2,7,7.4. Степени матрицы через Кэли–Гамильтона,7.4.3. Вариант 3. Повторное действие. Степень 6,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,5cc7ddaa1f0817f5e5b8c3c5e6bf45127ce3da571e33bd7543a81a6096895875
+P2-C07-E022,2,7,7.4. Степени матрицы через Кэли–Гамильтона,7.4.4. Вариант 4. Повторное действие. Степень 7,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,a03b46800ef4279131d6af5a3e2046d283de3d426afccbc05f9432189bb40ee8
+P2-C07-E023,2,7,7.4. Степени матрицы через Кэли–Гамильтона,7.4.5. Вариант 5. Повторное действие. Степень 8,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,0c3278d7d475a8f03a3074f8fa00cae9c2317af2636dc2919e2b6b58d6052cd1
+P2-C07-E024,2,7,7.4. Степени матрицы через Кэли–Гамильтона,7.4.6. Вариант 6. Повторное действие. Степень 9,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,2b701ace5163e8d5dfb52ec410d63022e6a5665760db74f82579fa02942bb8e8
+P2-C07-E025,2,7,7.5. Выделение квадратов и LDLᵀ,7.5.1. Вариант 1. Энергия двух координат. Форма 1,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,ca48483c5fc9c05d842a0b18e46fc4e82df8d19578f79f7f22f2bc535464fbff
+P2-C07-E026,2,7,7.5. Выделение квадратов и LDLᵀ,7.5.2. Вариант 2. Энергия двух координат. Форма 2,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,261d39027606fbf5509c24fad4e5b053fde6e64ef108ea7aa35c76bf86481a46
+P2-C07-E027,2,7,7.5. Выделение квадратов и LDLᵀ,7.5.3. Вариант 3. Энергия двух координат. Форма 3,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,f0e12ff2d6d7720cab418cef332c16dbfbce331c0e014a2c7d105b0df4f314cc
+P2-C07-E028,2,7,7.5. Выделение квадратов и LDLᵀ,7.5.4. Вариант 4. Энергия двух координат. Форма 4,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,8e6fcd15b293c8cdc9b7362872c623a323e6edaaca89ee3316857e1dd89941f7
+P2-C07-E029,2,7,7.5. Выделение квадратов и LDLᵀ,7.5.5. Вариант 5. Энергия двух координат. Форма 5,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,ab071c0747ad251b71f6b3fe3cbe27dc7678978e60028f883e71fa48384e8a1b
+P2-C07-E030,2,7,7.5. Выделение квадратов и LDLᵀ,7.5.6. Вариант 6. Энергия двух координат. Форма 6,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,13429479fa3e2ba06200375dc84f07d83287e40ea087f6e6971e1d7b9fcb157c
+P2-C07-E031,2,7,7.6. Минимум квадратичной функции,7.6.1. Вариант 1. Оптимальная настройка. Энергия 1,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,4c3526dba03298a71f24acf4eb4fc27d6b8d3c292de81c21701da17ef3ee37c7
+P2-C07-E032,2,7,7.6. Минимум квадратичной функции,7.6.2. Вариант 2. Оптимальная настройка. Энергия 2,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,5d6038a082ad086cdea2961ab2b5e434bbee14755752651f3f47b5581646c1da
+P2-C07-E033,2,7,7.6. Минимум квадратичной функции,7.6.3. Вариант 3. Оптимальная настройка. Энергия 3,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,6544b248ef7770dd411f2453f02c5efefe1f8b70860fcd5adae619e20e8a80c1
+P2-C07-E034,2,7,7.6. Минимум квадратичной функции,7.6.4. Вариант 4. Оптимальная настройка. Энергия 4,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,d2e04967163b3ebdc9b3aedb5a4b6c90814889fe829b8237965ded06a66d09a1
+P2-C07-E035,2,7,7.6. Минимум квадратичной функции,7.6.5. Вариант 5. Оптимальная настройка. Энергия 5,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,392c3255e436206e76f18f63111070d5a4e3106efbf9130dd7ae7fd56e332ba3
+P2-C07-E036,2,7,7.6. Минимум квадратичной функции,7.6.6. Вариант 6. Оптимальная настройка. Энергия 6,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,1c8e0ab614dc6c1e80fa8e50b87f50f01ba8814304b9714bd5612b382e4fb2e1
+P2-C07-E037,2,7,7.7. Экспонента нильпотентного возмущения,7.7.1. Вариант 1. Три последовательных звена. Связь 1,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,818e39a4ff1ac0ebdde84741db15f5fd4f6ad09fe638fad374d02fe32401b24c
+P2-C07-E038,2,7,7.7. Экспонента нильпотентного возмущения,7.7.2. Вариант 2. Три последовательных звена. Связь 2,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,3ffeaf50d048f38a7efd3e8e30d08fcf12dece5b88a640f1726ee99111377378
+P2-C07-E039,2,7,7.7. Экспонента нильпотентного возмущения,7.7.3. Вариант 3. Три последовательных звена. Связь 3,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,ce63276d6ad76aa2bf46bb54ebbce24d6c33454a8c4c45d86a29f7d916f97295
+P2-C07-E040,2,7,7.7. Экспонента нильпотентного возмущения,7.7.4. Вариант 4. Три последовательных звена. Связь 4,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,7e292429dec557719dd2860d5c42e9f14498d29d281739f52450cce72a3611ae
+P2-C07-E041,2,7,7.7. Экспонента нильпотентного возмущения,7.7.5. Вариант 5. Три последовательных звена. Связь 5,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,5cabfcf34c8712ea03cc65cdeb43d03e5ec9296e751f7ca2778633b2e1b3fe03
+P2-C07-E042,2,7,7.7. Экспонента нильпотентного возмущения,7.7.6. Вариант 6. Три последовательных звена. Связь 6,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,57ec79756b4f4451acc0c79c1b266a591b15497b3b385b32f25a9ceecb716e75
+P2-C07-E043,2,7,"7.8. Нормаль, площадь и объем",7.8.1. Вариант 1. Геометрия пространственной ячейки. Размер 1,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,0975db8a602ad2840d94392616d8cec75b5b2a3a6fcbf477ecc12360463cffdd
+P2-C07-E044,2,7,"7.8. Нормаль, площадь и объем",7.8.2. Вариант 2. Геометрия пространственной ячейки. Размер 2,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,5a4e11bb97638f1e9b9609519ba838a117bfe40cd41ab39491dce589d4d5e92e
+P2-C07-E045,2,7,"7.8. Нормаль, площадь и объем",7.8.3. Вариант 3. Геометрия пространственной ячейки. Размер 3,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,4baa79de94485e092e515a338de3002ae76501ca59b9cb1beeb4e59ee5dc00be
+P2-C07-E046,2,7,"7.8. Нормаль, площадь и объем",7.8.4. Вариант 4. Геометрия пространственной ячейки. Размер 4,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,7b413a68372faa1c11cedeb9d85e22b90e121bf856be6e178d33167691d3284a
+P2-C07-E047,2,7,"7.8. Нормаль, площадь и объем",7.8.5. Вариант 5. Геометрия пространственной ячейки. Размер 5,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,cc630145a0941a86ba31bc76ba44dbe8e02cfd2bab3785d349f365d3732d9662
+P2-C07-E048,2,7,"7.8. Нормаль, площадь и объем",7.8.6. Вариант 6. Геометрия пространственной ячейки. Размер 6,Part_2/Chapter_07.nb,Part_2/Chapter_07.wl,0b6bcb727470172e23dcfdc86f32a91352638940eb720d9849086ed8bc60b782
+P2-C08-E001,2,8,8.2. Указатель команд Wolfram Language,,Part_2/Chapter_08.nb,Part_2/Chapter_08.wl,789f6b84964b89db62213c8ba30fa9f9480f6e5d6bbef470142e6517228f65c9
+P2-C08-E002,2,8,8.2. Указатель команд Wolfram Language,,Part_2/Chapter_08.nb,Part_2/Chapter_08.wl,1e3ec070ab3df3a925236391264f4e42acfe87ae46a9de8b684f5c0494e0313d
+P3-C01-E001,3,1,1.1. Проекция на прямую,,Part_3/Chapter_01.nb,Part_3/Chapter_01.wl,8318447e4dd7829bd6e3bc42e53dbef63567fee7ab09b1ef67716fbd74c30b3c
+P3-C01-E002,3,1,1.3. Ортогональное дополнение,,Part_3/Chapter_01.nb,Part_3/Chapter_01.wl,80279a06c41b7ef18470e178acf1223264899b29451d9081689e2f1eb292ce31
+P3-C01-E003,3,1,1.4. Наименьшие квадраты,,Part_3/Chapter_01.nb,Part_3/Chapter_01.wl,1347fa38d908c94f2be7548515faf2bdced5e4994d34d56587129d06c7db871e
+P3-C01-E004,3,1,1.4. Наименьшие квадраты,1.4.1. Линейная регрессия как задача приближения,Part_3/Chapter_01.nb,Part_3/Chapter_01.wl,6053a6d2eac6b46cf62ab9e59c9ecea280aec55bf945f491defd6f2ed97987a1
+P3-C02-E001,3,2,2.1. Метод Грама–Шмидта,,Part_3/Chapter_02.nb,Part_3/Chapter_02.wl,ab5a7d459579c42763a5f4fe342d7336b7535dfe98b0d11d6a129453817d37a1
+P3-C02-E002,3,2,2.2. QR-разложение,,Part_3/Chapter_02.nb,Part_3/Chapter_02.wl,45283209d5e6fb9b425c3343e76e9dc733db8c0479a924468d5370189c7bb438
+P3-C02-E003,3,2,2.3. Сингулярное разложение и псевдообратная,,Part_3/Chapter_02.nb,Part_3/Chapter_02.wl,df772600f440e3a9539c7426a03afcfd9f7d37f528ad1ab3f7a0cef864fb6321
+P3-C02-E004,3,2,2.3. Сингулярное разложение и псевдообратная,2.3.1. Главные компоненты: сжатие признаков,Part_3/Chapter_02.nb,Part_3/Chapter_02.wl,39b9be4f351ef29e4f5747e95a84ced5a27ea2c4df6af83c642bdd9d051b8e31
+P3-C02-E005,3,2,2.3. Сингулярное разложение и псевдообратная,2.3.2. Регуляризация и гребневая регрессия,Part_3/Chapter_02.nb,Part_3/Chapter_02.wl,8828cce634dc031bd79f8fb2141291015715edc358bac4425debbdd9b51896bb
+P3-C02-E006,3,2,2.4. Скалярное произведение функций,,Part_3/Chapter_02.nb,Part_3/Chapter_02.wl,a38a158aad373eb7100f6dd6651e5f3ffe6d8f084da7ab4d465764cb45b092c8
+P3-C02-E007,3,2,2.5. Изометрии и вращения пространства,,Part_3/Chapter_02.nb,Part_3/Chapter_02.wl,242508105d270414e61dd93e1e738b311d2bff2a17fe33cf34236e1614c66c7c
+P3-C03-E001,3,3,3.1. Марковская модель двух состояний,3.1.1. Вариант 1. Переход между двумя категориями. Модель 1,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,f259452bf22dc137e3a1275ffff8bb864c904933189e191e7970bf2645b27b04
+P3-C03-E002,3,3,3.1. Марковская модель двух состояний,3.1.2. Вариант 2. Переход между двумя категориями. Модель 2,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,410b3c62ad9eb81bbd9c3eabbd7d5b3582bcd09069d4ea01d99de78d514b195c
+P3-C03-E003,3,3,3.1. Марковская модель двух состояний,3.1.3. Вариант 3. Переход между двумя категориями. Модель 3,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,1bd5c0451c4f3a4b009dbe348fa346feee5ae453ec1464354ddf6c35e39f4de8
+P3-C03-E004,3,3,3.1. Марковская модель двух состояний,3.1.4. Вариант 4. Переход между двумя категориями. Модель 4,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,33e7c79b2b3757bd5795630c945ff7e94173c359e44ae814c2d5dc31256d85e1
+P3-C03-E005,3,3,3.1. Марковская модель двух состояний,3.1.5. Вариант 5. Переход между двумя категориями. Модель 5,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,8fe1801dbd53765ebb11cedd5c94b9213520f53469e145034bc7fa986cd439dc
+P3-C03-E006,3,3,3.1. Марковская модель двух состояний,3.1.6. Вариант 6. Переход между двумя категориями. Модель 6,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,bbca1263bc090ee5d2aa7bcd70148501de74bbea6b7c215cf3c2181fddb98ec3
+P3-C03-E007,3,3,3.2. Проекция измерения на одно направление,3.2.1. Вариант 1. Объясненная компонента сигнала. Направление 1,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,765994defbfb0dd7ef984eca33429e660494a6cf8786092ec093ce354a618d10
+P3-C03-E008,3,3,3.2. Проекция измерения на одно направление,3.2.2. Вариант 2. Объясненная компонента сигнала. Направление 2,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,80d1f4a92b250643da2af66865f440c0793db0d0ee015e5726d03fb60b737fee
+P3-C03-E009,3,3,3.2. Проекция измерения на одно направление,3.2.3. Вариант 3. Объясненная компонента сигнала. Направление 3,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,1c41f3cee835229f20147bec602e6ebed14863a74ace1b3c5e3dd3b1c9295945
+P3-C03-E010,3,3,3.2. Проекция измерения на одно направление,3.2.4. Вариант 4. Объясненная компонента сигнала. Направление 4,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,0ee9bb9e523fb264c2d0c8ccee0d66c7d348d6ad4fb616775e9b857a179dbef0
+P3-C03-E011,3,3,3.2. Проекция измерения на одно направление,3.2.5. Вариант 5. Объясненная компонента сигнала. Направление 5,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,93801b657d931d2317154c2c34f85524ce082a945a886ca3f62773d1241b5a0e
+P3-C03-E012,3,3,3.2. Проекция измерения на одно направление,3.2.6. Вариант 6. Объясненная компонента сигнала. Направление 6,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,e741f0eee48cae086646cc7521dc9bb3f1f456086e4ad878532c75d7742963f3
+P3-C03-E013,3,3,3.3. Расстояние и ближайшая точка плоскости,3.3.1. Вариант 1. Калибровка положения. Плоскость 1,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,e1bb69e72502c1b2452c22856497e59dff2d7f5eac6e3dc06df319b4a1a8c45e
+P3-C03-E014,3,3,3.3. Расстояние и ближайшая точка плоскости,3.3.2. Вариант 2. Калибровка положения. Плоскость 2,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,e5844095248af20a20f468b4370ea6baae30132314a35dcb508a8c6fdec17fd9
+P3-C03-E015,3,3,3.3. Расстояние и ближайшая точка плоскости,3.3.3. Вариант 3. Калибровка положения. Плоскость 3,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,51505afb8750bb52cdf90e8b930b89e87574e28e6bc02df9b0911dd725b76f05
+P3-C03-E016,3,3,3.3. Расстояние и ближайшая точка плоскости,3.3.4. Вариант 4. Калибровка положения. Плоскость 4,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,6cad6b728c3fb6e6a2c4e4db39ee00c0a10a2450390c99dc2fc02737870f3783
+P3-C03-E017,3,3,3.3. Расстояние и ближайшая точка плоскости,3.3.5. Вариант 5. Калибровка положения. Плоскость 5,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,d9d5e4684b15814aca1f8a1905a556be8ec6d88bc9e40a945d6cd4b0d71c2852
+P3-C03-E018,3,3,3.3. Расстояние и ближайшая точка плоскости,3.3.6. Вариант 6. Калибровка положения. Плоскость 6,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,4c7c6080b757d20ff3b8838cb21287645f250f159028c4621cfcd17fd1bf933f
+P3-C03-E019,3,3,3.4. Линейная калибровка методом наименьших квадратов,3.4.1. Вариант 1. Четыре показания прибора. Серия 1,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,12957117b5effb67e3da699e81263d0882773b3594e6cb26d94b8d8e120d3d14
+P3-C03-E020,3,3,3.4. Линейная калибровка методом наименьших квадратов,3.4.2. Вариант 2. Четыре показания прибора. Серия 2,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,4da357203dd2ce1f58dcb18b371dd413205eedf468c85397c82c4e85c0cc2f5d
+P3-C03-E021,3,3,3.4. Линейная калибровка методом наименьших квадратов,3.4.3. Вариант 3. Четыре показания прибора. Серия 3,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,3da2d80764d1381780e8714cd700350da49636258e2e7a51cfb7ea692a4be568
+P3-C03-E022,3,3,3.4. Линейная калибровка методом наименьших квадратов,3.4.4. Вариант 4. Четыре показания прибора. Серия 4,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,f8452aa694418d932826e5d8ca7fdd66279b2282c16870af366e606064758406
+P3-C03-E023,3,3,3.4. Линейная калибровка методом наименьших квадратов,3.4.5. Вариант 5. Четыре показания прибора. Серия 5,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,4c5a24b02376e631923536cf618645f1a9b4453a5dca40e6989529694d1f53de
+P3-C03-E024,3,3,3.4. Линейная калибровка методом наименьших квадратов,3.4.6. Вариант 6. Четыре показания прибора. Серия 6,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,ed450be36ab80bf8fc3b49bd6f64d388cd28f8ef46eb94556efaefe5fd9565be
+P3-C03-E025,3,3,3.5. Взвешенные наименьшие квадраты,3.5.1. Вариант 1. Надежное среднее измерение. Вес 2,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,1bce68a0549b21e1eb7476b31462c2bb2241acc178315f35859ce8ee6dcd8fd2
+P3-C03-E026,3,3,3.5. Взвешенные наименьшие квадраты,3.5.2. Вариант 2. Надежное среднее измерение. Вес 3,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,5afb65dccdd77dc796d79ef3ef8eeac64b4521480268294d81402703ed7c398d
+P3-C03-E027,3,3,3.5. Взвешенные наименьшие квадраты,3.5.3. Вариант 3. Надежное среднее измерение. Вес 4,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,74ef8783a2ee57f0de99ff7f259bcee6528681edd62ddad98bc78fae67c37ab8
+P3-C03-E028,3,3,3.5. Взвешенные наименьшие квадраты,3.5.4. Вариант 4. Надежное среднее измерение. Вес 5,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,956824274fc40161035b370c54544ede838060ceaeff94dcb02d1e65692e2dbf
+P3-C03-E029,3,3,3.5. Взвешенные наименьшие квадраты,3.5.5. Вариант 5. Надежное среднее измерение. Вес 6,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,466ff1afa5094771bdcde4b531cd111a3c42a7ff62469643cc11714149d30115
+P3-C03-E030,3,3,3.5. Взвешенные наименьшие квадраты,3.5.6. Вариант 6. Надежное среднее измерение. Вес 7,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,39482f2da32971588e71f18256774c79ab574bc63537797fd10d7ba616f58bf5
+P3-C03-E031,3,3,3.6. Грам–Шмидт и тонкое QR-разложение,3.6.1. Вариант 1. Два канала в трех координатах. Ортогонализация 1,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,118bf4eb08cc81f62be1c6f2804af8a3fea786fb824ac63684fc38b014d3b559
+P3-C03-E032,3,3,3.6. Грам–Шмидт и тонкое QR-разложение,3.6.2. Вариант 2. Два канала в трех координатах. Ортогонализация 2,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,5b36167ea2253fde63c94a752481f51f8583ffb579df84ec75193b8010a256dd
+P3-C03-E033,3,3,3.6. Грам–Шмидт и тонкое QR-разложение,3.6.3. Вариант 3. Два канала в трех координатах. Ортогонализация 3,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,35dda4350dbb6ca60748ae052276dbb079691fa068f07d55c4041fbe6dffaaff
+P3-C03-E034,3,3,3.6. Грам–Шмидт и тонкое QR-разложение,3.6.4. Вариант 4. Два канала в трех координатах. Ортогонализация 4,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,c0d2d0e207a6842e7a42bbe474b7cfad383b001c9039262b406177363eee7cfb
+P3-C03-E035,3,3,3.6. Грам–Шмидт и тонкое QR-разложение,3.6.5. Вариант 5. Два канала в трех координатах. Ортогонализация 5,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,cf859dfa0adf0dc3bf3d85b64aef01bd09e74e7cefc0c3bdce3b8be290573c0e
+P3-C03-E036,3,3,3.6. Грам–Шмидт и тонкое QR-разложение,3.6.6. Вариант 6. Два канала в трех координатах. Ортогонализация 6,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,3b2856965f3e0e61e033295b36e8b45b5606ec55c51391536ac72622112a8242
+P3-C03-E037,3,3,3.7. Матрица ранга один и псевдообратная,3.7.1. Вариант 1. Один наблюдаемый режим. Вариант 1,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,865c77c4e900a82d82a48e9a8d2ca1e5ca7a32042fdb0273235de0cc7c7bb142
+P3-C03-E038,3,3,3.7. Матрица ранга один и псевдообратная,3.7.2. Вариант 2. Один наблюдаемый режим. Вариант 2,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,076663bf1a0f33f68c4edd0ffcb597285ca3cc8d99b5c3c7aaa17733449d70e6
+P3-C03-E039,3,3,3.7. Матрица ранга один и псевдообратная,3.7.3. Вариант 3. Один наблюдаемый режим. Вариант 3,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,a3deb7f817bb65557203256fcfb325daec93933817989bab860a3592862dd2cd
+P3-C03-E040,3,3,3.7. Матрица ранга один и псевдообратная,3.7.4. Вариант 4. Один наблюдаемый режим. Вариант 4,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,f385448851be0088c95ba39166c9d159e1383767589ae01875b47a43fb307576
+P3-C03-E041,3,3,3.7. Матрица ранга один и псевдообратная,3.7.5. Вариант 5. Один наблюдаемый режим. Вариант 5,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,99ef49b5edbe89148726f450730c499b3a405f16d43443a7967a5ea966c70fa7
+P3-C03-E042,3,3,3.7. Матрица ранга один и псевдообратная,3.7.6. Вариант 6. Один наблюдаемый режим. Вариант 6,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,e00164ce182be9ae3cca21f2968ad3d64b621b500aa3fca70fe8b974873ceb05
+P3-C03-E043,3,3,3.8. Регуляризация и компромисс между точностью и нормой,3.8.1. Вариант 1. Зависимые признаки. Штраф 1/2,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,50efdd5ce8c920b9485fcbca4ecc5fef9f623958929e0197f9cbf89bb13e143a
+P3-C03-E044,3,3,3.8. Регуляризация и компромисс между точностью и нормой,3.8.2. Вариант 2. Зависимые признаки. Штраф 1,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,962457ab417319f6c8295e3e86413db20d32a995ba052e2a9afc98e7b478a8fe
+P3-C03-E045,3,3,3.8. Регуляризация и компромисс между точностью и нормой,3.8.3. Вариант 3. Зависимые признаки. Штраф 3/2,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,b08398940865b838fe2de967c3833b50259ed8e069aaf49fb29dede3530e3917
+P3-C03-E046,3,3,3.8. Регуляризация и компромисс между точностью и нормой,3.8.4. Вариант 4. Зависимые признаки. Штраф 2,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,fd0b7ddb089028f03ffa25e4ad7dfcc73552ff44ece4e6dd6f28375bdcd32f56
+P3-C03-E047,3,3,3.8. Регуляризация и компромисс между точностью и нормой,3.8.5. Вариант 5. Зависимые признаки. Штраф 5/2,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,c0d4f9de339d16531d864307d8416b16dd4c109bc71747768df2bdeb33c0b2bb
+P3-C03-E048,3,3,3.8. Регуляризация и компромисс между точностью и нормой,3.8.6. Вариант 6. Зависимые признаки. Штраф 3,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,eb1d1cd82f428187175fea0fc40b44d721294fae558cebee9aa633069888c59b
+P3-C03-E049,3,3,3.9. Итоговый проект. От наблюдений к проверенной модели,,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,e4c9c6d32859be188d3e7e4f31da12f7f80395e42e6bf4967906022e8239aa85
+P3-C03-E050,3,3,3.9. Итоговый проект. От наблюдений к проверенной модели,,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,43d2ce4b7a45bad3d0be9e6fabf2290a647026709fde1d06112ff42b2c9b54cc
+P3-C03-E051,3,3,3.9. Итоговый проект. От наблюдений к проверенной модели,,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,fc44eab68ee092201ff12619a6b6ab143f61ea815036ca6100ed412865b000dd
+P3-C03-E052,3,3,3.9. Итоговый проект. От наблюдений к проверенной модели,,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,c7b8bf6ef5f6b5c3efbde3e893aea3010f2e83548b44e6e98fff427a13812217
+P3-C03-E053,3,3,3.9. Итоговый проект. От наблюдений к проверенной модели,,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,7141500b79ffa55bceb0b42ed477ec0fd240dff006f5bc798206cc299a4a9927
+P3-C03-E054,3,3,3.9. Итоговый проект. От наблюдений к проверенной модели,,Part_3/Chapter_03.nb,Part_3/Chapter_03.wl,13e98569757afd09cf60358ffa02176007da51a9ddbf53095b11f9775958a016
+P3-C04-E001,3,4,4.2. Указатель команд Wolfram Language,,Part_3/Chapter_04.nb,Part_3/Chapter_04.wl,789f6b84964b89db62213c8ba30fa9f9480f6e5d6bbef470142e6517228f65c9
+P3-C04-E002,3,4,4.2. Указатель команд Wolfram Language,,Part_3/Chapter_04.nb,Part_3/Chapter_04.wl,1e3ec070ab3df3a925236391264f4e42acfe87ae46a9de8b684f5c0494e0313d

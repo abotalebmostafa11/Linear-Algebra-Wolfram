@@ -1,0 +1,21 @@
+(* Wolfram Notebook File *)
+Notebook[{
+Cell["1. Ортогональные проекции и наименьшие квадраты","Title"],
+Cell["Часть 3. Ноутбук соответствует нумерации книги. Выполняйте ячейки сверху вниз через Shift+Enter. Исходные данные включены в программы. Независимые примеры используют отдельные контексты; шесть блоков проекта cars разделяют один контекст.","Text"],
+Cell[CellGroupData[{Cell["1.1. Проекция на прямую — P3-C01-E001","Section"],
+Cell["Источник: часть 3, 1.1. Проекция на прямую. Кодовый блок 1 главы 1.","Text"],
+Cell[BoxData[RowBox[{"ClearAll","[","\"LinearAlgebraCompanion`Part3`P3C01E001`*\"","]",";"}]],"Input",CellContext->"LinearAlgebraCompanion`Part3`P3C01E001`",CellLabel->"P3-C01-E001 reset"],
+Cell[BoxData[RowBox[{"u"," ","="," ","{","2",","," ","1","}",";"," ","b"," ","="," ","{","1",","," ","3","}",";","\n","p"," ","="," ","(","Conjugate","[","u","]",".","b",")","/","(","Conjugate","[","u","]",".","u",")"," ","u",";","\n","r"," ","="," ","b"," ","-"," ","p",";","\n","{","p",","," ","r",","," ","Conjugate","[","u","]",".","r",","," ","Norm","[","r","]","}"}]],"Input",CellContext->"LinearAlgebraCompanion`Part3`P3C01E001`",CellLabel->"P3-C01-E001"]},Open]],
+Cell[CellGroupData[{Cell["1.3. Ортогональное дополнение — P3-C01-E002","Section"],
+Cell["Источник: часть 3, 1.3. Ортогональное дополнение. Кодовый блок 2 главы 1.","Text"],
+Cell[BoxData[RowBox[{"ClearAll","[","\"LinearAlgebraCompanion`Part3`P3C01E002`*\"","]",";"}]],"Input",CellContext->"LinearAlgebraCompanion`Part3`P3C01E002`",CellLabel->"P3-C01-E002 reset"],
+Cell[BoxData[RowBox[{"normal"," ","="," ","{","1",","," ","1",","," ","1","}",";","\n","basis"," ","="," ","NullSpace","[","{","normal","}","]",";","\n","{","basis",","," ","basis",".","normal",","," ","MatrixRank","[","basis","]","}"}]],"Input",CellContext->"LinearAlgebraCompanion`Part3`P3C01E002`",CellLabel->"P3-C01-E002"]},Open]],
+Cell[CellGroupData[{Cell["1.4. Наименьшие квадраты — P3-C01-E003","Section"],
+Cell["Источник: часть 3, 1.4. Наименьшие квадраты. Кодовый блок 3 главы 1.","Text"],
+Cell[BoxData[RowBox[{"ClearAll","[","\"LinearAlgebraCompanion`Part3`P3C01E003`*\"","]",";"}]],"Input",CellContext->"LinearAlgebraCompanion`Part3`P3C01E003`",CellLabel->"P3-C01-E003 reset"],
+Cell[BoxData[RowBox[{"a"," ","="," ","{","{","1",","," ","0","}",","," ","{","1",","," ","1","}",","," ","{","1",","," ","2","}","}",";","\n","b"," ","="," ","{","1",","," ","2",","," ","2","}",";","\n","x"," ","="," ","LeastSquares","[","a",","," ","b","]",";","\n","r"," ","="," ","b"," ","-"," ","a",".","x",";","\n","{","x",","," ","r",","," ","Transpose","[","a","]",".","r",","," ","r",".","r","}"}]],"Input",CellContext->"LinearAlgebraCompanion`Part3`P3C01E003`",CellLabel->"P3-C01-E003"]},Open]],
+Cell[CellGroupData[{Cell["1.4.1. Линейная регрессия как задача приближения — P3-C01-E004","Section"],
+Cell["Источник: часть 3, 1.4. Наименьшие квадраты. Кодовый блок 4 главы 1.","Text"],
+Cell[BoxData[RowBox[{"ClearAll","[","\"LinearAlgebraCompanion`Part3`P3C01E004`*\"","]",";"}]],"Input",CellContext->"LinearAlgebraCompanion`Part3`P3C01E004`",CellLabel->"P3-C01-E004 reset"],
+Cell[BoxData[RowBox[{"t"," ","="," ","{","0",","," ","1",","," ","2","}",";"," ","y"," ","="," ","{","1",","," ","2",","," ","2","}",";","\n","tc"," ","="," ","t"," ","-"," ","Mean","[","t","]",";"," ","yc"," ","="," ","y"," ","-"," ","Mean","[","y","]",";","\n","slope"," ","="," ","(","tc",".","yc",")","/","(","tc",".","tc",")",";","\n","intercept"," ","="," ","Mean","[","y","]"," ","-"," ","slope"," ","Mean","[","t","]",";","\n","design"," ","="," ","Transpose","[","{","ConstantArray","[","1",","," ","Length","[","t","]]",","," ","t","}","]",";","\n","beta"," ","="," ","{","intercept",","," ","slope","}",";","\n","residual"," ","="," ","y"," ","-"," ","design",".","beta",";","\n","{","beta",","," ","Total","[","residual","]",","," ","tc",".","residual",",","\n ","beta"," ","=="," ","LeastSquares","[","design",","," ","y","]","}"}]],"Input",CellContext->"LinearAlgebraCompanion`Part3`P3C01E004`",CellLabel->"P3-C01-E004"]},Open]]
+},WindowTitle->"1. Ортогональные проекции и наименьшие квадраты",StyleDefinitions->"Default.nb",Saveable->True,TaggingRules-><|"CompanionVersion"->"1.0.0"|>]

@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite the corresponding part of the book when using these companion materials."
+title: "Linear Algebra with Wolfram Mathematica Companion Code and Data"
+type: software
+authors:
+  - family-names: "Abotaleb"
+    given-names: "Mostafa"
+version: "1.0.0"
+date-released: 2026-10-16
+repository-code: "https://github.com/abotalebmostafa11/Linear-Algebra-Wolfram"
+url: "https://github.com/abotalebmostafa11/Linear-Algebra-Wolfram"
+abstract: "Companion materials for the author's three-part Russian-language linear algebra course."

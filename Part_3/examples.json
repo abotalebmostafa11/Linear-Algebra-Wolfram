@@ -1,0 +1,1490 @@
+{
+  "format_version": 1,
+  "part": 3,
+  "examples": [
+    {
+      "id": "P3-C01-E001",
+      "part": 3,
+      "chapter": 1,
+      "chapter_title": "1. Ортогональные проекции и наименьшие квадраты",
+      "example": 1,
+      "section": "1.1. Проекция на прямую",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P3-C01-E001",
+      "depends_on": [],
+      "code": "u = {2, 1}; b = {1, 3};\np = (Conjugate[u].b)/(Conjugate[u].u) u;\nr = b - p;\n{p, r, Conjugate[u].r, Norm[r]}",
+      "sha256": "8318447e4dd7829bd6e3bc42e53dbef63567fee7ab09b1ef67716fbd74c30b3c",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 10,
+          "example": 1,
+          "section": "10.1. Проекция на прямую"
+        }
+      ]
+    },
+    {
+      "id": "P3-C01-E002",
+      "part": 3,
+      "chapter": 1,
+      "chapter_title": "1. Ортогональные проекции и наименьшие квадраты",
+      "example": 2,
+      "section": "1.3. Ортогональное дополнение",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P3-C01-E002",
+      "depends_on": [],
+      "code": "normal = {1, 1, 1};\nbasis = NullSpace[{normal}];\n{basis, basis.normal, MatrixRank[basis]}",
+      "sha256": "80279a06c41b7ef18470e178acf1223264899b29451d9081689e2f1eb292ce31",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 10,
+          "example": 2,
+          "section": "10.3. Ортогональное дополнение"
+        }
+      ]
+    },
+    {
+      "id": "P3-C01-E003",
+      "part": 3,
+      "chapter": 1,
+      "chapter_title": "1. Ортогональные проекции и наименьшие квадраты",
+      "example": 3,
+      "section": "1.4. Наименьшие квадраты",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P3-C01-E003",
+      "depends_on": [],
+      "code": "a = {{1, 0}, {1, 1}, {1, 2}};\nb = {1, 2, 2};\nx = LeastSquares[a, b];\nr = b - a.x;\n{x, r, Transpose[a].r, r.r}",
+      "sha256": "1347fa38d908c94f2be7548515faf2bdced5e4994d34d56587129d06c7db871e",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 10,
+          "example": 3,
+          "section": "10.4. Наименьшие квадраты"
+        }
+      ]
+    },
+    {
+      "id": "P3-C01-E004",
+      "part": 3,
+      "chapter": 1,
+      "chapter_title": "1. Ортогональные проекции и наименьшие квадраты",
+      "example": 4,
+      "section": "1.4. Наименьшие квадраты",
+      "subsection": "1.4.1. Линейная регрессия как задача приближения",
+      "variant": "1.4.1. Линейная регрессия как задача приближения",
+      "execution_group": "P3-C01-E004",
+      "depends_on": [],
+      "code": "t = {0, 1, 2}; y = {1, 2, 2};\ntc = t - Mean[t]; yc = y - Mean[y];\nslope = (tc.yc)/(tc.tc);\nintercept = Mean[y] - slope Mean[t];\ndesign = Transpose[{ConstantArray[1, Length[t]], t}];\nbeta = {intercept, slope};\nresidual = y - design.beta;\n{beta, Total[residual], tc.residual,\n beta == LeastSquares[design, y]}",
+      "sha256": "6053a6d2eac6b46cf62ab9e59c9ecea280aec55bf945f491defd6f2ed97987a1",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 10,
+          "example": 4,
+          "section": "10.4.1. Линейная регрессия как задача приближения"
+        }
+      ]
+    },
+    {
+      "id": "P3-C02-E001",
+      "part": 3,
+      "chapter": 2,
+      "chapter_title": "2. Ортогональные и сингулярные разложения",
+      "example": 1,
+      "section": "2.1. Метод Грама–Шмидта",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P3-C02-E001",
+      "depends_on": [],
+      "code": "a1 = {1, 1, 0}; a2 = {1, 0, 1};\nq1 = a1/Norm[a1];\nv2 = a2 - q1 (Conjugate[q1].a2);\nq2 = FullSimplify[v2/Norm[v2]];\n{q1, q2, FullSimplify[Conjugate[q1].q2]}",
+      "sha256": "ab5a7d459579c42763a5f4fe342d7336b7535dfe98b0d11d6a129453817d37a1",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 10,
+          "example": 5,
+          "section": "10.5. Метод Грама–Шмидта"
+        }
+      ]
+    },
+    {
+      "id": "P3-C02-E002",
+      "part": 3,
+      "chapter": 2,
+      "chapter_title": "2. Ортогональные и сингулярные разложения",
+      "example": 2,
+      "section": "2.2. QR-разложение",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P3-C02-E002",
+      "depends_on": [],
+      "code": "a = {{1, 1}, {1, 0}, {0, 1}};\n{qStored, r} = QRDecomposition[a];\nq = ConjugateTranspose[qStored];\n{FullSimplify[q.r - a],\n FullSimplify[ConjugateTranspose[q].q]}",
+      "sha256": "45283209d5e6fb9b425c3343e76e9dc733db8c0479a924468d5370189c7bb438",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 10,
+          "example": 6,
+          "section": "10.6. QR-разложение"
+        }
+      ]
+    },
+    {
+      "id": "P3-C02-E003",
+      "part": 3,
+      "chapter": 2,
+      "chapter_title": "2. Ортогональные и сингулярные разложения",
+      "example": 3,
+      "section": "2.3. Сингулярное разложение и псевдообратная",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P3-C02-E003",
+      "depends_on": [],
+      "code": "a = {{1, 1}};\nb = {2};\npinv = PseudoInverse[a];\nx = pinv.b;\n{pinv, x, a.x}",
+      "sha256": "df772600f440e3a9539c7426a03afcfd9f7d37f528ad1ab3f7a0cef864fb6321",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 10,
+          "example": 7,
+          "section": "10.7. Сингулярное разложение и псевдообратная"
+        }
+      ]
+    },
+    {
+      "id": "P3-C02-E004",
+      "part": 3,
+      "chapter": 2,
+      "chapter_title": "2. Ортогональные и сингулярные разложения",
+      "example": 4,
+      "section": "2.3. Сингулярное разложение и псевдообратная",
+      "subsection": "2.3.1. Главные компоненты: сжатие признаков",
+      "variant": "2.3.1. Главные компоненты: сжатие признаков",
+      "execution_group": "P3-C02-E004",
+      "depends_on": [],
+      "code": "x = {{-2, -1}, {-1, -2}, {1, 2}, {2, 1}};\nmean = Mean[x];\nxc = (# - mean) & /@ x;\nv1 = {1, 1}/Sqrt[2];\nz = xc.v1;\nxOne = Outer[Times, z, v1];\nerr = Total[Flatten[(xc - xOne)^2]];\n{mean, Transpose[xc].xc, z, xOne, err,\n 1 - err/Total[Flatten[xc^2]]}",
+      "sha256": "39b9be4f351ef29e4f5747e95a84ced5a27ea2c4df6af83c642bdd9d051b8e31",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 10,
+          "example": 8,
+          "section": "10.7.1. Главные компоненты: сжатие признаков"
+        }
+      ]
+    },
+    {
+      "id": "P3-C02-E005",
+      "part": 3,
+      "chapter": 2,
+      "chapter_title": "2. Ортогональные и сингулярные разложения",
+      "example": 5,
+      "section": "2.3. Сингулярное разложение и псевдообратная",
+      "subsection": "2.3.2. Регуляризация и гребневая регрессия",
+      "variant": "2.3.2. Регуляризация и гребневая регрессия",
+      "execution_group": "P3-C02-E005",
+      "depends_on": [],
+      "code": "a = {{1, 1}, {2, 2}}; b = {1, 2};\nlambda = 1;\nnormal = Transpose[a].a + lambda IdentityMatrix[2];\nx = LinearSolve[normal, Transpose[a].b];\nr = b - a.x;\n{x, a.x, r, Transpose[a].r - lambda x,\n r.r, x.x, r.r + lambda x.x}",
+      "sha256": "8828cce634dc031bd79f8fb2141291015715edc358bac4425debbdd9b51896bb",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 10,
+          "example": 9,
+          "section": "10.7.2. Регуляризация и гребневая регрессия"
+        }
+      ]
+    },
+    {
+      "id": "P3-C02-E006",
+      "part": 3,
+      "chapter": 2,
+      "chapter_title": "2. Ортогональные и сингулярные разложения",
+      "example": 6,
+      "section": "2.4. Скалярное произведение функций",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P3-C02-E006",
+      "depends_on": [],
+      "code": "ClearAll[t];\nc = Integrate[t^2, {t, -1, 1}]/\n  Integrate[1, {t, -1, 1}];\n{c, Integrate[t^2 - c, {t, -1, 1}],\n Integrate[(t^2 - c)^2, {t, -1, 1}]}",
+      "sha256": "a38a158aad373eb7100f6dd6651e5f3ffe6d8f084da7ab4d465764cb45b092c8",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 10,
+          "example": 10,
+          "section": "10.8. Скалярное произведение функций"
+        }
+      ]
+    },
+    {
+      "id": "P3-C02-E007",
+      "part": 3,
+      "chapter": 2,
+      "chapter_title": "2. Ортогональные и сингулярные разложения",
+      "example": 7,
+      "section": "2.5. Изометрии и вращения пространства",
+      "subsection": "",
+      "variant": "",
+      "execution_group": "P3-C02-E007",
+      "depends_on": [],
+      "code": "q = {{0, -1, 0}, {1, 0, 0}, {0, 0, 1}};\n{Transpose[q].q, Det[q],\n NullSpace[q - IdentityMatrix[3]]}",
+      "sha256": "242508105d270414e61dd93e1e738b311d2bff2a17fe33cf34236e1614c66c7c",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 10,
+          "example": 11,
+          "section": "10.9. Изометрии и вращения пространства"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E001",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 1,
+      "section": "3.1. Марковская модель двух состояний",
+      "subsection": "3.1.1. Вариант 1. Переход между двумя категориями. Модель 1",
+      "variant": "3.1.1. Вариант 1. Переход между двумя категориями. Модель 1",
+      "execution_group": "P3-C03-E001",
+      "depends_on": [],
+      "code": "p = {{4/5, 1/5},\n {1/5, 4/5}};\nx0 = {1, 0};\nstationary = {1/2, 1/2};\nlambda2 = 3/5;\nx4 = stationary + lambda2^4 (x0 - stationary);\n{Total /@ Transpose[p], p.x0, p.p.x0,\n stationary, x4, MatrixPower[p, 4].x0,\n p.stationary - stationary}",
+      "sha256": "f259452bf22dc137e3a1275ffff8bb864c904933189e191e7970bf2645b27b04",
+      "verification_expression": "TrueQ[Total /@ Transpose[p] == {1,1}] && TrueQ[p.stationary == stationary] && TrueQ[Total[stationary] == 1] && TrueQ[x4 == MatrixPower[p,4].x0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 73,
+          "section": "15.13.1. Вариант 1. Переход между двумя категориями. Модель 1"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E002",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 2,
+      "section": "3.1. Марковская модель двух состояний",
+      "subsection": "3.1.2. Вариант 2. Переход между двумя категориями. Модель 2",
+      "variant": "3.1.2. Вариант 2. Переход между двумя категориями. Модель 2",
+      "execution_group": "P3-C03-E002",
+      "depends_on": [],
+      "code": "p = {{7/10, 1/5},\n {3/10, 4/5}};\nx0 = {1, 0};\nstationary = {2/5, 3/5};\nlambda2 = 1/2;\nx4 = stationary + lambda2^4 (x0 - stationary);\n{Total /@ Transpose[p], p.x0, p.p.x0,\n stationary, x4, MatrixPower[p, 4].x0,\n p.stationary - stationary}",
+      "sha256": "410b3c62ad9eb81bbd9c3eabbd7d5b3582bcd09069d4ea01d99de78d514b195c",
+      "verification_expression": "TrueQ[Total /@ Transpose[p] == {1,1}] && TrueQ[p.stationary == stationary] && TrueQ[Total[stationary] == 1] && TrueQ[x4 == MatrixPower[p,4].x0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 74,
+          "section": "15.13.2. Вариант 2. Переход между двумя категориями. Модель 2"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E003",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 3,
+      "section": "3.1. Марковская модель двух состояний",
+      "subsection": "3.1.3. Вариант 3. Переход между двумя категориями. Модель 3",
+      "variant": "3.1.3. Вариант 3. Переход между двумя категориями. Модель 3",
+      "execution_group": "P3-C03-E003",
+      "depends_on": [],
+      "code": "p = {{3/5, 1/5},\n {2/5, 4/5}};\nx0 = {1, 0};\nstationary = {1/3, 2/3};\nlambda2 = 2/5;\nx4 = stationary + lambda2^4 (x0 - stationary);\n{Total /@ Transpose[p], p.x0, p.p.x0,\n stationary, x4, MatrixPower[p, 4].x0,\n p.stationary - stationary}",
+      "sha256": "1bd5c0451c4f3a4b009dbe348fa346feee5ae453ec1464354ddf6c35e39f4de8",
+      "verification_expression": "TrueQ[Total /@ Transpose[p] == {1,1}] && TrueQ[p.stationary == stationary] && TrueQ[Total[stationary] == 1] && TrueQ[x4 == MatrixPower[p,4].x0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 75,
+          "section": "15.13.3. Вариант 3. Переход между двумя категориями. Модель 3"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E004",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 4,
+      "section": "3.1. Марковская модель двух состояний",
+      "subsection": "3.1.4. Вариант 4. Переход между двумя категориями. Модель 4",
+      "variant": "3.1.4. Вариант 4. Переход между двумя категориями. Модель 4",
+      "execution_group": "P3-C03-E004",
+      "depends_on": [],
+      "code": "p = {{1/2, 1/5},\n {1/2, 4/5}};\nx0 = {1, 0};\nstationary = {2/7, 5/7};\nlambda2 = 3/10;\nx4 = stationary + lambda2^4 (x0 - stationary);\n{Total /@ Transpose[p], p.x0, p.p.x0,\n stationary, x4, MatrixPower[p, 4].x0,\n p.stationary - stationary}",
+      "sha256": "33e7c79b2b3757bd5795630c945ff7e94173c359e44ae814c2d5dc31256d85e1",
+      "verification_expression": "TrueQ[Total /@ Transpose[p] == {1,1}] && TrueQ[p.stationary == stationary] && TrueQ[Total[stationary] == 1] && TrueQ[x4 == MatrixPower[p,4].x0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 76,
+          "section": "15.13.4. Вариант 4. Переход между двумя категориями. Модель 4"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E005",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 5,
+      "section": "3.1. Марковская модель двух состояний",
+      "subsection": "3.1.5. Вариант 5. Переход между двумя категориями. Модель 5",
+      "variant": "3.1.5. Вариант 5. Переход между двумя категориями. Модель 5",
+      "execution_group": "P3-C03-E005",
+      "depends_on": [],
+      "code": "p = {{2/5, 1/5},\n {3/5, 4/5}};\nx0 = {1, 0};\nstationary = {1/4, 3/4};\nlambda2 = 1/5;\nx4 = stationary + lambda2^4 (x0 - stationary);\n{Total /@ Transpose[p], p.x0, p.p.x0,\n stationary, x4, MatrixPower[p, 4].x0,\n p.stationary - stationary}",
+      "sha256": "8fe1801dbd53765ebb11cedd5c94b9213520f53469e145034bc7fa986cd439dc",
+      "verification_expression": "TrueQ[Total /@ Transpose[p] == {1,1}] && TrueQ[p.stationary == stationary] && TrueQ[Total[stationary] == 1] && TrueQ[x4 == MatrixPower[p,4].x0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 77,
+          "section": "15.13.5. Вариант 5. Переход между двумя категориями. Модель 5"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E006",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 6,
+      "section": "3.1. Марковская модель двух состояний",
+      "subsection": "3.1.6. Вариант 6. Переход между двумя категориями. Модель 6",
+      "variant": "3.1.6. Вариант 6. Переход между двумя категориями. Модель 6",
+      "execution_group": "P3-C03-E006",
+      "depends_on": [],
+      "code": "p = {{3/10, 1/5},\n {7/10, 4/5}};\nx0 = {1, 0};\nstationary = {2/9, 7/9};\nlambda2 = 1/10;\nx4 = stationary + lambda2^4 (x0 - stationary);\n{Total /@ Transpose[p], p.x0, p.p.x0,\n stationary, x4, MatrixPower[p, 4].x0,\n p.stationary - stationary}",
+      "sha256": "bbca1263bc090ee5d2aa7bcd70148501de74bbea6b7c215cf3c2181fddb98ec3",
+      "verification_expression": "TrueQ[Total /@ Transpose[p] == {1,1}] && TrueQ[p.stationary == stationary] && TrueQ[Total[stationary] == 1] && TrueQ[x4 == MatrixPower[p,4].x0]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 78,
+          "section": "15.13.6. Вариант 6. Переход между двумя категориями. Модель 6"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E007",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 7,
+      "section": "3.2. Проекция измерения на одно направление",
+      "subsection": "3.2.1. Вариант 1. Объясненная компонента сигнала. Направление 1",
+      "variant": "3.2.1. Вариант 1. Объясненная компонента сигнала. Направление 1",
+      "execution_group": "P3-C03-E007",
+      "depends_on": [],
+      "code": "u = {1, 1};\nb = {3, 1};\nnorm2 = u.u;\ncoefficient = (u.b)/norm2;\np = coefficient u;\nr = b - p;\n{coefficient, p, r, u.r,\n b.b, p.p + r.r}",
+      "sha256": "765994defbfb0dd7ef984eca33429e660494a6cf8786092ec093ce354a618d10",
+      "verification_expression": "TrueQ[u.r == 0] && TrueQ[b == p+r] && TrueQ[b.b == p.p+r.r]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 79,
+          "section": "15.14.1. Вариант 1. Объясненная компонента сигнала. Направление 1"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E008",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 8,
+      "section": "3.2. Проекция измерения на одно направление",
+      "subsection": "3.2.2. Вариант 2. Объясненная компонента сигнала. Направление 2",
+      "variant": "3.2.2. Вариант 2. Объясненная компонента сигнала. Направление 2",
+      "execution_group": "P3-C03-E008",
+      "depends_on": [],
+      "code": "u = {1, 2};\nb = {4, 1};\nnorm2 = u.u;\ncoefficient = (u.b)/norm2;\np = coefficient u;\nr = b - p;\n{coefficient, p, r, u.r,\n b.b, p.p + r.r}",
+      "sha256": "80d1f4a92b250643da2af66865f440c0793db0d0ee015e5726d03fb60b737fee",
+      "verification_expression": "TrueQ[u.r == 0] && TrueQ[b == p+r] && TrueQ[b.b == p.p+r.r]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 80,
+          "section": "15.14.2. Вариант 2. Объясненная компонента сигнала. Направление 2"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E009",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 9,
+      "section": "3.2. Проекция измерения на одно направление",
+      "subsection": "3.2.3. Вариант 3. Объясненная компонента сигнала. Направление 3",
+      "variant": "3.2.3. Вариант 3. Объясненная компонента сигнала. Направление 3",
+      "execution_group": "P3-C03-E009",
+      "depends_on": [],
+      "code": "u = {1, 3};\nb = {5, 1};\nnorm2 = u.u;\ncoefficient = (u.b)/norm2;\np = coefficient u;\nr = b - p;\n{coefficient, p, r, u.r,\n b.b, p.p + r.r}",
+      "sha256": "1c41f3cee835229f20147bec602e6ebed14863a74ace1b3c5e3dd3b1c9295945",
+      "verification_expression": "TrueQ[u.r == 0] && TrueQ[b == p+r] && TrueQ[b.b == p.p+r.r]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 81,
+          "section": "15.14.3. Вариант 3. Объясненная компонента сигнала. Направление 3"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E010",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 10,
+      "section": "3.2. Проекция измерения на одно направление",
+      "subsection": "3.2.4. Вариант 4. Объясненная компонента сигнала. Направление 4",
+      "variant": "3.2.4. Вариант 4. Объясненная компонента сигнала. Направление 4",
+      "execution_group": "P3-C03-E010",
+      "depends_on": [],
+      "code": "u = {1, 4};\nb = {6, 1};\nnorm2 = u.u;\ncoefficient = (u.b)/norm2;\np = coefficient u;\nr = b - p;\n{coefficient, p, r, u.r,\n b.b, p.p + r.r}",
+      "sha256": "0ee9bb9e523fb264c2d0c8ccee0d66c7d348d6ad4fb616775e9b857a179dbef0",
+      "verification_expression": "TrueQ[u.r == 0] && TrueQ[b == p+r] && TrueQ[b.b == p.p+r.r]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 82,
+          "section": "15.14.4. Вариант 4. Объясненная компонента сигнала. Направление 4"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E011",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 11,
+      "section": "3.2. Проекция измерения на одно направление",
+      "subsection": "3.2.5. Вариант 5. Объясненная компонента сигнала. Направление 5",
+      "variant": "3.2.5. Вариант 5. Объясненная компонента сигнала. Направление 5",
+      "execution_group": "P3-C03-E011",
+      "depends_on": [],
+      "code": "u = {1, 5};\nb = {7, 1};\nnorm2 = u.u;\ncoefficient = (u.b)/norm2;\np = coefficient u;\nr = b - p;\n{coefficient, p, r, u.r,\n b.b, p.p + r.r}",
+      "sha256": "93801b657d931d2317154c2c34f85524ce082a945a886ca3f62773d1241b5a0e",
+      "verification_expression": "TrueQ[u.r == 0] && TrueQ[b == p+r] && TrueQ[b.b == p.p+r.r]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 83,
+          "section": "15.14.5. Вариант 5. Объясненная компонента сигнала. Направление 5"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E012",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 12,
+      "section": "3.2. Проекция измерения на одно направление",
+      "subsection": "3.2.6. Вариант 6. Объясненная компонента сигнала. Направление 6",
+      "variant": "3.2.6. Вариант 6. Объясненная компонента сигнала. Направление 6",
+      "execution_group": "P3-C03-E012",
+      "depends_on": [],
+      "code": "u = {1, 6};\nb = {8, 1};\nnorm2 = u.u;\ncoefficient = (u.b)/norm2;\np = coefficient u;\nr = b - p;\n{coefficient, p, r, u.r,\n b.b, p.p + r.r}",
+      "sha256": "e741f0eee48cae086646cc7521dc9bb3f1f456086e4ad878532c75d7742963f3",
+      "verification_expression": "TrueQ[u.r == 0] && TrueQ[b == p+r] && TrueQ[b.b == p.p+r.r]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 84,
+          "section": "15.14.6. Вариант 6. Объясненная компонента сигнала. Направление 6"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E013",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 13,
+      "section": "3.3. Расстояние и ближайшая точка плоскости",
+      "subsection": "3.3.1. Вариант 1. Калибровка положения. Плоскость 1",
+      "variant": "3.3.1. Вариант 1. Калибровка положения. Плоскость 1",
+      "execution_group": "P3-C03-E013",
+      "depends_on": [],
+      "code": "n = {1, 2, 1};\nd = 3; b = {1, 1, 3};\ndelta = n.b - d;\nshift = delta/(n.n) n;\np = b - shift;\n{delta, shift, p, n.p,\n (b - p).(b - p), delta^2/(n.n)}",
+      "sha256": "e1bb69e72502c1b2452c22856497e59dff2d7f5eac6e3dc06df319b4a1a8c45e",
+      "verification_expression": "TrueQ[n.p == d] && TrueQ[(b-p).(b-p) == delta^2/(n.n)]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 85,
+          "section": "15.15.1. Вариант 1. Калибровка положения. Плоскость 1"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E014",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 14,
+      "section": "3.3. Расстояние и ближайшая точка плоскости",
+      "subsection": "3.3.2. Вариант 2. Калибровка положения. Плоскость 2",
+      "variant": "3.3.2. Вариант 2. Калибровка положения. Плоскость 2",
+      "execution_group": "P3-C03-E014",
+      "depends_on": [],
+      "code": "n = {1, 2, 2};\nd = 4; b = {2, 1, 3};\ndelta = n.b - d;\nshift = delta/(n.n) n;\np = b - shift;\n{delta, shift, p, n.p,\n (b - p).(b - p), delta^2/(n.n)}",
+      "sha256": "e5844095248af20a20f468b4370ea6baae30132314a35dcb508a8c6fdec17fd9",
+      "verification_expression": "TrueQ[n.p == d] && TrueQ[(b-p).(b-p) == delta^2/(n.n)]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 86,
+          "section": "15.15.2. Вариант 2. Калибровка положения. Плоскость 2"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E015",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 15,
+      "section": "3.3. Расстояние и ближайшая точка плоскости",
+      "subsection": "3.3.3. Вариант 3. Калибровка положения. Плоскость 3",
+      "variant": "3.3.3. Вариант 3. Калибровка положения. Плоскость 3",
+      "execution_group": "P3-C03-E015",
+      "depends_on": [],
+      "code": "n = {1, 2, 3};\nd = 5; b = {3, 1, 3};\ndelta = n.b - d;\nshift = delta/(n.n) n;\np = b - shift;\n{delta, shift, p, n.p,\n (b - p).(b - p), delta^2/(n.n)}",
+      "sha256": "51505afb8750bb52cdf90e8b930b89e87574e28e6bc02df9b0911dd725b76f05",
+      "verification_expression": "TrueQ[n.p == d] && TrueQ[(b-p).(b-p) == delta^2/(n.n)]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 87,
+          "section": "15.15.3. Вариант 3. Калибровка положения. Плоскость 3"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E016",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 16,
+      "section": "3.3. Расстояние и ближайшая точка плоскости",
+      "subsection": "3.3.4. Вариант 4. Калибровка положения. Плоскость 4",
+      "variant": "3.3.4. Вариант 4. Калибровка положения. Плоскость 4",
+      "execution_group": "P3-C03-E016",
+      "depends_on": [],
+      "code": "n = {1, 2, 4};\nd = 6; b = {4, 1, 3};\ndelta = n.b - d;\nshift = delta/(n.n) n;\np = b - shift;\n{delta, shift, p, n.p,\n (b - p).(b - p), delta^2/(n.n)}",
+      "sha256": "6cad6b728c3fb6e6a2c4e4db39ee00c0a10a2450390c99dc2fc02737870f3783",
+      "verification_expression": "TrueQ[n.p == d] && TrueQ[(b-p).(b-p) == delta^2/(n.n)]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 88,
+          "section": "15.15.4. Вариант 4. Калибровка положения. Плоскость 4"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E017",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 17,
+      "section": "3.3. Расстояние и ближайшая точка плоскости",
+      "subsection": "3.3.5. Вариант 5. Калибровка положения. Плоскость 5",
+      "variant": "3.3.5. Вариант 5. Калибровка положения. Плоскость 5",
+      "execution_group": "P3-C03-E017",
+      "depends_on": [],
+      "code": "n = {1, 2, 5};\nd = 7; b = {5, 1, 3};\ndelta = n.b - d;\nshift = delta/(n.n) n;\np = b - shift;\n{delta, shift, p, n.p,\n (b - p).(b - p), delta^2/(n.n)}",
+      "sha256": "d9d5e4684b15814aca1f8a1905a556be8ec6d88bc9e40a945d6cd4b0d71c2852",
+      "verification_expression": "TrueQ[n.p == d] && TrueQ[(b-p).(b-p) == delta^2/(n.n)]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 89,
+          "section": "15.15.5. Вариант 5. Калибровка положения. Плоскость 5"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E018",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 18,
+      "section": "3.3. Расстояние и ближайшая точка плоскости",
+      "subsection": "3.3.6. Вариант 6. Калибровка положения. Плоскость 6",
+      "variant": "3.3.6. Вариант 6. Калибровка положения. Плоскость 6",
+      "execution_group": "P3-C03-E018",
+      "depends_on": [],
+      "code": "n = {1, 2, 6};\nd = 8; b = {6, 1, 3};\ndelta = n.b - d;\nshift = delta/(n.n) n;\np = b - shift;\n{delta, shift, p, n.p,\n (b - p).(b - p), delta^2/(n.n)}",
+      "sha256": "4c7c6080b757d20ff3b8838cb21287645f250f159028c4621cfcd17fd1bf933f",
+      "verification_expression": "TrueQ[n.p == d] && TrueQ[(b-p).(b-p) == delta^2/(n.n)]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 90,
+          "section": "15.15.6. Вариант 6. Калибровка положения. Плоскость 6"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E019",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 19,
+      "section": "3.4. Линейная калибровка методом наименьших квадратов",
+      "subsection": "3.4.1. Вариант 1. Четыре показания прибора. Серия 1",
+      "variant": "3.4.1. Вариант 1. Четыре показания прибора. Серия 1",
+      "execution_group": "P3-C03-E019",
+      "depends_on": [],
+      "code": "a = {{1, 0},\n {1, 1},\n {1, 2},\n {1, 3}};\nb = {2, 2, 5, 8};\nnormal = Transpose[a].a;\nrhs = Transpose[a].b;\ncoefficients = LinearSolve[normal, rhs];\npredicted = a.coefficients;\nresidual = b - predicted;\n{normal, rhs, coefficients, predicted, residual,\n Transpose[a].residual, residual.residual,\n LeastSquares[a, b]}",
+      "sha256": "12957117b5effb67e3da699e81263d0882773b3594e6cb26d94b8d8e120d3d14",
+      "verification_expression": "TrueQ[Transpose[a].residual == {0,0}] && TrueQ[coefficients == LeastSquares[a,b]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 91,
+          "section": "15.16.1. Вариант 1. Четыре показания прибора. Серия 1"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E020",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 20,
+      "section": "3.4. Линейная калибровка методом наименьших квадратов",
+      "subsection": "3.4.2. Вариант 2. Четыре показания прибора. Серия 2",
+      "variant": "3.4.2. Вариант 2. Четыре показания прибора. Серия 2",
+      "execution_group": "P3-C03-E020",
+      "depends_on": [],
+      "code": "a = {{1, 0},\n {1, 1},\n {1, 2},\n {1, 3}};\nb = {3, 3, 7, 9};\nnormal = Transpose[a].a;\nrhs = Transpose[a].b;\ncoefficients = LinearSolve[normal, rhs];\npredicted = a.coefficients;\nresidual = b - predicted;\n{normal, rhs, coefficients, predicted, residual,\n Transpose[a].residual, residual.residual,\n LeastSquares[a, b]}",
+      "sha256": "4da357203dd2ce1f58dcb18b371dd413205eedf468c85397c82c4e85c0cc2f5d",
+      "verification_expression": "TrueQ[Transpose[a].residual == {0,0}] && TrueQ[coefficients == LeastSquares[a,b]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 92,
+          "section": "15.16.2. Вариант 2. Четыре показания прибора. Серия 2"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E021",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 21,
+      "section": "3.4. Линейная калибровка методом наименьших квадратов",
+      "subsection": "3.4.3. Вариант 3. Четыре показания прибора. Серия 3",
+      "variant": "3.4.3. Вариант 3. Четыре показания прибора. Серия 3",
+      "execution_group": "P3-C03-E021",
+      "depends_on": [],
+      "code": "a = {{1, 0},\n {1, 1},\n {1, 2},\n {1, 3}};\nb = {4, 4, 9, 10};\nnormal = Transpose[a].a;\nrhs = Transpose[a].b;\ncoefficients = LinearSolve[normal, rhs];\npredicted = a.coefficients;\nresidual = b - predicted;\n{normal, rhs, coefficients, predicted, residual,\n Transpose[a].residual, residual.residual,\n LeastSquares[a, b]}",
+      "sha256": "3da2d80764d1381780e8714cd700350da49636258e2e7a51cfb7ea692a4be568",
+      "verification_expression": "TrueQ[Transpose[a].residual == {0,0}] && TrueQ[coefficients == LeastSquares[a,b]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 93,
+          "section": "15.16.3. Вариант 3. Четыре показания прибора. Серия 3"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E022",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 22,
+      "section": "3.4. Линейная калибровка методом наименьших квадратов",
+      "subsection": "3.4.4. Вариант 4. Четыре показания прибора. Серия 4",
+      "variant": "3.4.4. Вариант 4. Четыре показания прибора. Серия 4",
+      "execution_group": "P3-C03-E022",
+      "depends_on": [],
+      "code": "a = {{1, 0},\n {1, 1},\n {1, 2},\n {1, 3}};\nb = {5, 5, 11, 11};\nnormal = Transpose[a].a;\nrhs = Transpose[a].b;\ncoefficients = LinearSolve[normal, rhs];\npredicted = a.coefficients;\nresidual = b - predicted;\n{normal, rhs, coefficients, predicted, residual,\n Transpose[a].residual, residual.residual,\n LeastSquares[a, b]}",
+      "sha256": "f8452aa694418d932826e5d8ca7fdd66279b2282c16870af366e606064758406",
+      "verification_expression": "TrueQ[Transpose[a].residual == {0,0}] && TrueQ[coefficients == LeastSquares[a,b]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 94,
+          "section": "15.16.4. Вариант 4. Четыре показания прибора. Серия 4"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E023",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 23,
+      "section": "3.4. Линейная калибровка методом наименьших квадратов",
+      "subsection": "3.4.5. Вариант 5. Четыре показания прибора. Серия 5",
+      "variant": "3.4.5. Вариант 5. Четыре показания прибора. Серия 5",
+      "execution_group": "P3-C03-E023",
+      "depends_on": [],
+      "code": "a = {{1, 0},\n {1, 1},\n {1, 2},\n {1, 3}};\nb = {6, 6, 13, 12};\nnormal = Transpose[a].a;\nrhs = Transpose[a].b;\ncoefficients = LinearSolve[normal, rhs];\npredicted = a.coefficients;\nresidual = b - predicted;\n{normal, rhs, coefficients, predicted, residual,\n Transpose[a].residual, residual.residual,\n LeastSquares[a, b]}",
+      "sha256": "4c5a24b02376e631923536cf618645f1a9b4453a5dca40e6989529694d1f53de",
+      "verification_expression": "TrueQ[Transpose[a].residual == {0,0}] && TrueQ[coefficients == LeastSquares[a,b]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 95,
+          "section": "15.16.5. Вариант 5. Четыре показания прибора. Серия 5"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E024",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 24,
+      "section": "3.4. Линейная калибровка методом наименьших квадратов",
+      "subsection": "3.4.6. Вариант 6. Четыре показания прибора. Серия 6",
+      "variant": "3.4.6. Вариант 6. Четыре показания прибора. Серия 6",
+      "execution_group": "P3-C03-E024",
+      "depends_on": [],
+      "code": "a = {{1, 0},\n {1, 1},\n {1, 2},\n {1, 3}};\nb = {7, 7, 15, 13};\nnormal = Transpose[a].a;\nrhs = Transpose[a].b;\ncoefficients = LinearSolve[normal, rhs];\npredicted = a.coefficients;\nresidual = b - predicted;\n{normal, rhs, coefficients, predicted, residual,\n Transpose[a].residual, residual.residual,\n LeastSquares[a, b]}",
+      "sha256": "ed450be36ab80bf8fc3b49bd6f64d388cd28f8ef46eb94556efaefe5fd9565be",
+      "verification_expression": "TrueQ[Transpose[a].residual == {0,0}] && TrueQ[coefficients == LeastSquares[a,b]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 96,
+          "section": "15.16.6. Вариант 6. Четыре показания прибора. Серия 6"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E025",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 25,
+      "section": "3.5. Взвешенные наименьшие квадраты",
+      "subsection": "3.5.1. Вариант 1. Надежное среднее измерение. Вес 2",
+      "variant": "3.5.1. Вариант 1. Надежное среднее измерение. Вес 2",
+      "execution_group": "P3-C03-E025",
+      "depends_on": [],
+      "code": "a = {{1, 0},\n {1, 1},\n {1, 2}};\nb = {1, 3, 2};\nw = DiagonalMatrix[{1, 2, 1}];\nnormal = Transpose[a].w.a;\nrhs = Transpose[a].w.b;\nx = LinearSolve[normal, rhs];\nr = b - a.x;\n{normal, rhs, x, r, Transpose[a].w.r, r.w.r}",
+      "sha256": "1bce68a0549b21e1eb7476b31462c2bb2241acc178315f35859ce8ee6dcd8fd2",
+      "verification_expression": "TrueQ[Transpose[a].w.r == {0,0}] && TrueQ[normal.x == rhs]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 97,
+          "section": "15.17.1. Вариант 1. Надежное среднее измерение. Вес 2"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E026",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 26,
+      "section": "3.5. Взвешенные наименьшие квадраты",
+      "subsection": "3.5.2. Вариант 2. Надежное среднее измерение. Вес 3",
+      "variant": "3.5.2. Вариант 2. Надежное среднее измерение. Вес 3",
+      "execution_group": "P3-C03-E026",
+      "depends_on": [],
+      "code": "a = {{1, 0},\n {1, 1},\n {1, 2}};\nb = {1, 3, 2};\nw = DiagonalMatrix[{1, 3, 1}];\nnormal = Transpose[a].w.a;\nrhs = Transpose[a].w.b;\nx = LinearSolve[normal, rhs];\nr = b - a.x;\n{normal, rhs, x, r, Transpose[a].w.r, r.w.r}",
+      "sha256": "5afb65dccdd77dc796d79ef3ef8eeac64b4521480268294d81402703ed7c398d",
+      "verification_expression": "TrueQ[Transpose[a].w.r == {0,0}] && TrueQ[normal.x == rhs]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 98,
+          "section": "15.17.2. Вариант 2. Надежное среднее измерение. Вес 3"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E027",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 27,
+      "section": "3.5. Взвешенные наименьшие квадраты",
+      "subsection": "3.5.3. Вариант 3. Надежное среднее измерение. Вес 4",
+      "variant": "3.5.3. Вариант 3. Надежное среднее измерение. Вес 4",
+      "execution_group": "P3-C03-E027",
+      "depends_on": [],
+      "code": "a = {{1, 0},\n {1, 1},\n {1, 2}};\nb = {1, 3, 2};\nw = DiagonalMatrix[{1, 4, 1}];\nnormal = Transpose[a].w.a;\nrhs = Transpose[a].w.b;\nx = LinearSolve[normal, rhs];\nr = b - a.x;\n{normal, rhs, x, r, Transpose[a].w.r, r.w.r}",
+      "sha256": "74ef8783a2ee57f0de99ff7f259bcee6528681edd62ddad98bc78fae67c37ab8",
+      "verification_expression": "TrueQ[Transpose[a].w.r == {0,0}] && TrueQ[normal.x == rhs]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 99,
+          "section": "15.17.3. Вариант 3. Надежное среднее измерение. Вес 4"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E028",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 28,
+      "section": "3.5. Взвешенные наименьшие квадраты",
+      "subsection": "3.5.4. Вариант 4. Надежное среднее измерение. Вес 5",
+      "variant": "3.5.4. Вариант 4. Надежное среднее измерение. Вес 5",
+      "execution_group": "P3-C03-E028",
+      "depends_on": [],
+      "code": "a = {{1, 0},\n {1, 1},\n {1, 2}};\nb = {1, 3, 2};\nw = DiagonalMatrix[{1, 5, 1}];\nnormal = Transpose[a].w.a;\nrhs = Transpose[a].w.b;\nx = LinearSolve[normal, rhs];\nr = b - a.x;\n{normal, rhs, x, r, Transpose[a].w.r, r.w.r}",
+      "sha256": "956824274fc40161035b370c54544ede838060ceaeff94dcb02d1e65692e2dbf",
+      "verification_expression": "TrueQ[Transpose[a].w.r == {0,0}] && TrueQ[normal.x == rhs]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 100,
+          "section": "15.17.4. Вариант 4. Надежное среднее измерение. Вес 5"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E029",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 29,
+      "section": "3.5. Взвешенные наименьшие квадраты",
+      "subsection": "3.5.5. Вариант 5. Надежное среднее измерение. Вес 6",
+      "variant": "3.5.5. Вариант 5. Надежное среднее измерение. Вес 6",
+      "execution_group": "P3-C03-E029",
+      "depends_on": [],
+      "code": "a = {{1, 0},\n {1, 1},\n {1, 2}};\nb = {1, 3, 2};\nw = DiagonalMatrix[{1, 6, 1}];\nnormal = Transpose[a].w.a;\nrhs = Transpose[a].w.b;\nx = LinearSolve[normal, rhs];\nr = b - a.x;\n{normal, rhs, x, r, Transpose[a].w.r, r.w.r}",
+      "sha256": "466ff1afa5094771bdcde4b531cd111a3c42a7ff62469643cc11714149d30115",
+      "verification_expression": "TrueQ[Transpose[a].w.r == {0,0}] && TrueQ[normal.x == rhs]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 101,
+          "section": "15.17.5. Вариант 5. Надежное среднее измерение. Вес 6"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E030",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 30,
+      "section": "3.5. Взвешенные наименьшие квадраты",
+      "subsection": "3.5.6. Вариант 6. Надежное среднее измерение. Вес 7",
+      "variant": "3.5.6. Вариант 6. Надежное среднее измерение. Вес 7",
+      "execution_group": "P3-C03-E030",
+      "depends_on": [],
+      "code": "a = {{1, 0},\n {1, 1},\n {1, 2}};\nb = {1, 3, 2};\nw = DiagonalMatrix[{1, 7, 1}];\nnormal = Transpose[a].w.a;\nrhs = Transpose[a].w.b;\nx = LinearSolve[normal, rhs];\nr = b - a.x;\n{normal, rhs, x, r, Transpose[a].w.r, r.w.r}",
+      "sha256": "39482f2da32971588e71f18256774c79ab574bc63537797fd10d7ba616f58bf5",
+      "verification_expression": "TrueQ[Transpose[a].w.r == {0,0}] && TrueQ[normal.x == rhs]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 102,
+          "section": "15.17.6. Вариант 6. Надежное среднее измерение. Вес 7"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E031",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 31,
+      "section": "3.6. Грам–Шмидт и тонкое QR-разложение",
+      "subsection": "3.6.1. Вариант 1. Два канала в трех координатах. Ортогонализация 1",
+      "variant": "3.6.1. Вариант 1. Два канала в трех координатах. Ортогонализация 1",
+      "execution_group": "P3-C03-E031",
+      "depends_on": [],
+      "code": "a1 = {1, 1, 0}; a2 = {1, 0, 1};\nr11 = Norm[a1];\nq1 = a1/r11;\nr12 = q1.a2;\nw = FullSimplify[a2 - r12 q1];\nr22 = FullSimplify[Norm[w]];\nq2 = FullSimplify[w/r22];\nq = Transpose[{q1, q2}];\nr = {{r11, r12},\n {0, r22}};\na = Transpose[{a1, a2}];\n{r, FullSimplify[Transpose[q].q],\n FullSimplify[q.r - a]}",
+      "sha256": "118bf4eb08cc81f62be1c6f2804af8a3fea786fb824ac63684fc38b014d3b559",
+      "verification_expression": "TrueQ[FullSimplify[Transpose[q].q] == IdentityMatrix[2]] && TrueQ[FullSimplify[q.r-a] == ConstantArray[0,Dimensions[a]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 103,
+          "section": "15.18.1. Вариант 1. Два канала в трех координатах. Ортогонализация 1"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E032",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 32,
+      "section": "3.6. Грам–Шмидт и тонкое QR-разложение",
+      "subsection": "3.6.2. Вариант 2. Два канала в трех координатах. Ортогонализация 2",
+      "variant": "3.6.2. Вариант 2. Два канала в трех координатах. Ортогонализация 2",
+      "execution_group": "P3-C03-E032",
+      "depends_on": [],
+      "code": "a1 = {1, 2, 0}; a2 = {1, 0, 1};\nr11 = Norm[a1];\nq1 = a1/r11;\nr12 = q1.a2;\nw = FullSimplify[a2 - r12 q1];\nr22 = FullSimplify[Norm[w]];\nq2 = FullSimplify[w/r22];\nq = Transpose[{q1, q2}];\nr = {{r11, r12},\n {0, r22}};\na = Transpose[{a1, a2}];\n{r, FullSimplify[Transpose[q].q],\n FullSimplify[q.r - a]}",
+      "sha256": "5b36167ea2253fde63c94a752481f51f8583ffb579df84ec75193b8010a256dd",
+      "verification_expression": "TrueQ[FullSimplify[Transpose[q].q] == IdentityMatrix[2]] && TrueQ[FullSimplify[q.r-a] == ConstantArray[0,Dimensions[a]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 104,
+          "section": "15.18.2. Вариант 2. Два канала в трех координатах. Ортогонализация 2"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E033",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 33,
+      "section": "3.6. Грам–Шмидт и тонкое QR-разложение",
+      "subsection": "3.6.3. Вариант 3. Два канала в трех координатах. Ортогонализация 3",
+      "variant": "3.6.3. Вариант 3. Два канала в трех координатах. Ортогонализация 3",
+      "execution_group": "P3-C03-E033",
+      "depends_on": [],
+      "code": "a1 = {1, 3, 0}; a2 = {1, 0, 1};\nr11 = Norm[a1];\nq1 = a1/r11;\nr12 = q1.a2;\nw = FullSimplify[a2 - r12 q1];\nr22 = FullSimplify[Norm[w]];\nq2 = FullSimplify[w/r22];\nq = Transpose[{q1, q2}];\nr = {{r11, r12},\n {0, r22}};\na = Transpose[{a1, a2}];\n{r, FullSimplify[Transpose[q].q],\n FullSimplify[q.r - a]}",
+      "sha256": "35dda4350dbb6ca60748ae052276dbb079691fa068f07d55c4041fbe6dffaaff",
+      "verification_expression": "TrueQ[FullSimplify[Transpose[q].q] == IdentityMatrix[2]] && TrueQ[FullSimplify[q.r-a] == ConstantArray[0,Dimensions[a]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 105,
+          "section": "15.18.3. Вариант 3. Два канала в трех координатах. Ортогонализация 3"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E034",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 34,
+      "section": "3.6. Грам–Шмидт и тонкое QR-разложение",
+      "subsection": "3.6.4. Вариант 4. Два канала в трех координатах. Ортогонализация 4",
+      "variant": "3.6.4. Вариант 4. Два канала в трех координатах. Ортогонализация 4",
+      "execution_group": "P3-C03-E034",
+      "depends_on": [],
+      "code": "a1 = {1, 4, 0}; a2 = {1, 0, 1};\nr11 = Norm[a1];\nq1 = a1/r11;\nr12 = q1.a2;\nw = FullSimplify[a2 - r12 q1];\nr22 = FullSimplify[Norm[w]];\nq2 = FullSimplify[w/r22];\nq = Transpose[{q1, q2}];\nr = {{r11, r12},\n {0, r22}};\na = Transpose[{a1, a2}];\n{r, FullSimplify[Transpose[q].q],\n FullSimplify[q.r - a]}",
+      "sha256": "c0d2d0e207a6842e7a42bbe474b7cfad383b001c9039262b406177363eee7cfb",
+      "verification_expression": "TrueQ[FullSimplify[Transpose[q].q] == IdentityMatrix[2]] && TrueQ[FullSimplify[q.r-a] == ConstantArray[0,Dimensions[a]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 106,
+          "section": "15.18.4. Вариант 4. Два канала в трех координатах. Ортогонализация 4"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E035",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 35,
+      "section": "3.6. Грам–Шмидт и тонкое QR-разложение",
+      "subsection": "3.6.5. Вариант 5. Два канала в трех координатах. Ортогонализация 5",
+      "variant": "3.6.5. Вариант 5. Два канала в трех координатах. Ортогонализация 5",
+      "execution_group": "P3-C03-E035",
+      "depends_on": [],
+      "code": "a1 = {1, 5, 0}; a2 = {1, 0, 1};\nr11 = Norm[a1];\nq1 = a1/r11;\nr12 = q1.a2;\nw = FullSimplify[a2 - r12 q1];\nr22 = FullSimplify[Norm[w]];\nq2 = FullSimplify[w/r22];\nq = Transpose[{q1, q2}];\nr = {{r11, r12},\n {0, r22}};\na = Transpose[{a1, a2}];\n{r, FullSimplify[Transpose[q].q],\n FullSimplify[q.r - a]}",
+      "sha256": "cf859dfa0adf0dc3bf3d85b64aef01bd09e74e7cefc0c3bdce3b8be290573c0e",
+      "verification_expression": "TrueQ[FullSimplify[Transpose[q].q] == IdentityMatrix[2]] && TrueQ[FullSimplify[q.r-a] == ConstantArray[0,Dimensions[a]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 107,
+          "section": "15.18.5. Вариант 5. Два канала в трех координатах. Ортогонализация 5"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E036",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 36,
+      "section": "3.6. Грам–Шмидт и тонкое QR-разложение",
+      "subsection": "3.6.6. Вариант 6. Два канала в трех координатах. Ортогонализация 6",
+      "variant": "3.6.6. Вариант 6. Два канала в трех координатах. Ортогонализация 6",
+      "execution_group": "P3-C03-E036",
+      "depends_on": [],
+      "code": "a1 = {1, 6, 0}; a2 = {1, 0, 1};\nr11 = Norm[a1];\nq1 = a1/r11;\nr12 = q1.a2;\nw = FullSimplify[a2 - r12 q1];\nr22 = FullSimplify[Norm[w]];\nq2 = FullSimplify[w/r22];\nq = Transpose[{q1, q2}];\nr = {{r11, r12},\n {0, r22}};\na = Transpose[{a1, a2}];\n{r, FullSimplify[Transpose[q].q],\n FullSimplify[q.r - a]}",
+      "sha256": "3b2856965f3e0e61e033295b36e8b45b5606ec55c51391536ac72622112a8242",
+      "verification_expression": "TrueQ[FullSimplify[Transpose[q].q] == IdentityMatrix[2]] && TrueQ[FullSimplify[q.r-a] == ConstantArray[0,Dimensions[a]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 108,
+          "section": "15.18.6. Вариант 6. Два канала в трех координатах. Ортогонализация 6"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E037",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 37,
+      "section": "3.7. Матрица ранга один и псевдообратная",
+      "subsection": "3.7.1. Вариант 1. Один наблюдаемый режим. Вариант 1",
+      "variant": "3.7.1. Вариант 1. Один наблюдаемый режим. Вариант 1",
+      "execution_group": "P3-C03-E037",
+      "depends_on": [],
+      "code": "u = {1, 1}; v = {1, 2, 1};\na = Outer[Times, u, v];\npinv = Outer[Times, v, u]/((u.u) (v.v));\nb = {1, 1};\nx = pinv.b;\nr = b - a.x;\n{MatrixRank[a], Sqrt[(u.u) (v.v)], pinv, x, r,\n Transpose[a].r, a.pinv.a - a,\n pinv == PseudoInverse[a]}",
+      "sha256": "865c77c4e900a82d82a48e9a8d2ca1e5ca7a32042fdb0273235de0cc7c7bb142",
+      "verification_expression": "TrueQ[a.pinv.a == a] && TrueQ[pinv.a.pinv == pinv] && TrueQ[Transpose[a.pinv] == a.pinv] && TrueQ[Transpose[pinv.a] == pinv.a] && TrueQ[Transpose[a].r == ConstantArray[0,Length[v]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 109,
+          "section": "15.19.1. Вариант 1. Один наблюдаемый режим. Вариант 1"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E038",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 38,
+      "section": "3.7. Матрица ранга один и псевдообратная",
+      "subsection": "3.7.2. Вариант 2. Один наблюдаемый режим. Вариант 2",
+      "variant": "3.7.2. Вариант 2. Один наблюдаемый режим. Вариант 2",
+      "execution_group": "P3-C03-E038",
+      "depends_on": [],
+      "code": "u = {1, 2}; v = {1, 2, 1};\na = Outer[Times, u, v];\npinv = Outer[Times, v, u]/((u.u) (v.v));\nb = {2, 1};\nx = pinv.b;\nr = b - a.x;\n{MatrixRank[a], Sqrt[(u.u) (v.v)], pinv, x, r,\n Transpose[a].r, a.pinv.a - a,\n pinv == PseudoInverse[a]}",
+      "sha256": "076663bf1a0f33f68c4edd0ffcb597285ca3cc8d99b5c3c7aaa17733449d70e6",
+      "verification_expression": "TrueQ[a.pinv.a == a] && TrueQ[pinv.a.pinv == pinv] && TrueQ[Transpose[a.pinv] == a.pinv] && TrueQ[Transpose[pinv.a] == pinv.a] && TrueQ[Transpose[a].r == ConstantArray[0,Length[v]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 110,
+          "section": "15.19.2. Вариант 2. Один наблюдаемый режим. Вариант 2"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E039",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 39,
+      "section": "3.7. Матрица ранга один и псевдообратная",
+      "subsection": "3.7.3. Вариант 3. Один наблюдаемый режим. Вариант 3",
+      "variant": "3.7.3. Вариант 3. Один наблюдаемый режим. Вариант 3",
+      "execution_group": "P3-C03-E039",
+      "depends_on": [],
+      "code": "u = {1, 3}; v = {1, 2, 1};\na = Outer[Times, u, v];\npinv = Outer[Times, v, u]/((u.u) (v.v));\nb = {3, 1};\nx = pinv.b;\nr = b - a.x;\n{MatrixRank[a], Sqrt[(u.u) (v.v)], pinv, x, r,\n Transpose[a].r, a.pinv.a - a,\n pinv == PseudoInverse[a]}",
+      "sha256": "a3deb7f817bb65557203256fcfb325daec93933817989bab860a3592862dd2cd",
+      "verification_expression": "TrueQ[a.pinv.a == a] && TrueQ[pinv.a.pinv == pinv] && TrueQ[Transpose[a.pinv] == a.pinv] && TrueQ[Transpose[pinv.a] == pinv.a] && TrueQ[Transpose[a].r == ConstantArray[0,Length[v]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 111,
+          "section": "15.19.3. Вариант 3. Один наблюдаемый режим. Вариант 3"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E040",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 40,
+      "section": "3.7. Матрица ранга один и псевдообратная",
+      "subsection": "3.7.4. Вариант 4. Один наблюдаемый режим. Вариант 4",
+      "variant": "3.7.4. Вариант 4. Один наблюдаемый режим. Вариант 4",
+      "execution_group": "P3-C03-E040",
+      "depends_on": [],
+      "code": "u = {1, 4}; v = {1, 2, 1};\na = Outer[Times, u, v];\npinv = Outer[Times, v, u]/((u.u) (v.v));\nb = {4, 1};\nx = pinv.b;\nr = b - a.x;\n{MatrixRank[a], Sqrt[(u.u) (v.v)], pinv, x, r,\n Transpose[a].r, a.pinv.a - a,\n pinv == PseudoInverse[a]}",
+      "sha256": "f385448851be0088c95ba39166c9d159e1383767589ae01875b47a43fb307576",
+      "verification_expression": "TrueQ[a.pinv.a == a] && TrueQ[pinv.a.pinv == pinv] && TrueQ[Transpose[a.pinv] == a.pinv] && TrueQ[Transpose[pinv.a] == pinv.a] && TrueQ[Transpose[a].r == ConstantArray[0,Length[v]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 112,
+          "section": "15.19.4. Вариант 4. Один наблюдаемый режим. Вариант 4"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E041",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 41,
+      "section": "3.7. Матрица ранга один и псевдообратная",
+      "subsection": "3.7.5. Вариант 5. Один наблюдаемый режим. Вариант 5",
+      "variant": "3.7.5. Вариант 5. Один наблюдаемый режим. Вариант 5",
+      "execution_group": "P3-C03-E041",
+      "depends_on": [],
+      "code": "u = {1, 5}; v = {1, 2, 1};\na = Outer[Times, u, v];\npinv = Outer[Times, v, u]/((u.u) (v.v));\nb = {5, 1};\nx = pinv.b;\nr = b - a.x;\n{MatrixRank[a], Sqrt[(u.u) (v.v)], pinv, x, r,\n Transpose[a].r, a.pinv.a - a,\n pinv == PseudoInverse[a]}",
+      "sha256": "99ef49b5edbe89148726f450730c499b3a405f16d43443a7967a5ea966c70fa7",
+      "verification_expression": "TrueQ[a.pinv.a == a] && TrueQ[pinv.a.pinv == pinv] && TrueQ[Transpose[a.pinv] == a.pinv] && TrueQ[Transpose[pinv.a] == pinv.a] && TrueQ[Transpose[a].r == ConstantArray[0,Length[v]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 113,
+          "section": "15.19.5. Вариант 5. Один наблюдаемый режим. Вариант 5"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E042",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 42,
+      "section": "3.7. Матрица ранга один и псевдообратная",
+      "subsection": "3.7.6. Вариант 6. Один наблюдаемый режим. Вариант 6",
+      "variant": "3.7.6. Вариант 6. Один наблюдаемый режим. Вариант 6",
+      "execution_group": "P3-C03-E042",
+      "depends_on": [],
+      "code": "u = {1, 6}; v = {1, 2, 1};\na = Outer[Times, u, v];\npinv = Outer[Times, v, u]/((u.u) (v.v));\nb = {6, 1};\nx = pinv.b;\nr = b - a.x;\n{MatrixRank[a], Sqrt[(u.u) (v.v)], pinv, x, r,\n Transpose[a].r, a.pinv.a - a,\n pinv == PseudoInverse[a]}",
+      "sha256": "e00164ce182be9ae3cca21f2968ad3d64b621b500aa3fca70fe8b974873ceb05",
+      "verification_expression": "TrueQ[a.pinv.a == a] && TrueQ[pinv.a.pinv == pinv] && TrueQ[Transpose[a.pinv] == a.pinv] && TrueQ[Transpose[pinv.a] == pinv.a] && TrueQ[Transpose[a].r == ConstantArray[0,Length[v]]]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 114,
+          "section": "15.19.6. Вариант 6. Один наблюдаемый режим. Вариант 6"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E043",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 43,
+      "section": "3.8. Регуляризация и компромисс между точностью и нормой",
+      "subsection": "3.8.1. Вариант 1. Зависимые признаки. Штраф 1/2",
+      "variant": "3.8.1. Вариант 1. Зависимые признаки. Штраф 1/2",
+      "execution_group": "P3-C03-E043",
+      "depends_on": [],
+      "code": "a = {{1, 1},\n {2, 2},\n {3, 3}};\nb = {2, 4, 7};\nlambda = 1/2;\nnormal = Transpose[a].a + lambda IdentityMatrix[2];\nrhs = Transpose[a].b;\nx = LinearSolve[normal, rhs];\nr = b - a.x;\n{x, r, Transpose[a].r - lambda x,\n r.r + lambda x.x, Norm[x], Norm[r]}",
+      "sha256": "50efdd5ce8c920b9485fcbca4ecc5fef9f623958929e0197f9cbf89bb13e143a",
+      "verification_expression": "TrueQ[Transpose[a].r == lambda x] && TrueQ[normal.x == rhs]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 139,
+          "section": "15.24.1. Вариант 1. Зависимые признаки. Штраф 1/2"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E044",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 44,
+      "section": "3.8. Регуляризация и компромисс между точностью и нормой",
+      "subsection": "3.8.2. Вариант 2. Зависимые признаки. Штраф 1",
+      "variant": "3.8.2. Вариант 2. Зависимые признаки. Штраф 1",
+      "execution_group": "P3-C03-E044",
+      "depends_on": [],
+      "code": "a = {{1, 1},\n {2, 2},\n {3, 3}};\nb = {2, 4, 7};\nlambda = 1;\nnormal = Transpose[a].a + lambda IdentityMatrix[2];\nrhs = Transpose[a].b;\nx = LinearSolve[normal, rhs];\nr = b - a.x;\n{x, r, Transpose[a].r - lambda x,\n r.r + lambda x.x, Norm[x], Norm[r]}",
+      "sha256": "962457ab417319f6c8295e3e86413db20d32a995ba052e2a9afc98e7b478a8fe",
+      "verification_expression": "TrueQ[Transpose[a].r == lambda x] && TrueQ[normal.x == rhs]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 140,
+          "section": "15.24.2. Вариант 2. Зависимые признаки. Штраф 1"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E045",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 45,
+      "section": "3.8. Регуляризация и компромисс между точностью и нормой",
+      "subsection": "3.8.3. Вариант 3. Зависимые признаки. Штраф 3/2",
+      "variant": "3.8.3. Вариант 3. Зависимые признаки. Штраф 3/2",
+      "execution_group": "P3-C03-E045",
+      "depends_on": [],
+      "code": "a = {{1, 1},\n {2, 2},\n {3, 3}};\nb = {2, 4, 7};\nlambda = 3/2;\nnormal = Transpose[a].a + lambda IdentityMatrix[2];\nrhs = Transpose[a].b;\nx = LinearSolve[normal, rhs];\nr = b - a.x;\n{x, r, Transpose[a].r - lambda x,\n r.r + lambda x.x, Norm[x], Norm[r]}",
+      "sha256": "b08398940865b838fe2de967c3833b50259ed8e069aaf49fb29dede3530e3917",
+      "verification_expression": "TrueQ[Transpose[a].r == lambda x] && TrueQ[normal.x == rhs]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 141,
+          "section": "15.24.3. Вариант 3. Зависимые признаки. Штраф 3/2"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E046",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 46,
+      "section": "3.8. Регуляризация и компромисс между точностью и нормой",
+      "subsection": "3.8.4. Вариант 4. Зависимые признаки. Штраф 2",
+      "variant": "3.8.4. Вариант 4. Зависимые признаки. Штраф 2",
+      "execution_group": "P3-C03-E046",
+      "depends_on": [],
+      "code": "a = {{1, 1},\n {2, 2},\n {3, 3}};\nb = {2, 4, 7};\nlambda = 2;\nnormal = Transpose[a].a + lambda IdentityMatrix[2];\nrhs = Transpose[a].b;\nx = LinearSolve[normal, rhs];\nr = b - a.x;\n{x, r, Transpose[a].r - lambda x,\n r.r + lambda x.x, Norm[x], Norm[r]}",
+      "sha256": "fd0b7ddb089028f03ffa25e4ad7dfcc73552ff44ece4e6dd6f28375bdcd32f56",
+      "verification_expression": "TrueQ[Transpose[a].r == lambda x] && TrueQ[normal.x == rhs]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 142,
+          "section": "15.24.4. Вариант 4. Зависимые признаки. Штраф 2"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E047",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 47,
+      "section": "3.8. Регуляризация и компромисс между точностью и нормой",
+      "subsection": "3.8.5. Вариант 5. Зависимые признаки. Штраф 5/2",
+      "variant": "3.8.5. Вариант 5. Зависимые признаки. Штраф 5/2",
+      "execution_group": "P3-C03-E047",
+      "depends_on": [],
+      "code": "a = {{1, 1},\n {2, 2},\n {3, 3}};\nb = {2, 4, 7};\nlambda = 5/2;\nnormal = Transpose[a].a + lambda IdentityMatrix[2];\nrhs = Transpose[a].b;\nx = LinearSolve[normal, rhs];\nr = b - a.x;\n{x, r, Transpose[a].r - lambda x,\n r.r + lambda x.x, Norm[x], Norm[r]}",
+      "sha256": "c0d4f9de339d16531d864307d8416b16dd4c109bc71747768df2bdeb33c0b2bb",
+      "verification_expression": "TrueQ[Transpose[a].r == lambda x] && TrueQ[normal.x == rhs]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 143,
+          "section": "15.24.5. Вариант 5. Зависимые признаки. Штраф 5/2"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E048",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 48,
+      "section": "3.8. Регуляризация и компромисс между точностью и нормой",
+      "subsection": "3.8.6. Вариант 6. Зависимые признаки. Штраф 3",
+      "variant": "3.8.6. Вариант 6. Зависимые признаки. Штраф 3",
+      "execution_group": "P3-C03-E048",
+      "depends_on": [],
+      "code": "a = {{1, 1},\n {2, 2},\n {3, 3}};\nb = {2, 4, 7};\nlambda = 3;\nnormal = Transpose[a].a + lambda IdentityMatrix[2];\nrhs = Transpose[a].b;\nx = LinearSolve[normal, rhs];\nr = b - a.x;\n{x, r, Transpose[a].r - lambda x,\n r.r + lambda x.x, Norm[x], Norm[r]}",
+      "sha256": "eb1d1cd82f428187175fea0fc40b44d721294fae558cebee9aa633069888c59b",
+      "verification_expression": "TrueQ[Transpose[a].r == lambda x] && TrueQ[normal.x == rhs]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 144,
+          "section": "15.24.6. Вариант 6. Зависимые признаки. Штраф 3"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E049",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 49,
+      "section": "3.9. Итоговый проект. От наблюдений к проверенной модели",
+      "subsection": "Реализация в Wolfram Mathematica",
+      "variant": "",
+      "execution_group": "P3-C03-CarsProject",
+      "depends_on": [],
+      "code": "speed = {4, 4, 7, 7, 8, 9, 10, 10, 10, 11, 11, 12, 12, 12,\n 12, 13, 13, 13, 13, 14, 14, 14, 14, 15, 15,\n 15, 16, 16, 17, 17, 17, 18, 18, 18, 18, 19, 19, 19, 20, 20,\n 20, 20, 20, 22, 23, 24, 24, 24, 24, 25};\ndistance = {2, 10, 4, 22, 16, 10, 18, 26, 34, 17, 28, 14, 20,\n 24, 28, 26, 34, 34, 46, 26, 36, 60, 80, 20, 26,\n 54, 32, 40, 32, 40, 50, 42, 56, 76, 84, 36, 46, 68, 32, 48,\n 52, 56, 64, 66, 54, 70, 92, 93, 120, 85};",
+      "sha256": "e4c9c6d32859be188d3e7e4f31da12f7f80395e42e6bf4967906022e8239aa85",
+      "verification_expression": "TrueQ[Length[speed] == 50] && TrueQ[Length[distance] == 50]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 145,
+          "section": "15.25. Итоговый проект. От наблюдений к проверенной модели"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E050",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 50,
+      "section": "3.9. Итоговый проект. От наблюдений к проверенной модели",
+      "subsection": "Реализация в Wolfram Mathematica",
+      "variant": "",
+      "execution_group": "P3-C03-CarsProject",
+      "depends_on": [
+        "P3-C03-E049"
+      ],
+      "code": "count = Length[speed];\na = Transpose[{ConstantArray[1, count], speed}];\nb = distance;\nnormal = Transpose[a].a; rhs = Transpose[a].b;\nbeta = LinearSolve[normal, rhs];\nresidual = b - a.beta;\n{Dimensions[a], MatrixRank[a], normal, rhs, beta,\n Transpose[a].residual, residual.residual}",
+      "sha256": "43d2ce4b7a45bad3d0be9e6fabf2290a647026709fde1d06112ff42b2c9b54cc",
+      "verification_expression": "TrueQ[normal == {{50,770},{770,13228}}] && TrueQ[rhs == {2149,38482}] && TrueQ[Transpose[a].residual == {0,0}]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 146,
+          "section": "15.25. Итоговый проект. От наблюдений к проверенной модели"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E051",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 51,
+      "section": "3.9. Итоговый проект. От наблюдений к проверенной модели",
+      "subsection": "Реализация в Wolfram Mathematica",
+      "variant": "",
+      "execution_group": "P3-C03-CarsProject",
+      "depends_on": [
+        "P3-C03-E050"
+      ],
+      "code": "an = N[a, 40]; bn = N[b, 40];\n{qStored, rFactor} = QRDecomposition[an];\nqFactor = ConjugateTranspose[qStored];\nbetaQR = LinearSolve[rFactor,\n ConjugateTranspose[qFactor].bn];\n{uFactor, sFactor, vFactor} =\n SingularValueDecomposition[an, 2];\nsingular = Diagonal[sFactor];\nbetaSVD = vFactor.DiagonalMatrix[1/singular].\n ConjugateTranspose[uFactor].bn;\n{kappa = Max[singular]/Min[singular],\n betaQR, betaSVD, N[beta, 12]}",
+      "sha256": "fc44eab68ee092201ff12619a6b6ab143f61ea815036ca6100ed412865b000dd",
+      "verification_expression": "TrueQ[Norm[betaQR-N[beta,40]] < 10^-25] && TrueQ[Norm[betaSVD-N[beta,40]] < 10^-25]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 147,
+          "section": "15.25. Итоговый проект. От наблюдений к проверенной модели"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E052",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 52,
+      "section": "3.9. Итоговый проект. От наблюдений к проверенной модели",
+      "subsection": "Реализация в Wolfram Mathematica",
+      "variant": "",
+      "execution_group": "P3-C03-CarsProject",
+      "depends_on": [
+        "P3-C03-E051"
+      ],
+      "code": "qrError = Norm[an - qFactor.rFactor, \"Frobenius\"];\nsvdError = Norm[an - uFactor.sFactor.\n ConjugateTranspose[vFactor], \"Frobenius\"];\nqrOrth = Norm[ConjugateTranspose[qFactor].qFactor -\n IdentityMatrix[2], \"Frobenius\"];\npinv = PseudoInverse[an];\npenrose = {\n Norm[an.pinv.an - an, \"Frobenius\"],\n Norm[pinv.an.pinv - pinv, \"Frobenius\"],\n Norm[ConjugateTranspose[an.pinv] - an.pinv,\n  \"Frobenius\"],\n Norm[ConjugateTranspose[pinv.an] - pinv.an,\n  \"Frobenius\"]};\n{qrError, qrOrth, svdError, penrose,\n Norm[betaQR - betaSVD], Norm[pinv.bn - betaSVD]}",
+      "sha256": "c7b8bf6ef5f6b5c3efbde3e893aea3010f2e83548b44e6e98fff427a13812217",
+      "verification_expression": "TrueQ[Max[Join[{qrError,qrOrth,svdError},penrose]] < 10^-25] && TrueQ[Norm[betaQR-betaSVD] < 10^-25]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 148,
+          "section": "15.25. Итоговый проект. От наблюдений к проверенной модели"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E053",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 53,
+      "section": "3.9. Итоговый проект. От наблюдений к проверенной модели",
+      "subsection": "Реализация в Wolfram Mathematica",
+      "variant": "",
+      "execution_group": "P3-C03-CarsProject",
+      "depends_on": [
+        "P3-C03-E052"
+      ],
+      "code": "meanT = Mean[speed]; meanY = Mean[distance];\nscaleT = Sqrt[Total[(speed - meanT)^2]/count];\nz = (speed - meanT)/scaleT;\ndesignZ = Transpose[{ConstantArray[1, count], z}];\npenalty = DiagonalMatrix[{0, 1}];\nlambda = 5;\nalpha = LinearSolve[Transpose[designZ].designZ +\n lambda penalty, Transpose[designZ].b];\nbetaRidge = {alpha[[1]] - alpha[[2]] meanT/scaleT,\n alpha[[2]]/scaleT};\nrRidge = b - a.betaRidge;\n{N[betaRidge, 10], N[rRidge.rRidge, 12],\n FullSimplify[Transpose[designZ].rRidge -\n lambda penalty.alpha]}",
+      "sha256": "7141500b79ffa55bceb0b42ed477ec0fd240dff006f5bc798206cc299a4a9927",
+      "verification_expression": "TrueQ[FullSimplify[Transpose[designZ].rRidge-lambda penalty.alpha] == {0,0}]",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 149,
+          "section": "15.25. Итоговый проект. От наблюдений к проверенной модели"
+        }
+      ]
+    },
+    {
+      "id": "P3-C03-E054",
+      "part": 3,
+      "chapter": 3,
+      "chapter_title": "3. Практикум. Решения с промежуточными вычислениями",
+      "example": 54,
+      "section": "3.9. Итоговый проект. От наблюдений к проверенной модели",
+      "subsection": "Дополнительные численные варианты",
+      "variant": "",
+      "execution_group": "P3-C03-CarsProject",
+      "depends_on": [
+        "P3-C03-E053"
+      ],
+      "code": "results = Table[\n alpha = LinearSolve[Transpose[designZ].designZ +\n  lam penalty, Transpose[designZ].b];\n coef = {alpha[[1]] - alpha[[2]] meanT/scaleT,\n  alpha[[2]]/scaleT};\n rr = b - a.coef;\n {lam, coef, rr.rr,\n  FullSimplify[Transpose[designZ].rr -\n   lam penalty.alpha]},\n {lam, {0, 5, 50}}];\nresults // N[#, 12] &",
+      "sha256": "13e98569757afd09cf60358ffa02176007da51a9ddbf53095b11f9775958a016",
+      "verification_expression": "And @@ (TrueQ[#[[4]] == {0,0}] & /@ results)",
+      "uploaded_source": [
+        {
+          "chapter": 15,
+          "example": 150,
+          "section": "15.25. Итоговый проект. От наблюдений к проверенной модели"
+        }
+      ]
+    },
+    {
+      "id": "P3-C04-E001",
+      "part": 3,
+      "chapter": 4,
+      "chapter_title": "4. Справочник и литература",
+      "example": 1,
+      "section": "4.2. Указатель команд Wolfram Language",
+      "subsection": "Соглашения пяти матричных команд",
+      "variant": "",
+      "execution_group": "P3-C04-E001",
+      "depends_on": [],
+      "code": "a = {{1, 2, 3}, {2, 4, 6}};\np = PseudoInverse[a];\n{a.p.a == a, p.a.p == p,\n ConjugateTranspose[a.p] == a.p,\n ConjugateTranspose[p.a] == p.a}",
+      "sha256": "789f6b84964b89db62213c8ba30fa9f9480f6e5d6bbef470142e6517228f65c9",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 16,
+          "example": 1,
+          "section": "16.2. Указатель команд Wolfram Language"
+        }
+      ]
+    },
+    {
+      "id": "P3-C04-E002",
+      "part": 3,
+      "chapter": 4,
+      "chapter_title": "4. Справочник и литература",
+      "example": 2,
+      "section": "4.2. Указатель команд Wolfram Language",
+      "subsection": "Соглашения пяти матричных команд",
+      "variant": "",
+      "execution_group": "P3-C04-E002",
+      "depends_on": [],
+      "code": "ClearAll[t];\na = {{2, 1}, {0, 2}};\n{s, j} = JordanDecomposition[a];\ne = MatrixExp[t a];\n{a.s == s.j, Det[s] != 0,\n FullSimplify[D[e, t] - a.e],\n FullSimplify[(e /. t -> 0) - IdentityMatrix[2]]}",
+      "sha256": "1e3ec070ab3df3a925236391264f4e42acfe87ae46a9de8b684f5c0494e0313d",
+      "verification_expression": "",
+      "uploaded_source": [
+        {
+          "chapter": 16,
+          "example": 2,
+          "section": "16.2. Указатель команд Wolfram Language"
+        }
+      ]
+    }
+  ]
+}

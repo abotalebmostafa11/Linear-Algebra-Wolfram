@@ -1,0 +1,12 @@
+{
+  "source_blocks_in_uploaded_archive": 251,
+  "notebook_input_blocks_checked": 251,
+  "book_code_occurrences": 255,
+  "book_code_matches_uploaded_archive": 255,
+  "chapter_notebooks": 21,
+  "mathematical_checks_supplied": 150,
+  "cars_rows": 50,
+  "cars_matches_book_vectors": true,
+  "native_wolfram_execution": "not_run_no_kernel_in_preparation_environment",
+  "repository_publication": "published_to_github"
+}

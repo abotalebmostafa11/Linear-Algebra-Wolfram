@@ -1,2 +1,57 @@
-# Linear-Algebra-Wolfram
-Wolfram Mathematica companion code and data for the three-part Russian linear algebra textbook by Dr. Mostafa Abotaleb.
+# Линейная алгебра с Wolfram Mathematica
+
+Код и данные к трехчастному курсу «Линейная алгебра. От вычислений и доказательств к моделированию, кодам и программированию в Wolfram Mathematica».
+
+Автор — Dr. Mostafa Abotaleb, PhD, Associate Professor. Югорский государственный университет.
+
+Репозиторий содержит 255 кодовых блоков из трех книг, 21 ноутбук Mathematica, 21 файл Wolfram Language и входные данные. Нумерация файлов соответствует каждой книге. Тексты книг в репозиторий не включены.
+
+| Часть | Темы | Главы с кодом | Блоки |
+| --- | --- | ---: | ---: |
+| [Part_1](Part_1) | Матрицы, векторные пространства и линейные коды | 9 | 100 |
+| [Part_2](Part_2) | Спектральная теория и геометрические приложения | 8 | 88 |
+| [Part_3](Part_3) | Методы приближения и вычислительное моделирование | 4 | 67 |
+
+## Скачать и открыть
+
+1. Нажмите [Download ZIP](https://github.com/abotalebmostafa11/Linear-Algebra-Wolfram/archive/refs/heads/main.zip) и распакуйте архив.
+2. Откройте папку нужной части.
+3. Откройте `Chapter_XX.nb` в Wolfram Mathematica.
+4. Выполняйте ячейки сверху вниз через Shift+Enter. Ячейки сброса очищают только контекст примера.
+
+Для всех программ одной части используйте ее `Run_All.nb`. Для всех трех частей — `Run_All.nb` в корне репозитория. Файлы `.wl` содержат тот же исходный код в текстовом виде и выводят результаты при загрузке через `Get`.
+
+## Командная строка
+
+При установленном и активированном Wolfram Engine или Mathematica с `wolframscript` выполните из корня репозитория
+
+```bash
+wolframscript -file Run_All.wls
+wolframscript -file Part_1/Run_All.wls
+wolframscript -file Part_2/Run_All.wls
+wolframscript -file Part_3/Run_All.wls
+```
+
+Запускайте нужную команду. Отчеты находятся в `results/`. Они содержат версию ядра, результаты, сообщения и результаты математических проверок. Сеть и дополнительные пакеты для вычислений не требуются.
+
+## Данные и проверка
+
+Числовые входы включены в каждый пример. Указатель присваиваний находится в `Part_N/data/inputs.json`. Все 50 наблюдений проекта части 3 находятся в [cars.csv](Part_3/data/cars.csv), описание и единицы — в [источниках данных](docs/DATA_SOURCES.md).
+
+Код в файлах сверяется с книгами и входным архивом. Для 144 численных вариантов и шести блоков проекта предусмотрены математические проверки. Порядок проверки и статус выполнения ядром описаны в [REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md).
+
+Проверка структуры и контрольных сумм без Mathematica
+
+```bash
+python3 tools/check_package.py
+```
+
+Полный [каталог примеров](docs/Example_Catalogue.csv) связывает часть, главу, раздел, вариант, ноутбук и файл кода.
+
+## Ссылки
+
+- [Документация Wolfram Language](https://reference.wolfram.com/language/)
+- [Источники данных](docs/DATA_SOURCES.md)
+- [English guide](README_EN.md)
+
+Mathematica и Wolfram Language — продукты Wolfram Research. Репозиторий является авторским приложением к книгам.

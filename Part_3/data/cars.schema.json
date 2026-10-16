@@ -1,0 +1,20 @@
+{
+  "name": "cars",
+  "row_count": 50,
+  "missing_values": false,
+  "columns": [
+    {
+      "name": "speed_mph",
+      "type": "integer",
+      "unit": "mile per hour"
+    },
+    {
+      "name": "distance_ft",
+      "type": "integer",
+      "unit": "foot"
+    }
+  ],
+  "description": "Historical speed and stopping-distance observations supplied with the R datasets package.",
+  "source": "https://svn.r-project.org/R/trunk/src/library/datasets/data/cars.R",
+  "documentation": "https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/cars.html"
+}

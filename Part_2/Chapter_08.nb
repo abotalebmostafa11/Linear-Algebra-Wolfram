@@ -1,0 +1,13 @@
+(* Wolfram Notebook File *)
+Notebook[{
+Cell["8. Справочник и литература","Title"],
+Cell["Часть 2. Ноутбук соответствует нумерации книги. Выполняйте ячейки сверху вниз через Shift+Enter. Исходные данные включены в программы. Независимые примеры используют отдельные контексты; шесть блоков проекта cars разделяют один контекст.","Text"],
+Cell[CellGroupData[{Cell["8.2. Указатель команд Wolfram Language — P2-C08-E001","Section"],
+Cell["Источник: часть 2, 8.2. Указатель команд Wolfram Language. Кодовый блок 1 главы 8.","Text"],
+Cell[BoxData[RowBox[{"ClearAll","[","\"LinearAlgebraCompanion`Part2`P2C08E001`*\"","]",";"}]],"Input",CellContext->"LinearAlgebraCompanion`Part2`P2C08E001`",CellLabel->"P2-C08-E001 reset"],
+Cell[BoxData[RowBox[{"a"," ","="," ","{","{","1",","," ","2",","," ","3","}",","," ","{","2",","," ","4",","," ","6","}","}",";","\n","p"," ","="," ","PseudoInverse","[","a","]",";","\n","{","a",".","p",".","a"," ","=="," ","a",","," ","p",".","a",".","p"," ","=="," ","p",",","\n ","ConjugateTranspose","[","a",".","p","]"," ","=="," ","a",".","p",",","\n ","ConjugateTranspose","[","p",".","a","]"," ","=="," ","p",".","a","}"}]],"Input",CellContext->"LinearAlgebraCompanion`Part2`P2C08E001`",CellLabel->"P2-C08-E001"]},Open]],
+Cell[CellGroupData[{Cell["8.2. Указатель команд Wolfram Language — P2-C08-E002","Section"],
+Cell["Источник: часть 2, 8.2. Указатель команд Wolfram Language. Кодовый блок 2 главы 8.","Text"],
+Cell[BoxData[RowBox[{"ClearAll","[","\"LinearAlgebraCompanion`Part2`P2C08E002`*\"","]",";"}]],"Input",CellContext->"LinearAlgebraCompanion`Part2`P2C08E002`",CellLabel->"P2-C08-E002 reset"],
+Cell[BoxData[RowBox[{"ClearAll","[","t","]",";","\n","a"," ","="," ","{","{","2",","," ","1","}",","," ","{","0",","," ","2","}","}",";","\n","{","s",","," ","j","}"," ","="," ","JordanDecomposition","[","a","]",";","\n","e"," ","="," ","MatrixExp","[","t"," ","a","]",";","\n","{","a",".","s"," ","=="," ","s",".","j",","," ","Det","[","s","]"," ","!="," ","0",",","\n ","FullSimplify","[","D","[","e",","," ","t","]"," ","-"," ","a",".","e","]",",","\n ","FullSimplify","[","(","e"," ","/."," ","t"," ","->"," ","0",")"," ","-"," ","IdentityMatrix","[","2","]]","}"}]],"Input",CellContext->"LinearAlgebraCompanion`Part2`P2C08E002`",CellLabel->"P2-C08-E002"]},Open]]
+},WindowTitle->"8. Справочник и литература",StyleDefinitions->"Default.nb",Saveable->True,TaggingRules-><|"CompanionVersion"->"1.0.0"|>]
