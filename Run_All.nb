@@ -1,6 +1,0 @@
-(* Wolfram Notebook File *)
-Notebook[{
-Cell["Проверка кода всех частей","Title"],
-Cell["Выполните ячейку через Shift+Enter. Отчет содержит версию ядра, фактические результаты, сообщения и результаты математических проверок. Блоки проекта cars выполняются в одном контексте и в исходном порядке.","Text"],
-Cell[BoxData[RowBox[{"root"," ","="," ","NotebookDirectory","[","]",";","\n","Get","[","FileNameJoin","[","{","root",",","\"lib\"",",","\"Companion.wl\"","}","]]",";","\n","report"," ","="," ","LinearAlgebraCompanion`RunExamples","[","root",",","All","]",";","\n","LinearAlgebraCompanion`SaveReport","[","report",",","FileNameJoin","[","{","root",",","\"results\"",",","\"execution_all.json\"","}","]]",";","\n","KeyDrop","[","report",",","\"results\"","]"}]],"Input",CellContext->"LinearAlgebraCompanionRunner`",CellLabel->"Run"]
-},WindowTitle->"Проверка кода всех частей",StyleDefinitions->"Default.nb",Saveable->True,TaggingRules-><|"CompanionVersion"->"1.0.0"|>]

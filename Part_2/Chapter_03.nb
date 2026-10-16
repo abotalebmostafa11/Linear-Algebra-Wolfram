@@ -1,21 +1,11 @@
-(* Wolfram Notebook File *)
 Notebook[{
 Cell["3. Унитарная диагонализация","Title"],
-Cell["Часть 2. Ноутбук соответствует нумерации книги. Выполняйте ячейки сверху вниз через Shift+Enter. Исходные данные включены в программы. Независимые примеры используют отдельные контексты; шесть блоков проекта cars разделяют один контекст.","Text"],
-Cell[CellGroupData[{Cell["3.1. Сопряженный оператор и нормальность — P2-C03-E001","Section"],
-Cell["Источник: часть 2, 3.1. Сопряженный оператор и нормальность. Кодовый блок 1 главы 3.","Text"],
-Cell[BoxData[RowBox[{"ClearAll","[","\"LinearAlgebraCompanion`Part2`P2C03E001`*\"","]",";"}]],"Input",CellContext->"LinearAlgebraCompanion`Part2`P2C03E001`",CellLabel->"P2-C03-E001 reset"],
-Cell[BoxData[RowBox[{"a"," ","="," ","{","{","1",","," ","-","2","}",","," ","{","2",","," ","1","}","}",";","\n","{","ConjugateTranspose","[","a","]",".","a",",","\n ","a",".","ConjugateTranspose","[","a","]",","," ","Eigenvalues","[","a","]","}"}]],"Input",CellContext->"LinearAlgebraCompanion`Part2`P2C03E001`",CellLabel->"P2-C03-E001"]},Open]],
-Cell[CellGroupData[{Cell["3.3. Эрмитовы матрицы и главные оси — P2-C03-E002","Section"],
-Cell["Источник: часть 2, 3.3. Эрмитовы матрицы и главные оси. Кодовый блок 2 главы 3.","Text"],
-Cell[BoxData[RowBox[{"ClearAll","[","\"LinearAlgebraCompanion`Part2`P2C03E002`*\"","]",";"}]],"Input",CellContext->"LinearAlgebraCompanion`Part2`P2C03E002`",CellLabel->"P2-C03-E002 reset"],
-Cell[BoxData[RowBox[{"a"," ","="," ","{","{","3",","," ","1","}",","," ","{","1",","," ","3","}","}",";","\n","q"," ","="," ","{","{","1",","," ","1","}",","," ","{","1",","," ","-","1","}","}","/","Sqrt","[","2","]",";","\n","{","FullSimplify","[","Transpose","[","q","]",".","a",".","q","]",",","\n ","FullSimplify","[","Transpose","[","q","]",".","q","]","}"}]],"Input",CellContext->"LinearAlgebraCompanion`Part2`P2C03E002`",CellLabel->"P2-C03-E002"]},Open]],
-Cell[CellGroupData[{Cell["3.4. Спектральные проекторы — P2-C03-E003","Section"],
-Cell["Источник: часть 2, 3.4. Спектральные проекторы. Кодовый блок 3 главы 3.","Text"],
-Cell[BoxData[RowBox[{"ClearAll","[","\"LinearAlgebraCompanion`Part2`P2C03E003`*\"","]",";"}]],"Input",CellContext->"LinearAlgebraCompanion`Part2`P2C03E003`",CellLabel->"P2-C03-E003 reset"],
-Cell[BoxData[RowBox[{"a"," ","="," ","{","{","3",","," ","1","}",","," ","{","1",","," ","3","}","}",";","\n","p4"," ","="," ","(","a"," ","-"," ","2"," ","IdentityMatrix","[","2","]",")","/","2",";","\n","p2"," ","="," ","(","4"," ","IdentityMatrix","[","2","]"," ","-"," ","a",")","/","2",";","\n","{","p4",".","p4"," ","=="," ","p4",","," ","p4",".","p2",",","\n ","4"," ","p4"," ","+"," ","2"," ","p2"," ","=="," ","a","}"}]],"Input",CellContext->"LinearAlgebraCompanion`Part2`P2C03E003`",CellLabel->"P2-C03-E003"]},Open]],
-Cell[CellGroupData[{Cell["3.5. Самосопряженность вне стандартных координат — P2-C03-E004","Section"],
-Cell["Источник: часть 2, 3.5. Самосопряженность вне стандартных координат. Кодовый блок 4 главы 3.","Text"],
-Cell[BoxData[RowBox[{"ClearAll","[","\"LinearAlgebraCompanion`Part2`P2C03E004`*\"","]",";"}]],"Input",CellContext->"LinearAlgebraCompanion`Part2`P2C03E004`",CellLabel->"P2-C03-E004 reset"],
-Cell[BoxData[RowBox[{"p"," ","="," ","{","{","1",","," ","1","}",","," ","{","0",","," ","1","}","}",";","\n","d"," ","="," ","DiagonalMatrix","[","{","1",","," ","2","}","]",";","\n","b"," ","="," ","Inverse","[","p","]",".","d",".","p",";","\n","g"," ","="," ","Transpose","[","p","]",".","p",";","\n","{","b",","," ","g",","," ","Transpose","[","b","]",".","g"," ","=="," ","g",".","b","}"}]],"Input",CellContext->"LinearAlgebraCompanion`Part2`P2C03E004`",CellLabel->"P2-C03-E004"]},Open]]
-},WindowTitle->"3. Унитарная диагонализация",StyleDefinitions->"Default.nb",Saveable->True,TaggingRules-><|"CompanionVersion"->"1.0.0"|>]
+Cell["3.1. Сопряженный оператор и нормальность","Section"],
+Cell[BoxData[RowBox[{"a"," ","="," ","{","{","1",","," ","-","2","}",","," ","{","2",","," ","1","}","}",";","\n","{","ConjugateTranspose","[","a","]",".","a",",","\n ","a",".","ConjugateTranspose","[","a","]",","," ","Eigenvalues","[","a","]","}"}]],"Input"],
+Cell["3.3. Эрмитовы матрицы и главные оси","Section"],
+Cell[BoxData[RowBox[{"a"," ","="," ","{","{","3",","," ","1","}",","," ","{","1",","," ","3","}","}",";","\n","q"," ","="," ","{","{","1",","," ","1","}",","," ","{","1",","," ","-","1","}","}","/","Sqrt","[","2","]",";","\n","{","FullSimplify","[","Transpose","[","q","]",".","a",".","q","]",",","\n ","FullSimplify","[","Transpose","[","q","]",".","q","]","}"}]],"Input"],
+Cell["3.4. Спектральные проекторы","Section"],
+Cell[BoxData[RowBox[{"a"," ","="," ","{","{","3",","," ","1","}",","," ","{","1",","," ","3","}","}",";","\n","p4"," ","="," ","(","a"," ","-"," ","2"," ","IdentityMatrix","[","2","]",")","/","2",";","\n","p2"," ","="," ","(","4"," ","IdentityMatrix","[","2","]"," ","-"," ","a",")","/","2",";","\n","{","p4",".","p4"," ","=="," ","p4",","," ","p4",".","p2",",","\n ","4"," ","p4"," ","+"," ","2"," ","p2"," ","=="," ","a","}"}]],"Input"],
+Cell["3.5. Самосопряженность вне стандартных координат","Section"],
+Cell[BoxData[RowBox[{"p"," ","="," ","{","{","1",","," ","1","}",","," ","{","0",","," ","1","}","}",";","\n","d"," ","="," ","DiagonalMatrix","[","{","1",","," ","2","}","]",";","\n","b"," ","="," ","Inverse","[","p","]",".","d",".","p",";","\n","g"," ","="," ","Transpose","[","p","]",".","p",";","\n","{","b",","," ","g",","," ","Transpose","[","b","]",".","g"," ","=="," ","g",".","b","}"}]],"Input"]
+},StyleDefinitions->"Default.nb"]
