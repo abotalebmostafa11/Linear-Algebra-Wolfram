@@ -1,4 +1,7 @@
 (* 3. Практикум. Решения с промежуточными вычислениями *)
+(* Перед самостоятельным примером выполните Quit[] в отдельной ячейке Mathematica. *)
+(* Копируйте один пример целиком. Его код совпадает с блоком книги. *)
+(* Шесть блоков раздела 3.9 выполняйте по порядку в одном ядре без Quit[] между ними. *)
 
 (* 3.1.1. Вариант 1. Переход между двумя категориями. Модель 1 *)
 p = {{4/5, 1/5},
@@ -576,7 +579,7 @@ r = b - a.x;
 {x, r, Transpose[a].r - lambda x,
  r.r + lambda x.x, Norm[x], Norm[r]}
 
-(* Реализация в Wolfram Mathematica *)
+(* 3.9. Итоговый проект. От наблюдений к проверенной модели. Ячейка 1 из 6 *)
 speed = {4, 4, 7, 7, 8, 9, 10, 10, 10, 11, 11, 12, 12, 12,
  12, 13, 13, 13, 13, 14, 14, 14, 14, 15, 15,
  15, 16, 16, 17, 17, 17, 18, 18, 18, 18, 19, 19, 19, 20, 20,
@@ -586,7 +589,7 @@ distance = {2, 10, 4, 22, 16, 10, 18, 26, 34, 17, 28, 14, 20,
  54, 32, 40, 32, 40, 50, 42, 56, 76, 84, 36, 46, 68, 32, 48,
  52, 56, 64, 66, 54, 70, 92, 93, 120, 85};
 
-(* Реализация в Wolfram Mathematica *)
+(* 3.9. Итоговый проект. От наблюдений к проверенной модели. Ячейка 2 из 6 *)
 count = Length[speed];
 a = Transpose[{ConstantArray[1, count], speed}];
 b = distance;
@@ -596,7 +599,7 @@ residual = b - a.beta;
 {Dimensions[a], MatrixRank[a], normal, rhs, beta,
  Transpose[a].residual, residual.residual}
 
-(* Реализация в Wolfram Mathematica *)
+(* 3.9. Итоговый проект. От наблюдений к проверенной модели. Ячейка 3 из 6 *)
 an = N[a, 40]; bn = N[b, 40];
 {qStored, rFactor} = QRDecomposition[an];
 qFactor = ConjugateTranspose[qStored];
@@ -610,7 +613,7 @@ betaSVD = vFactor.DiagonalMatrix[1/singular].
 {kappa = Max[singular]/Min[singular],
  betaQR, betaSVD, N[beta, 12]}
 
-(* Реализация в Wolfram Mathematica *)
+(* 3.9. Итоговый проект. От наблюдений к проверенной модели. Ячейка 4 из 6 *)
 qrError = Norm[an - qFactor.rFactor, "Frobenius"];
 svdError = Norm[an - uFactor.sFactor.
  ConjugateTranspose[vFactor], "Frobenius"];
@@ -627,7 +630,7 @@ penrose = {
 {qrError, qrOrth, svdError, penrose,
  Norm[betaQR - betaSVD], Norm[pinv.bn - betaSVD]}
 
-(* Реализация в Wolfram Mathematica *)
+(* 3.9. Итоговый проект. От наблюдений к проверенной модели. Ячейка 5 из 6 *)
 meanT = Mean[speed]; meanY = Mean[distance];
 scaleT = Sqrt[Total[(speed - meanT)^2]/count];
 z = (speed - meanT)/scaleT;
@@ -643,7 +646,7 @@ rRidge = b - a.betaRidge;
  FullSimplify[Transpose[designZ].rRidge -
  lambda penalty.alpha]}
 
-(* Дополнительные численные варианты *)
+(* 3.9. Итоговый проект. От наблюдений к проверенной модели. Ячейка 6 из 6 *)
 results = Table[
  alpha = LinearSolve[Transpose[designZ].designZ +
   lam penalty, Transpose[designZ].b];
@@ -655,3 +658,63 @@ results = Table[
    lam penalty.alpha]},
  {lam, {0, 5, 50}}];
 results // N[#, 12] &
+
+(* 3.10.1. Вариант 1. Обусловленность матрицы плана и центрирование *)
+a = {{1, 1}, {1, 2}, {1, 3}}; b = {2, 3, 5};
+ac = {{1, -1}, {1, 0}, {1, 1}};
+cond[m_] := Module[{s = SingularValueList[N[m]]},
+  Max[s]/Min[s]];
+{cond[a], cond[Transpose[a].a], cond[ac],
+ LinearSolve[Transpose[a].a, Transpose[a].b],
+ LinearSolve[Transpose[ac].ac, Transpose[ac].b]}
+
+(* 3.10.2. Вариант 2. QR-разложение и нормальные уравнения *)
+a = {{1, 3}, {2, 3}, {2, 0}}; b = {1, 2, 4};
+{q, r} = QRDecomposition[a];
+xqr = LinearSolve[r, q.b];
+xne = LinearSolve[Transpose[a].a, Transpose[a].b];
+res = b - a.xqr;
+sv[m_] := SingularValueList[N[m]];
+{r, xqr, xne == xqr, res, Transpose[a].res,
+ Max[sv[a]]/Min[sv[a]],
+   Max[sv[Transpose[a].a]]/Min[sv[Transpose[a].a]]}
+
+(* 3.10.3. Вариант 3. Наилучшее приближение ранга один *)
+a = {{3, 0}, {4, 5}};
+{u, s, v} = SingularValueDecomposition[a];
+a1 = s[[1, 1]] Outer[Times, u[[All, 1]], v[[All, 1]]];
+{Diagonal[s], Simplify[a1], Simplify[Norm[a - a1, "Frobenius"]],
+ Simplify[Norm[a - a1, 2]], s[[1, 1]]^2/Total[Diagonal[s]^2]}
+
+(* 3.10.4. Вариант 4. QR-разложение отражением Хаусхолдера *)
+sigma[t_] := If[t >= 0, 1, -1];
+householder[x_] := Module[{n = Length[x], w},
+  If[Norm[x] == 0, IdentityMatrix[n],
+   w = x + sigma[x[[1]]] Norm[x] UnitVector[n, 1];
+   IdentityMatrix[n] - 2 Outer[Times, w, w]/(w.w)]];
+a = {{2, 1}, {1, 1}, {2, 0}};
+ha = householder[a[[All, 1]]].a;
+g = {{1, 0, 0}, {0, 3/5, -4/5}, {0, 4/5, 3/5}};
+rr = g.ha;
+{ha, rr, Transpose[rr].rr == Transpose[a].a}
+
+(* 3.10.5. Вариант 5. Отражение Хаусхолдера при нулевой первой компоненте *)
+sigma[t_] := If[t >= 0, 1, -1];
+householder[x_] := Module[{n = Length[x], w},
+  If[Norm[x] == 0, IdentityMatrix[n],
+   w = x + sigma[x[[1]]] Norm[x] UnitVector[n, 1];
+   IdentityMatrix[n] - 2 Outer[Times, w, w]/(w.w)]];
+x = {0, 3, 4};
+wrong = x + Sign[x[[1]]] Norm[x] UnitVector[3, 1];
+hWrong = IdentityMatrix[3] - 2 Outer[Times, wrong,
+  wrong]/(wrong.wrong);
+{householder[x].x, hWrong.x, householder[{0, 0, 0}]}
+
+(* 3.10.6. Вариант 6. Вращение Гивенса и решение системы через QR *)
+givens[{p_, q_}] := Module[{r = Sqrt[p^2 + q^2]},
+  If[r == 0, IdentityMatrix[2], {{p, q}, {-q, p}}/r]];
+a = {{3, 1}, {4, 2}}; b = {5, 6};
+g = givens[a[[All, 1]]];
+rr = g.a; gb = g.b;
+x = LinearSolve[rr, gb];
+{rr, gb, x, a.x - b, Transpose[g].g == IdentityMatrix[2]}

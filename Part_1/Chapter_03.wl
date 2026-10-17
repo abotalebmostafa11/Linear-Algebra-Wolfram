@@ -1,4 +1,6 @@
 (* 3. Теория матриц и разложения *)
+(* Перед самостоятельным примером выполните Quit[] в отдельной ячейке Mathematica. *)
+(* Копируйте один пример целиком. Его код совпадает с блоком книги. *)
 
 (* 3.1. Алгебраические законы *)
 a = {{1, 1}, {0, 1}};
@@ -26,7 +28,8 @@ ClearAll[rotation, a, b];
 rotation[t_] := {{Cos[t], -Sin[t]},
   {Sin[t], Cos[t]}};
 FullSimplify[rotation[a].rotation[b] -
-  rotation[a + b], Assumptions -> {a, b} \[Element] Reals]
+  rotation[a + b],
+  Assumptions -> Element[{a, b}, Reals]]
 
 (* 3.6. LU, LDU и роль перестановок *)
 a = {{2, 1, 1}, {4, 5, 3}, {2, 4, 4}};

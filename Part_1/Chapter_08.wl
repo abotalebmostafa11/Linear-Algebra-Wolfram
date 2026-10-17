@@ -1,4 +1,6 @@
 (* 8. Практикум. Решения с промежуточными вычислениями *)
+(* Перед самостоятельным примером выполните Quit[] в отдельной ячейке Mathematica. *)
+(* Копируйте один пример целиком. Его код совпадает с блоком книги. *)
 
 (* 8.1.1. Вариант 1. Мастерская *)
 a = {{1, 1},
@@ -7,7 +9,7 @@ b = {10, 34};
 aug = MapThread[Append, {a, b}];
 row2 = aug[[2]] - 2 aug[[1]];
 y = row2[[3]]/row2[[2]];
-x = b[[1]] - y;
+x = (b[[1]] - a[[1, 2]] y)/a[[1, 1]];
 answer = {x, y};
 {row2, answer, a.answer, b - a.answer}
 
@@ -18,7 +20,7 @@ b = {10, 42};
 aug = MapThread[Append, {a, b}];
 row2 = aug[[2]] - 3 aug[[1]];
 y = row2[[3]]/row2[[2]];
-x = b[[1]] - y;
+x = (b[[1]] - a[[1, 2]] y)/a[[1, 1]];
 answer = {x, y};
 {row2, answer, a.answer, b - a.answer}
 
@@ -29,7 +31,7 @@ b = {10, 50};
 aug = MapThread[Append, {a, b}];
 row2 = aug[[2]] - 4 aug[[1]];
 y = row2[[3]]/row2[[2]];
-x = b[[1]] - y;
+x = (b[[1]] - a[[1, 2]] y)/a[[1, 1]];
 answer = {x, y};
 {row2, answer, a.answer, b - a.answer}
 
@@ -40,7 +42,7 @@ b = {10, 58};
 aug = MapThread[Append, {a, b}];
 row2 = aug[[2]] - 5 aug[[1]];
 y = row2[[3]]/row2[[2]];
-x = b[[1]] - y;
+x = (b[[1]] - a[[1, 2]] y)/a[[1, 1]];
 answer = {x, y};
 {row2, answer, a.answer, b - a.answer}
 
@@ -51,7 +53,7 @@ b = {10, 66};
 aug = MapThread[Append, {a, b}];
 row2 = aug[[2]] - 6 aug[[1]];
 y = row2[[3]]/row2[[2]];
-x = b[[1]] - y;
+x = (b[[1]] - a[[1, 2]] y)/a[[1, 1]];
 answer = {x, y};
 {row2, answer, a.answer, b - a.answer}
 
@@ -62,7 +64,7 @@ b = {10, 74};
 aug = MapThread[Append, {a, b}];
 row2 = aug[[2]] - 7 aug[[1]];
 y = row2[[3]]/row2[[2]];
-x = b[[1]] - y;
+x = (b[[1]] - a[[1, 2]] y)/a[[1, 1]];
 answer = {x, y};
 {row2, answer, a.answer, b - a.answer}
 
