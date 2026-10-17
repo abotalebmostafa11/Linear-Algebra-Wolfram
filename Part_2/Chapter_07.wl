@@ -1,6 +1,5 @@
 (* 7. Практикум. Решения с промежуточными вычислениями *)
-(* Перед самостоятельным примером выполните Quit[] в отдельной ячейке Mathematica. *)
-(* Копируйте один пример целиком. Его код совпадает с блоком книги. *)
+(* Код совпадает с книгой. Перед самостоятельным примером выполните Quit[] в отдельной ячейке. *)
 
 (* 7.1.1. Вариант 1. Три направления. Определитель 1 *)
 a = {{2, 1, 2},
@@ -68,6 +67,10 @@ contributions = a[[1]] cofactors;
 result = Total[contributions];
 {minors, cofactors, contributions, result, Det[a]}
 
+(* Исследование при изменении условия *)
+a = IdentityMatrix[3]; b = DiagonalMatrix[{2, 1/2, 1}];
+{Det[a], Det[b], b.{1, 0, 0}}
+
 (* 7.2.1. Вариант 1. Преобразование участка. Масштаб 1 *)
 p = {{2, 1},
  {1, 3}};
@@ -127,6 +130,10 @@ u = p[[All, 1]]; v = p[[All, 2]];
 new = Transpose[{a.u, a.v}];
 {Det[p], Det[a], new, Abs[Det[new]],
  Det[new] == Det[a] Det[p]}
+
+(* Исследование при изменении условия *)
+Table[{t, Det[DiagonalMatrix[{t, 2}]],
+ Abs[Det[DiagonalMatrix[{t, 2}]]]}, {t, {-1, 0, 1}}]
 
 (* 7.3.1. Вариант 1. Два связанных процесса. Связь 1 *)
 a = {{3, 1},
@@ -193,6 +200,10 @@ diagonal = FullSimplify[Transpose[q].a.q];
 coordinates = FullSimplify[Transpose[q].x];
 {Eigenvalues[a], diagonal, coordinates,
  FullSimplify[q.diagonal.coordinates - a.x]}
+
+(* Исследование при изменении условия *)
+a = {{3, 1}, {1, 3}}; lambda = {4, 2};
+{Sort[Eigenvalues[a]], lambda, 1/Sqrt[lambda]}
 
 (* 7.4.1. Вариант 1. Повторное действие. Степень 4 *)
 a = {{2, 1},
@@ -265,6 +276,10 @@ history = Table[
  Prepend[coeff, k], {k, 1, power}];
 result = coeff[[1]] a + coeff[[2]] IdentityMatrix[2];
 {history, result, result - MatrixPower[a, power]}
+
+(* Исследование при изменении условия *)
+a = 2 IdentityMatrix[2]; b = {{2, 1}, {0, 2}};
+{MatrixPower[a, 4], MatrixPower[b, 4]}
 
 (* 7.5.1. Вариант 1. Энергия двух координат. Форма 1 *)
 ClearAll[x, y];
@@ -356,6 +371,11 @@ squares = d1 (x + ell y)^2 + d2 y^2;
 {l.d.Transpose[l] == a, Expand[form - squares],
  d1 > 0 && d2 > 0}
 
+(* Исследование при изменении условия *)
+a = {{0, 1}, {1, 0}};
+{Det[a], Sort[Eigenvalues[a]],
+ {1, 1}.a.{1, 1}, {1, -1}.a.{1, -1}}
+
 (* 7.6.1. Вариант 1. Оптимальная настройка. Энергия 1 *)
 ClearAll[x, y, h1, h2];
 a = {{3, 1},
@@ -427,6 +447,10 @@ minimum = f /. Thread[vec -> point];
 shifted = f /. Thread[vec -> point + {h1, h2}];
 {point, minimum,
  Expand[shifted - minimum], a.point - b}
+
+(* Исследование при изменении условия *)
+Table[Sort[Eigenvalues[2 {{1, t}, {t, 1}}]],
+ {t, {0, 2}}]
 
 (* 7.7.1. Вариант 1. Три последовательных звена. Связь 1 *)
 ClearAll[t];
@@ -500,6 +524,12 @@ x = Exp[-t] poly.{0, 0, 1};
  FullSimplify[D[x, t] - a.x], x /. t -> 0,
  FullSimplify[x - MatrixExp[t a].{0, 0, 1}]}
 
+(* Исследование при изменении условия *)
+n = {{0, 1, 0}, {0, 0, 1}, {0, 0, 0}};
+e = IdentityMatrix[3] + t n + t^2 n.n/2;
+{Expand[e.{0, 0, 1}],
+ Simplify[D[e, t] - n.e]}
+
 (* 7.8.1. Вариант 1. Геометрия пространственной ячейки. Размер 1 *)
 u = {1, 0, 1}; v = {0, 2, 1}; w = {1, 1, 3};
 n = Cross[u, v];
@@ -559,3 +589,71 @@ height = Abs[mixed]/area;
 volume = Abs[mixed]/6;
 {n, n.u, n.v, area, mixed,
  Det[Transpose[{u, v, w}]], height, volume}
+
+(* Исследование при изменении условия *)
+u = {1, 1, 0}; v = {2, 2, t}; w = Cross[u, v];
+{w, Expand[w.w]}
+
+(* Задача 7.1 *)
+a = Transpose[{{1, 0, 0}, {1, 1, 0}, {0, 1, 2}}];
+{Det[a], MatrixRank[a]}
+
+(* Задача 7.2 *)
+a = {{3/4, 1/4}, {1/4, 3/4}};
+{MatrixPower[a, 2].{1, 0}, Total[a.{1, 0}]}
+
+(* Задача 7.3 *)
+lambda = {9, 4}; radii = 1/Sqrt[lambda];
+{radii, Pi Times @@ radii}
+
+(* Задача 7.4 *)
+j = {{1, 1}, {0, 1}};
+MatrixPower[j, 10].{0, 1}
+
+(* Задача 7.5 *)
+p = {2, -1, 1}; n = {1, 2, 2};
+Abs[n.p]/Norm[n]
+
+(* Задача 7.6 *)
+a = {{3, 2}, {2, 3}};
+{a.{1, 1}, a.{1, -1}}
+
+(* Задача 7.7 *)
+a = {{1, t}, {t, 1}};
+{a.{1, 1}, a.{1, -1}} // Expand
+
+(* Задача 7.8 *)
+l = {{1, -1, 0}, {-1, 2, -1}, {0, -1, 1}};
+{Sort[Eigenvalues[2 l]], (2 l).{1, 0, -1}}
+
+(* Задача 7.9 *)
+f = t Exp[-t];
+{Simplify[D[f, t]], f /. t -> 1}
+
+(* Задача 7.10 *)
+d = {0, 3, 5, 6, 6};
+{Differences[d], Total[{3, 2, 1}]}
+
+(* Задача 7.11 *)
+a = {{2, 0}, {-1, 1}}; x = a.{1, 0};
+{Total[x], x}
+
+(* Задача 7.12 *)
+a = DiagonalMatrix[{4, 9}];
+s = DiagonalMatrix[{1/2, 1/3}];
+Transpose[s].a.s
+
+(* Задача 7.13 *)
+a = IdentityMatrix[2]; p = DiagonalMatrix[{2, 1}];
+{Eigenvalues[a], Sort[Eigenvalues[Transpose[p].a.p]]}
+
+(* Задача 7.14 *)
+a = {{0, 1, 0, 0}, {0, 0, 1, 0},
+ {0, 0, 0, 0}, {0, 0, 0, 0}};
+b = {{0, 1, 0, 0}, {0, 0, 0, 0},
+ {0, 0, 0, 1}, {0, 0, 0, 0}};
+{4 - MatrixRank[a.a], 4 - MatrixRank[b.b]}
+
+(* Задача 7.15 *)
+l = {{1, -1, 0}, {-1, 2, -1}, {0, -1, 1}};
+{l.{1, 1, 1}, Length[NullSpace[l]]}
