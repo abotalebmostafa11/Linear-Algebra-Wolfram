@@ -1,105 +1,103 @@
-(* 6. Геометрия плоскости и пространства *)
+(* 6. Жорданово разложение *)
 (* Код совпадает с книгой. Перед самостоятельным примером выполните Quit[] в отдельной ячейке. *)
 
-(* 6.1. Прямые и параметр *)
+(* 6.1. Обобщенные собственные векторы *)
+j = {{2, 1, 0}, {0, 2, 1}, {0, 0, 2}};
+n = j - 2 IdentityMatrix[3];
+Table[n.UnitVector[3, k], {k, 1, 3}]
+
+(* 6.4. Главный результат и вычисление *)
+a = {{2, 1, 1}, {0, 2, 1}, {0, 0, 2}};
+p = {{1, 0, 0}, {0, 1, -1}, {0, 0, 1}};
+j = Inverse[p].a.p;
+{j, a.p == p.j, Det[p]}
+
+(* 6.5. Размеры блоков из ядер *)
+j3 = {{0, 1, 0}, {0, 0, 1}, {0, 0, 0}};
+j2 = {{0, 1}, {0, 0}};
+n = ArrayFlatten[{{j3, ConstantArray[0, {3, 2}]},
+ {ConstantArray[0, {2, 3}], j2}}];
+dims = Table[5 - MatrixRank[MatrixPower[n, k]],
+ {k, 0, 4}];
+{dims, Differences[dims]}
+
+(* 6.6. Степени и экспонента блока *)
 ClearAll[t];
-p = {1, 2}; u = {3, -1};
-point = p + t u;
-{point, Expand[{1, 3}.point]}
+j = {{-1, 1}, {0, -1}};
+x = FullSimplify[MatrixExp[t j].{0, 1}];
+{x, FullSimplify[D[x, t] - j.x]}
 
-(* 6.2. Плоскость и нормаль *)
-n = {2, -1, 1}; p = {1, 0, 2};
-points = {{2, 1, 1}, {0, 0, 0}};
-(n.(# - p) &) /@ points
-
-(* 6.3. Неравенство Коши–Шварца *)
-u = {1, 2}; v = {2, -1}; w = {2, 4};
-{u.v, Abs[u.w], Norm[u] Norm[w]}
-
-(* 6.4. Углы и расстояния *)
-n = {2, -1, 1}; d = 4; b = {2, 1, 4};
-p = b - (n.b - d)/(n.n) n;
-{p, n.p, FullSimplify[Norm[b - p]]}
-
-(* 6.5. Векторное произведение *)
-u = {1, 0, 1}; v = {0, 2, 1};
-normal = Cross[u, v];
-{normal, normal.u, normal.v,
- Norm[normal], Norm[normal]/2}
-
-(* 6.6. Момент силы *)
-r = {3/10, 0, 0};
-force = {0, 10, 0};
-{Cross[r, force], Cross[r, {10, 0, 0}]}
-
-(* 6.7. Смешанное произведение и объем *)
-u = {2, 0, 0}; v = {0, 3, 0}; w = {1, 1, 4};
-mixed = u.Cross[v, w];
-{mixed, Det[Transpose[{u, v, w}]], Abs[mixed]/6}
-
-(* 6.8. Итоговый пример с плоскостями *)
-ClearAll[t];
-n1 = {1, 1, 1}; n2 = {1, -1, 1};
-line = {2, 1, 0} + t {-1, 0, 1};
-{Expand[n1.line], Expand[n2.line], Cross[n1, n2]}
+(* 6.8. Почему численная жорданова форма чувствительна *)
+ClearAll[e, t];
+a = {{0, 1}, {e, 0}};
+{CharacteristicPolynomial[a, t],
+ Eigenvalues[a /. e -> 1/1000000],
+ NullSpace[a /. e -> 0]}
 
 (* Задача 6.1 *)
-u = {1, 0, 1}; v = {0, 1, 1};
-{u.v, Simplify[u.v/(Norm[u] Norm[v])]}
+n = {{0, 1, 0}, {0, 0, 1}, {0, 0, 0}};
+{MatrixPower[n, 2], MatrixPower[n, 3]}
 
 (* Задача 6.2 *)
-{Cross[{1, 0, 0}, {0, 1, 0}],
- Cross[{0, 1, 0}, {1, 0, 0}]}
+MatrixPower[{{2, 1}, {0, 2}}, 3]
 
 (* Задача 6.3 *)
-n = {1, 1, 1}; p = {1, 2, 3};
-Simplify[Abs[n.p]/Norm[n]]
+n = {{0, 1}, {0, 0}}; e = IdentityMatrix[2] + t n;
+{e, D[e, t] - n.e}
 
 (* Задача 6.4 *)
-p = {1, 0, 2} + t {2, -1, 1};
-p /. t -> 3
+a = 3 IdentityMatrix[3];
+Length[NullSpace[a - 3 IdentityMatrix[3]]]
 
 (* Задача 6.5 *)
-u = {1, 1, 0}; v = {0, 1, 1}; w = {1, 0, 1};
-{u.Cross[v, w], Abs[Det[Transpose[{u, v, w}]]]}
+n = {{0, 1, 0}, {0, 0, 1}, {0, 0, 0}};
+Table[n.UnitVector[3, k], {k, 1, 3}]
 
 (* Задача 6.6 *)
-p = {2, 1, 0}; u = {1, 1, 0}; q = (p.u)/(u.u) u;
-{q, (p - q).u}
+d = {0, 2, 4, 5, 5};
+{Differences[d],
+ Table[d[[k + 1]] - d[[k]], {k, 1, 4}]}
 
 (* Задача 6.7 *)
-p = {1, 0, 0} + t {1, 1, 1};
-{Total[p] // Expand, p /. t -> 1}
+a = {{3, 1}, {-1, 1}}; n = a - 2 IdentityMatrix[2];
+{CharacteristicPolynomial[a, t], n.n, MatrixRank[n]}
 
 (* Задача 6.8 *)
-r = {2/5, 0, 0}; f = {0, 5, 0};
-Cross[r, f]
+a = {{3, 1}, {-1, 1}}; p = {{1, 1}, {-1, 0}};
+{Det[p], Inverse[p].a.p}
 
 (* Задача 6.9 *)
-p = {2 - t, -1, t};
-{{1, 1, 1}.p, {1, -1, 1}.p} // Expand
+j = {{-1, 1}, {0, -1}};
+x = {t Exp[-t], Exp[-t]};
+{Simplify[D[x, t] - j.x], x /. t -> 0}
 
 (* Задача 6.10 *)
-Abs[7 - 1]/Norm[{2, -1, 2}]
+a = DiagonalMatrix[{2, 2, 3}];
+{(a - 2 IdentityMatrix[3]).
+ (a - 3 IdentityMatrix[3]),
+ Factor[CharacteristicPolynomial[a, t]]}
 
 (* Задача 6.11 *)
-n = {1, 2, 2}; p = {3, 0, 0}; d = 1;
-q = p - ((n.p - d)/(n.n)) n;
-{n.q, Simplify[Norm[p - q]]}
+n = {{0, 1, 0}, {0, 0, 1}, {0, 0, 0}};
+MatrixPower[n, 2].{a, b, c}
 
 (* Задача 6.12 *)
-u = {1, 0, 1}; v = {0, 1, 1}; w = u + v;
-{u.Cross[v, w], MatrixRank[Transpose[{u, v, w}]]}
+sizes = {4, 2, 1};
+d = Table[Total[Min[k, #] & /@ sizes], {k, 0, 5}];
+{d, Differences[d]}
 
 (* Задача 6.13 *)
-difference = {t, -s, -1};
-{Expand[difference.difference],
- difference.difference /. {s -> 0, t -> 0}}
+a = ConstantArray[0, {2, 2}]; b = {{0, 1}, {0, 0}};
+{CharacteristicPolynomial[a, t],
+ CharacteristicPolynomial[b, t],
+ MatrixRank[a], MatrixRank[b]}
 
 (* Задача 6.14 *)
-u = {1, 2, 0}; v = {2, -1, 0};
-{u.v, Norm[Cross[u, v]], Norm[u] Norm[v]}
+a = {{0, 1}, {e, 0}};
+{CharacteristicPolynomial[a, t],
+ Sort[Eigenvalues[a /. e -> 1/1000000]]}
 
 (* Задача 6.15 *)
-zero = {{0, 0, 0}}; normal = {{1, 0, 0}};
-{MatrixRank[zero], MatrixRank[normal]}
+n = {{0, 1}, {0, 0}}; j = 2 IdentityMatrix[2] + n;
+Table[MatrixPower[j, m] ==
+ 2^m IdentityMatrix[2] + m 2^(m - 1) n, {m, 1, 4}]

@@ -22,7 +22,7 @@ pinv = PseudoInverse[a];
 x = pinv.b;
 {pinv, x, a.x}
 
-(* 2.3.1. Главные компоненты: сжатие признаков *)
+(* 2.3.1. Связь SVD с главными компонентами *)
 x = {{-2, -1}, {-1, -2}, {1, 2}, {2, 1}};
 mean = Mean[x];
 xc = (# - mean) & /@ x;
@@ -54,7 +54,34 @@ q = {{0, -1, 0}, {1, 0, 0}, {0, 0, 1}};
 {Transpose[q].q, Det[q],
  NullSpace[q - IdentityMatrix[3]]}
 
-(* 2.6. Обусловленность: нормальные уравнения или QR *)
+(* 2.6.1. Нормы векторов и матриц *)
+x = {3, -4};
+{Norm[x, 1], Norm[x, 2], Norm[x, Infinity]}
+
+(* 2.6.1. Нормы векторов и матриц *)
+a = {{1, -2}, {3, 4}};
+{Norm[a, 1], Norm[a, Infinity], Norm[a, "Frobenius"]}
+
+(* 2.6.2. Число обусловленности и ошибка решения *)
+a = DiagonalMatrix[{1, 1/1000}];
+b = {1, 0}; db = {0, 1/100000};
+x = LinearSolve[a, b];
+dx = LinearSolve[a, b + db] - x;
+kappa = Norm[a, Infinity] Norm[Inverse[a], Infinity];
+inputError = Norm[db, Infinity]/Norm[b, Infinity];
+outputError = Norm[dx, Infinity]/Norm[x, Infinity];
+{kappa, inputError, outputError, outputError <= kappa inputError}
+
+(* 2.6.2. Число обусловленности и ошибка решения *)
+eps = 1/10^6;
+a = DiagonalMatrix[{1, eps}]; b = {1, eps};
+x = LinearSolve[a, b]; xhat = {1, 0};
+r = b - a.xhat;
+{Norm[a, Infinity] Norm[Inverse[a], Infinity], x, xhat,
+ Norm[r, Infinity]/Norm[b, Infinity],
+ Norm[x - xhat, Infinity]/Norm[x, Infinity]}
+
+(* 2.6.3. Нормальные уравнения и QR *)
 eps = 10.^-8;
 a = {{1, 1}, {eps, 0}, {0, eps}};
 b = {2, eps, eps};

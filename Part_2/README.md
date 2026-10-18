@@ -13,10 +13,10 @@
 | Глава | Блокнот | Текст кода | Блоки |
 | --- | --- | --- | --- |
 | 1. Определители и геометрия | [Chapter_01.nb](Chapter_01.nb) | [Chapter_01.wl](Chapter_01.wl) | 22 |
-| 2. Собственные значения и динамика | [Chapter_02.nb](Chapter_02.nb) | [Chapter_02.wl](Chapter_02.wl) | 21 |
-| 3. Унитарная диагонализация | [Chapter_03.nb](Chapter_03.nb) | [Chapter_03.wl](Chapter_03.wl) | 19 |
-| 4. Приложения спектральной теории | [Chapter_04.nb](Chapter_04.nb) | [Chapter_04.wl](Chapter_04.wl) | 23 |
-| 5. Жорданово разложение | [Chapter_05.nb](Chapter_05.nb) | [Chapter_05.wl](Chapter_05.wl) | 20 |
-| 6. Геометрия плоскости и пространства | [Chapter_06.nb](Chapter_06.nb) | [Chapter_06.wl](Chapter_06.wl) | 23 |
+| 2. Геометрия плоскости и пространства | [Chapter_02.nb](Chapter_02.nb) | [Chapter_02.wl](Chapter_02.wl) | 23 |
+| 3. Собственные значения и динамика | [Chapter_03.nb](Chapter_03.nb) | [Chapter_03.wl](Chapter_03.wl) | 21 |
+| 4. Унитарная диагонализация | [Chapter_04.nb](Chapter_04.nb) | [Chapter_04.wl](Chapter_04.wl) | 19 |
+| 5. Приложения спектральной теории | [Chapter_05.nb](Chapter_05.nb) | [Chapter_05.wl](Chapter_05.wl) | 23 |
+| 6. Жорданово разложение | [Chapter_06.nb](Chapter_06.nb) | [Chapter_06.wl](Chapter_06.wl) | 20 |
 | 7. Практикум. Решения с промежуточными вычислениями | [Chapter_07.nb](Chapter_07.nb) | [Chapter_07.wl](Chapter_07.wl) | 71 |
 | 8. Справочник и литература | [Chapter_08.nb](Chapter_08.nb) | [Chapter_08.wl](Chapter_08.wl) | 17 |

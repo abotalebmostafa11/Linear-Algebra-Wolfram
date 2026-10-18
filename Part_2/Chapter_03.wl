@@ -1,98 +1,103 @@
-(* 3. Унитарная диагонализация *)
+(* 3. Собственные значения и динамика *)
 (* Код совпадает с книгой. Перед самостоятельным примером выполните Quit[] в отдельной ячейке. *)
 
-(* 3.1. Сопряженный оператор и нормальность *)
-a = {{1, -2}, {2, 1}};
-{ConjugateTranspose[a].a,
- a.ConjugateTranspose[a], Eigenvalues[a]}
+(* 3.1. Дискретная динамика и Фибоначчи *)
+a = {{1, 1}, {1, 0}};
+states = NestList[a.# &, {1, 0}, 8];
+{states, MatrixPower[a, 8].{1, 0}}
 
-(* 3.3. Эрмитовы матрицы и главные оси *)
-a = {{3, 1}, {1, 3}};
-q = {{1, 1}, {1, -1}}/Sqrt[2];
-diagonal = FullSimplify[Transpose[q].a.q];
-{diagonal, FullSimplify[Transpose[q].q],
- 1/Sqrt[Diagonal[diagonal]]}
+(* 3.2. Собственные пары и характеристический многочлен *)
+ClearAll[t];
+a = {{2, 1}, {1, 2}};
+{Factor[CharacteristicPolynomial[a, t]],
+ Eigensystem[a]}
 
-(* 3.4. Спектральные проекторы *)
-a = {{3, 1}, {1, 3}};
-p4 = (a - 2 IdentityMatrix[2])/2;
-p2 = (4 IdentityMatrix[2] - a)/2;
-{p4.p4 == p4, p4.p2,
- 4 p4 + 2 p2 == a}
+(* 3.4. Диагонализация и кратности *)
+j = {{2, 1}, {0, 2}};
+{CharacteristicPolynomial[j, t],
+ NullSpace[j - 2 IdentityMatrix[2]],
+ MatrixPower[j, 4]}
 
-(* 3.5. Самосопряженность вне стандартных координат *)
-p = {{1, 1}, {0, 1}};
-d = DiagonalMatrix[{1, 2}];
-b = Inverse[p].d.p;
-g = Transpose[p].p;
-{b, g, Transpose[b].g == g.b}
+(* 3.5. Формула Фибоначчи *)
+phi = (1 + Sqrt[5])/2;
+psi = (1 - Sqrt[5])/2;
+Table[FullSimplify[(phi^k - psi^k)/Sqrt[5]],
+ {k, 0, 10}]
+
+(* 3.7. Теорема Кэли–Гамильтона *)
+a = {{2, 1}, {1, 2}};
+{a.a - 4 a + 3 IdentityMatrix[2],
+ (4 IdentityMatrix[2] - a)/3 == Inverse[a]}
+
+(* 3.8. Экспонента и системы дифференциальных уравнений *)
+ClearAll[t];
+a = {{-2, 1}, {1, -2}};
+x = FullSimplify[MatrixExp[t a].{1, 0}];
+{x, FullSimplify[D[x, t] - a.x], x /. t -> 0}
 
 (* Задача 3.1 *)
-lambda = {4, 9};
-1/Sqrt[lambda]
+a = {{2, 1}, {1, 2}};
+{Sort[Eigenvalues[a]], a.{1, 1}, a.{1, -1}}
 
 (* Задача 3.2 *)
-a = {{3, 1}, {1, 3}};
-q = {{1, 1}, {1, -1}}/Sqrt[2];
-{Simplify[Transpose[q].a.q],
- 1/Sqrt[{4, 2}]}
+a = {{1, 2}, {0, 3}};
+{CharacteristicPolynomial[a, t], Tr[a], Det[a]}
 
 (* Задача 3.3 *)
-q = {{3, -4}, {4, 3}}/5;
-{Transpose[q].q, Det[q]}
+a = DiagonalMatrix[{2, 1/2}];
+MatrixPower[a, 5].{1, 4}
 
 (* Задача 3.4 *)
-a = DiagonalMatrix[{I, 2}];
-{ConjugateTranspose[a].a == a.ConjugateTranspose[a],
- ConjugateTranspose[a] == a}
+j = {{2, 1}, {0, 2}};
+{Factor[CharacteristicPolynomial[j, t]],
+ Length[NullSpace[j - 2 IdentityMatrix[2]]]}
 
 (* Задача 3.5 *)
-q = {1, 1}/Sqrt[2]; p = Outer[Times, q, q];
-{p, p.p == p, Transpose[p] == p}
+a = {{0, -1}, {1, 0}};
+{CharacteristicPolynomial[a, t],
+ Det[a - I IdentityMatrix[2]],
+ Det[a + I IdentityMatrix[2]]}
 
 (* Задача 3.6 *)
-p4 = {{1, 1}, {1, 1}}/2;
-p2 = {{1, -1}, {-1, 1}}/2;
-{4 p4 + 2 p2, p4.p2, p4 + p2}
+p = {{1, 1}, {1, -1}};
+p.DiagonalMatrix[{3^4, 1}].Inverse[p]
 
 (* Задача 3.7 *)
-lambda = {4, 2};
-Simplify[(1/Sqrt[4 lambda])/(1/Sqrt[lambda])]
+a = {{1, 1}, {1, 0}};
+MatrixPower[a, 10].{1, 0}
 
 (* Задача 3.8 *)
-a = DiagonalMatrix[{4, 2}];
-{a.{1, 0}, a.{0, 1}, 1/Sqrt[Diagonal[a]]}
+a = DiagonalMatrix[{1/2, -1/3}];
+MatrixPower[a, 10].{1, 1}
 
 (* Задача 3.9 *)
-b = {{2, 1}, {1, 2}};
-{b.b, Sort[Eigenvalues[b]]}
+a = {{2, 1}, {0, 3}};
+MatrixPower[a, 2] - 5 a + 6 IdentityMatrix[2]
 
 (* Задача 3.10 *)
-a = {{2, 1}, {0, 3}}; u = {1, 0}; v = {1, 1};
-{a.u - 2 u, a.v - 3 v, u.v,
- Transpose[a].a == a.Transpose[a]}
+a = {{1/2, 10}, {0, 1/2}}; x = a.{0, 1};
+{Sort[Eigenvalues[a]], x, x.x}
 
 (* Задача 3.11 *)
-a = {{2, I}, {-I, 2}};
-{ConjugateTranspose[a] == a, Sort[Eigenvalues[a]]}
+a = {{2, 1}, {1, 2}};
+{a.{1, 1} - 3 {1, 1},
+ a.{1, -1} - {1, -1}, Det[{{1, 1}, {1, -1}}]}
 
 (* Задача 3.12 *)
-a = {{2, I}, {-I, 2}}; u = {I, 1}; v = {-I, 1};
-{a.u - 3 u, a.v - v, Conjugate[u].v}
+a = IdentityMatrix[3];
+{Eigenvalues[a], Length[NullSpace[a - IdentityMatrix[3]]]}
 
 (* Задача 3.13 *)
-a = {{2, 1}, {0, 3}};
-{Sort[Eigenvalues[a]],
- Transpose[a].a - a.Transpose[a]}
+a = {{2, 1}, {0, 3}}; p = {{1, s}, {0, 1}};
+b = Inverse[p].a.p;
+Expand[CharacteristicPolynomial[a, t] -
+ CharacteristicPolynomial[b, t]]
 
 (* Задача 3.14 *)
-a = {{3, 1}, {1, 3}};
-q = {{1, 1}, {1, -1}}/Sqrt[2];
-r = q.DiagonalMatrix[{-1, 1}];
-{Simplify[Transpose[r].r],
- Simplify[Transpose[r].a.r]}
+a = {{p, q}, {r, s}};
+Expand[MatrixPower[a, 2] - (p + s) a +
+ (p s - q r) IdentityMatrix[2]]
 
 (* Задача 3.15 *)
-{Eigenvalues[DiagonalMatrix[{4, 2}]],
- Eigenvalues[DiagonalMatrix[{4, 0}]],
- Eigenvalues[DiagonalMatrix[{4, -2}]]}
+a = {{0, -1}, {1, 0}}; p = {{1, 1}, {-I, I}};
+Simplify[Inverse[p].a.p]
